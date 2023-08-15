@@ -1,0 +1,10 @@
+C:\Users\danic\Source\Repos\Progra1-A1-2023\PracticaProgramacion\bin\Debug\PracticaProgramacion.exe.config
+C:\Users\danic\Source\Repos\Progra1-A1-2023\PracticaProgramacion\bin\Debug\PracticaProgramacion.exe
+C:\Users\danic\Source\Repos\Progra1-A1-2023\PracticaProgramacion\bin\Debug\PracticaProgramacion.pdb
+C:\Users\danic\Source\Repos\Progra1-A1-2023\PracticaProgramacion\obj\Debug\PracticaProgramacion.csproj.AssemblyReference.cache
+C:\Users\danic\Source\Repos\Progra1-A1-2023\PracticaProgramacion\obj\Debug\PracticaProgramacion.Form1.resources
+C:\Users\danic\Source\Repos\Progra1-A1-2023\PracticaProgramacion\obj\Debug\PracticaProgramacion.Properties.Resources.resources
+C:\Users\danic\Source\Repos\Progra1-A1-2023\PracticaProgramacion\obj\Debug\PracticaProgramacion.csproj.GenerateResource.cache
+C:\Users\danic\Source\Repos\Progra1-A1-2023\PracticaProgramacion\obj\Debug\PracticaProgramacion.csproj.CoreCompileInputs.cache
+C:\Users\danic\Source\Repos\Progra1-A1-2023\PracticaProgramacion\obj\Debug\PracticaProgramacion.exe
+C:\Users\danic\Source\Repos\Progra1-A1-2023\PracticaProgramacion\obj\Debug\PracticaProgramacion.pdb
