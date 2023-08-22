@@ -48,7 +48,11 @@ namespace PracticaProgramacion
             };
             respuesta = unidades[cboTipoConversor.SelectedIndex][a] / unidades[cboTipoConversor.SelectedIndex][de] * cantidad;
 
-            lblRespuesta.Text = "Respuesta:"+ Math.Round(respuesta,6);
+            if(respuesta<1)
+                lblRespuesta.Text = "Respuesta: "+respuesta;
+            else
+                lblRespuesta.Text = "Respuesta:" + Math.Round(respuesta,2);
+       
         }
 
 
