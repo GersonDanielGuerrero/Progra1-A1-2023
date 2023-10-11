@@ -1,0 +1,15 @@
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe.config
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.exe
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\ProyectoFinal.pdb
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.AssemblyReference.cache
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Form1.resources
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Properties.Resources.resources
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.GenerateResource.cache
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Clientes.resources
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Productos.resources
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Pacientes.resources
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\db_veterinaria_huellitas.mdf
+C:\Users\danic\source\repos\ProyectoFinal\ProyectoFinal\bin\Debug\db_veterinaria_huellitas_log.ldf
