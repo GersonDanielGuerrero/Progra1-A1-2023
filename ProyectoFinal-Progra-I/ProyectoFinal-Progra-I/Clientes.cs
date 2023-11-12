@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ProyectoFinal_Progra_I
 {
@@ -18,15 +19,21 @@ namespace ProyectoFinal_Progra_I
         DataTable miTabla = new DataTable();
         public int posicion = 0;
         String accion = "nuevo";
+        byte[] bytesFotoCliente = null;
+
+
+
         public Clientes()
         {
             InitializeComponent();
-        }
 
+        }
+        
         private void Clientes_Load(object sender, EventArgs e)
         {
             actualizarDsClientes();
             cboOpcionBuscarCliente.SelectedIndex = 0;
+            
         }
         private void actualizarDsClientes()
         {
@@ -68,13 +75,22 @@ namespace ProyectoFinal_Progra_I
         {
             if (miTabla.Rows.Count > 0)
             {
-                
+
                 txtNombreCliente.Text = miTabla.Rows[posicion].ItemArray[1].ToString().Trim();
                 txtDireccionCliente.Text = miTabla.Rows[posicion].ItemArray[2].ToString().Trim();
                 txtCorreoCliente.Text = miTabla.Rows[posicion].ItemArray[3].ToString().Trim();
                 txtTelefonoCliente.Text = miTabla.Rows[posicion].ItemArray[4].ToString().Trim();
                 dtpNacimietoCliente.Value = (DateTime)miTabla.Rows[posicion].ItemArray[5];
                 dtpRegistroCliente.Value = (DateTime)miTabla.Rows[posicion].ItemArray[6];
+                try
+                { 
+                bytesFotoCliente = (byte[])miTabla.Rows[posicion].ItemArray[7];
+                using (MemoryStream ms = new MemoryStream(bytesFotoCliente))
+                    pbFotoCliente.Image = Image.FromStream(ms);
+                }
+                catch { }
+
+
 
                 lblPosicionCliente.Text = (posicion + 1) + " de " + miTabla.Rows.Count;
                 
@@ -128,23 +144,29 @@ namespace ProyectoFinal_Progra_I
             }
             else
             {
-
-                //C A M B I A    S E G U N   E L    F O R M U L A R I O
-
-                String msg = objConexion.mantenimientoClientes(accion, Convert.ToInt32(miTabla.Rows[posicion].ItemArray[0].ToString()), txtNombreCliente.Text,
-                    txtDireccionCliente.Text, txtCorreoCliente.Text, txtTelefonoCliente.Text, dtpNacimietoCliente.Value.Date, dtpRegistroCliente.Value.Date);
-                if (msg != "1")
+                TextBox[] camposObligatorios = { txtNombreCliente, txtDireccionCliente };
+                bool camposCompletos = true;
+               
+                foreach (TextBox textBox in camposObligatorios)
                 {
-                    MessageBox.Show("Error en el registro de Clientes: " + msg, "Registro de Clientes.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (string.IsNullOrWhiteSpace(textBox.Text))
+                        {
+                            erpClientes.SetError(textBox, "Este campo no puede estar vacío");
+                            camposCompletos = false;
+                        }
+                        else
+                        {
+                            erpClientes.SetError(textBox, "");
+                        }
+                }
+                if (camposCompletos)
+                {
+                    guardarDatosCliente();
                 }
                 else
                 {
-                    actualizarDsClientes();
-                    estadoControles(true);
-                    btnNuevoCliente.Text = "Nuevo cliente";
-                    btnModificarCliente.Text = "Modificar datos";
+                    MessageBox.Show("Por favor, complete todos los campos obligatorios.", "Campos Incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                
             }
         }
 
@@ -159,6 +181,10 @@ namespace ProyectoFinal_Progra_I
             }
             else
             {
+                TextBox[] camposObligatorios = { txtNombreCliente, txtDireccionCliente };
+
+                foreach (TextBox textBox in camposObligatorios)
+                    erpClientes.SetError(textBox, "");
 
                 estadoControles(true);
                 mostrarDatosCliente();
@@ -177,6 +203,7 @@ namespace ProyectoFinal_Progra_I
             txtDireccionCliente.ReadOnly = estado;
             txtCorreoCliente.ReadOnly = estado;
             dtpNacimietoCliente.Enabled = !estado;
+            btnAgregarFotoCliente.Enabled = !estado;
 
             grbNavegacionCliente.Enabled = estado;
             btnEliminarCliente.Enabled = estado;
@@ -227,7 +254,7 @@ namespace ProyectoFinal_Progra_I
                 //C A M B I A    S E G U N   E L    F O R M U L A R I O
 
                 String msg = objConexion.mantenimientoClientes(accion, Convert.ToInt32(miTabla.Rows[posicion].ItemArray[0]),txtNombreCliente.Text,
-                    txtDireccionCliente.Text,txtCorreoCliente.Text,txtTelefonoCliente.Text,dtpNacimietoCliente.Value.Date,dtpRegistroCliente.Value.Date);
+                    txtDireccionCliente.Text,txtCorreoCliente.Text,txtTelefonoCliente.Text,dtpNacimietoCliente.Value.Date,dtpRegistroCliente.Value.Date,bytesFotoCliente);
                 if (msg != "1")
                 {
                     MessageBox.Show("Error en la eliminacion de Clientes: " + msg, "Registro de Clientes.", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -240,5 +267,40 @@ namespace ProyectoFinal_Progra_I
             }
             accion = "nuevo";
         }
+
+        private void guardarDatosCliente()
+        {
+            
+            String msg = objConexion.mantenimientoClientes(accion, Convert.ToInt32(miTabla.Rows[posicion].ItemArray[0].ToString()), txtNombreCliente.Text,
+                   txtDireccionCliente.Text, txtCorreoCliente.Text, txtTelefonoCliente.Text, dtpNacimietoCliente.Value.Date, dtpRegistroCliente.Value.Date,bytesFotoCliente);
+            if (msg != "1")
+            {
+                MessageBox.Show("Error en el registro de Clientes: " + msg, "Registro de Clientes.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                actualizarDsClientes();
+                estadoControles(true);
+                btnNuevoCliente.Text = "Nuevo cliente";
+                btnModificarCliente.Text = "Modificar datos";
+            }
+
+        }
+
+        private void btnAgregarFotoCliente_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Archivo de imagen |*.jpg;*.png;*.jpeg";
+            if (ofd.ShowDialog().Equals(DialogResult.OK))
+            {
+                string ruta = ofd.FileName;
+                bytesFotoCliente = File.ReadAllBytes(ruta);
+                using(MemoryStream ms = new MemoryStream(bytesFotoCliente))
+                    pbFotoCliente.Image = Image.FromStream(ms);
+                
+            }
+        }
+
+        
     }
 }

@@ -312,11 +312,10 @@ namespace ProyectoFinal_Progra_I
             this.cboOpcionBuscarProducto.FormattingEnabled = true;
             this.cboOpcionBuscarProducto.Items.AddRange(new object[] {
             "Nombre",
-            "Dirección",
-            "Correo",
-            "Teléfono",
-            "Fecha de nacimiento",
-            "Fecha de registro"});
+            "Marca",
+            "Principios activos",
+            "Descripcion",
+            "Precio"});
             this.cboOpcionBuscarProducto.Location = new System.Drawing.Point(95, 49);
             this.cboOpcionBuscarProducto.Name = "cboOpcionBuscarProducto";
             this.cboOpcionBuscarProducto.Size = new System.Drawing.Size(154, 28);

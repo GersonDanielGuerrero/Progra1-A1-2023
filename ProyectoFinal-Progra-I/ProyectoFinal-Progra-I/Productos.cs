@@ -49,9 +49,9 @@ namespace ProyectoFinal_Progra_I
             {
                 BindingSource bs = new BindingSource();
                 bs.DataSource = grdDatosProductos.DataSource;
-                bs.Filter = opcion == 0 ? "nombre like '%" + valor + "%'" : opcion == 1 ? "direccion like '%" + valor + "%'"
-                    : opcion == 2 ? "correo like '%" + valor + "%'" : opcion == 3 ? "telefono like '%" + valor + "%'" :
-                    opcion == 4 ? "fechaNacimiento like '%" + valor + "%'" : "fechaRegistro like '%" + valor.ToString() + "%'";
+                bs.Filter = opcion == 0 ? "nombre like '%" + valor + "%'" : opcion == 1 ? "marca like '%" + valor + "%'"
+                    : opcion == 2 ? "principiosActivos '%" + valor + "%'" : opcion == 3 ? "descripcion like '%" + valor + "%'" :
+                   "precio like '%" + valor + "%'" ;
                 grdDatosProductos.DataSource = bs;
                 erpProductos.SetError(txtBuscarProducto, "");
             }

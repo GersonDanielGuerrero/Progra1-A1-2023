@@ -144,6 +144,7 @@ namespace ProyectoFinal_Progra_I
                     }
                     else
                     {
+                        
                         actualizarDsPacientes();
                         estadoControles(true);
                         btnNuevoPaciente.Text = "Nuevo paciente";

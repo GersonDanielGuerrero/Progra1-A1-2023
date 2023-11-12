@@ -282,21 +282,21 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(131, 309);
+            this.label9.Location = new System.Drawing.Point(109, 309);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 20);
+            this.label9.Size = new System.Drawing.Size(85, 20);
             this.label9.TabIndex = 15;
-            this.label9.Text = "Peso";
+            this.label9.Text = "Peso (kg)";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(104, 262);
+            this.label8.Location = new System.Drawing.Point(71, 262);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 20);
+            this.label8.Size = new System.Drawing.Size(118, 20);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Estatura";
+            this.label8.Text = "Estatura (cm)";
             // 
             // txtEspeciePaciente
             // 

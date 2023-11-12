@@ -22,8 +22,7 @@ namespace ProyectoFinal_Progra_I
             miConexion.ConnectionString = cadenaConexion;
             miConexion.Open();
             obtenerDatos();
-
-
+            parametrizacion();
         }
         public DataSet obtenerDatos()
         {
@@ -42,20 +41,27 @@ namespace ProyectoFinal_Progra_I
             miAdaptador.SelectCommand = miComando;
             miAdaptador.Fill(miDs, "productos");
 
+            miComando.CommandText = "select * from usuarios";
+            miAdaptador.SelectCommand = miComando;
+            miAdaptador.Fill(miDs, "usuarios");
+
             return miDs;
         }
+        private void parametrizacion() 
+        { 
 
-        public String mantenimientoClientes(string accion, int idCliente, string nombre,string direccion,string correo,string telefono,DateTime fechaNacimiento,DateTime fechaRegistro)
+        }
+        public String mantenimientoClientes(string accion, int idCliente, string nombre,string direccion,string correo,string telefono,DateTime fechaNacimiento,DateTime fechaRegistro,byte[] foto)
         {
             miComando.Parameters.Clear();
             String sql = "";
             if (accion == "nuevo")
             {
-                sql = "INSERT INTO clientes (nombre,direccion,correo,telefono,fechaNacimiento,fechaRegistro) VALUES(@nombre,@direccion,@correo,@telefono,@fechaNacimiento,@fechaRegistro)";
+                sql = "INSERT INTO clientes (nombre,direccion,correo,telefono,fechaNacimiento,fechaRegistro,foto) VALUES(@nombre,@direccion,@correo,@telefono,@fechaNacimiento,@fechaRegistro,@foto)";
             }
             else if (accion == "modificar")
             {
-                sql = "UPDATE clientes SET nombre=@nombre, direccion=@direccion,correo=@correo,telefono=@telefono,fechaNacimiento=@fechaNacimiento,fechaRegistro=@fechaRegistro WHERE idCliente=@idCliente";
+                sql = "UPDATE clientes SET nombre=@nombre, direccion=@direccion,correo=@correo,telefono=@telefono,fechaNacimiento=@fechaNacimiento,fechaRegistro=@fechaRegistro,foto=@foto WHERE idCliente=@idCliente";
             }
             else if (accion == "eliminar")
             {
@@ -70,7 +76,7 @@ namespace ProyectoFinal_Progra_I
             miComando.Parameters.Add("@telefono", SqlDbType.Char).Value = telefono;
             miComando.Parameters.Add("@fechaNacimiento", SqlDbType.Date).Value = fechaNacimiento.Date;
             miComando.Parameters.Add("@fechaRegistro", SqlDbType.Date).Value = fechaRegistro.Date;
-
+            miComando.Parameters.Add("@foto", SqlDbType.VarBinary).Value = foto;
 
             return ejecutarSql(sql);
 
@@ -154,6 +160,6 @@ namespace ProyectoFinal_Progra_I
                 return e.Message;
             }
 
-        }//Vamos a sacar 10 con este proyecto por que nos lo merecemos, gracias, gracias, graciasss
+        }
     }
 }

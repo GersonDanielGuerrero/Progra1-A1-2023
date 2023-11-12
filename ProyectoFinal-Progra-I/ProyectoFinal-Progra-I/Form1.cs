@@ -19,7 +19,7 @@ namespace ProyectoFinal_Progra_I
         public Form1()
         {
             InitializeComponent();
-           
+        
         }
 
         private void pacientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,6 +43,12 @@ namespace ProyectoFinal_Progra_I
             objProductos.Show();
             objPacientes.Hide();
             objClientes.Hide();
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+            
         }
     }
 }
