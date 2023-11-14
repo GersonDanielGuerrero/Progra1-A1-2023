@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_Progra_I
 {
+    // :D
     public partial class Pacientes : Form
     {
         Conexion objConexion = new Conexion();
