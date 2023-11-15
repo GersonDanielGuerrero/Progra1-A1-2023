@@ -43,8 +43,6 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosProducto = new System.Windows.Forms.GroupBox();
             this.txtDescripcionProducto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPrincipiosActivosProducto = new System.Windows.Forms.TextBox();
-            this.txtMarcaProducto = new System.Windows.Forms.TextBox();
             this.txtPrecioProducto = new System.Windows.Forms.TextBox();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -62,6 +60,8 @@ namespace ProyectoFinal_Progra_I
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.erpProductos = new System.Windows.Forms.ErrorProvider(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.grbNavegacionProducto.SuspendLayout();
             this.grbEdicionProducto.SuspendLayout();
             this.grbDatosProducto.SuspendLayout();
@@ -192,10 +192,10 @@ namespace ProyectoFinal_Progra_I
             // 
             // grbDatosProducto
             // 
+            this.grbDatosProducto.Controls.Add(this.comboBox2);
+            this.grbDatosProducto.Controls.Add(this.comboBox1);
             this.grbDatosProducto.Controls.Add(this.txtDescripcionProducto);
             this.grbDatosProducto.Controls.Add(this.label6);
-            this.grbDatosProducto.Controls.Add(this.txtPrincipiosActivosProducto);
-            this.grbDatosProducto.Controls.Add(this.txtMarcaProducto);
             this.grbDatosProducto.Controls.Add(this.txtPrecioProducto);
             this.grbDatosProducto.Controls.Add(this.txtNombreProducto);
             this.grbDatosProducto.Controls.Add(this.label5);
@@ -227,24 +227,6 @@ namespace ProyectoFinal_Progra_I
             this.label6.Size = new System.Drawing.Size(103, 20);
             this.label6.TabIndex = 12;
             this.label6.Text = "Descripción";
-            // 
-            // txtPrincipiosActivosProducto
-            // 
-            this.txtPrincipiosActivosProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrincipiosActivosProducto.Location = new System.Drawing.Point(208, 244);
-            this.txtPrincipiosActivosProducto.Name = "txtPrincipiosActivosProducto";
-            this.txtPrincipiosActivosProducto.ReadOnly = true;
-            this.txtPrincipiosActivosProducto.Size = new System.Drawing.Size(430, 26);
-            this.txtPrincipiosActivosProducto.TabIndex = 11;
-            // 
-            // txtMarcaProducto
-            // 
-            this.txtMarcaProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarcaProducto.Location = new System.Drawing.Point(208, 160);
-            this.txtMarcaProducto.Name = "txtMarcaProducto";
-            this.txtMarcaProducto.ReadOnly = true;
-            this.txtMarcaProducto.Size = new System.Drawing.Size(430, 26);
-            this.txtMarcaProducto.TabIndex = 10;
             // 
             // txtPrecioProducto
             // 
@@ -404,6 +386,24 @@ namespace ProyectoFinal_Progra_I
             // 
             this.erpProductos.ContainerControl = this;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Enabled = false;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(208, 165);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(430, 21);
+            this.comboBox1.TabIndex = 14;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Enabled = false;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(208, 252);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(430, 21);
+            this.comboBox2.TabIndex = 15;
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,8 +446,6 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.Button btnModificarProducto;
         private System.Windows.Forms.Button btnEliminarProducto;
         private System.Windows.Forms.GroupBox grbDatosProducto;
-        private System.Windows.Forms.TextBox txtPrincipiosActivosProducto;
-        private System.Windows.Forms.TextBox txtMarcaProducto;
         private System.Windows.Forms.TextBox txtPrecioProducto;
         private System.Windows.Forms.TextBox txtNombreProducto;
         private System.Windows.Forms.Label label5;
@@ -467,5 +465,7 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.ErrorProvider erpProductos;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
