@@ -41,6 +41,10 @@ namespace ProyectoFinal_Progra_I
             this.btnModificarProducto = new System.Windows.Forms.Button();
             this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.grbDatosProducto = new System.Windows.Forms.GroupBox();
+            this.cboTipoDeProducto = new System.Windows.Forms.ComboBox();
+            this.lblTipoDeProducto = new System.Windows.Forms.Label();
+            this.cboPrincipiosActivosProducto = new System.Windows.Forms.ComboBox();
+            this.cboMarcaProducto = new System.Windows.Forms.ComboBox();
             this.txtDescripcionProducto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPrecioProducto = new System.Windows.Forms.TextBox();
@@ -54,14 +58,13 @@ namespace ProyectoFinal_Progra_I
             this.label1 = new System.Windows.Forms.Label();
             this.grdDatosProductos = new System.Windows.Forms.DataGridView();
             this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDeProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.principiosActivos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.erpProductos = new System.Windows.Forms.ErrorProvider(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.grbNavegacionProducto.SuspendLayout();
             this.grbEdicionProducto.SuspendLayout();
             this.grbDatosProducto.SuspendLayout();
@@ -192,8 +195,10 @@ namespace ProyectoFinal_Progra_I
             // 
             // grbDatosProducto
             // 
-            this.grbDatosProducto.Controls.Add(this.comboBox2);
-            this.grbDatosProducto.Controls.Add(this.comboBox1);
+            this.grbDatosProducto.Controls.Add(this.cboTipoDeProducto);
+            this.grbDatosProducto.Controls.Add(this.lblTipoDeProducto);
+            this.grbDatosProducto.Controls.Add(this.cboPrincipiosActivosProducto);
+            this.grbDatosProducto.Controls.Add(this.cboMarcaProducto);
             this.grbDatosProducto.Controls.Add(this.txtDescripcionProducto);
             this.grbDatosProducto.Controls.Add(this.label6);
             this.grbDatosProducto.Controls.Add(this.txtPrecioProducto);
@@ -208,6 +213,43 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosProducto.TabIndex = 32;
             this.grbDatosProducto.TabStop = false;
             this.grbDatosProducto.Text = "Información del producto";
+            // 
+            // cboTipoDeProducto
+            // 
+            this.cboTipoDeProducto.Enabled = false;
+            this.cboTipoDeProducto.FormattingEnabled = true;
+            this.cboTipoDeProducto.Location = new System.Drawing.Point(208, 88);
+            this.cboTipoDeProducto.Name = "cboTipoDeProducto";
+            this.cboTipoDeProducto.Size = new System.Drawing.Size(430, 21);
+            this.cboTipoDeProducto.TabIndex = 17;
+            // 
+            // lblTipoDeProducto
+            // 
+            this.lblTipoDeProducto.AutoSize = true;
+            this.lblTipoDeProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoDeProducto.Location = new System.Drawing.Point(50, 88);
+            this.lblTipoDeProducto.Name = "lblTipoDeProducto";
+            this.lblTipoDeProducto.Size = new System.Drawing.Size(145, 20);
+            this.lblTipoDeProducto.TabIndex = 16;
+            this.lblTipoDeProducto.Text = "Tipo de Producto";
+            // 
+            // cboPrincipiosActivosProducto
+            // 
+            this.cboPrincipiosActivosProducto.Enabled = false;
+            this.cboPrincipiosActivosProducto.FormattingEnabled = true;
+            this.cboPrincipiosActivosProducto.Location = new System.Drawing.Point(208, 252);
+            this.cboPrincipiosActivosProducto.Name = "cboPrincipiosActivosProducto";
+            this.cboPrincipiosActivosProducto.Size = new System.Drawing.Size(430, 21);
+            this.cboPrincipiosActivosProducto.TabIndex = 15;
+            // 
+            // cboMarcaProducto
+            // 
+            this.cboMarcaProducto.Enabled = false;
+            this.cboMarcaProducto.FormattingEnabled = true;
+            this.cboMarcaProducto.Location = new System.Drawing.Point(208, 197);
+            this.cboMarcaProducto.Name = "cboMarcaProducto";
+            this.cboMarcaProducto.Size = new System.Drawing.Size(430, 21);
+            this.cboMarcaProducto.TabIndex = 14;
             // 
             // txtDescripcionProducto
             // 
@@ -241,7 +283,7 @@ namespace ProyectoFinal_Progra_I
             // txtNombreProducto
             // 
             this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreProducto.Location = new System.Drawing.Point(208, 78);
+            this.txtNombreProducto.Location = new System.Drawing.Point(208, 137);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.ReadOnly = true;
             this.txtNombreProducto.Size = new System.Drawing.Size(430, 26);
@@ -271,7 +313,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(124, 83);
+            this.label4.Location = new System.Drawing.Point(124, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 4;
@@ -281,7 +323,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(137, 163);
+            this.label3.Location = new System.Drawing.Point(137, 195);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 20);
             this.label3.TabIndex = 3;
@@ -327,6 +369,7 @@ namespace ProyectoFinal_Progra_I
             this.grdDatosProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDatosProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProducto,
+            this.tipoDeProducto,
             this.nombre,
             this.marca,
             this.principiosActivos,
@@ -345,6 +388,11 @@ namespace ProyectoFinal_Progra_I
             this.idProducto.Name = "idProducto";
             this.idProducto.ReadOnly = true;
             this.idProducto.Visible = false;
+            // 
+            // tipoDeProducto
+            // 
+            this.tipoDeProducto.HeaderText = "Tipo de Producto";
+            this.tipoDeProducto.Name = "tipoDeProducto";
             // 
             // nombre
             // 
@@ -385,24 +433,6 @@ namespace ProyectoFinal_Progra_I
             // erpProductos
             // 
             this.erpProductos.ContainerControl = this;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(208, 165);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(430, 21);
-            this.comboBox1.TabIndex = 14;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Enabled = false;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(208, 252);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(430, 21);
-            this.comboBox2.TabIndex = 15;
             // 
             // Productos
             // 
@@ -458,14 +488,17 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DataGridView grdDatosProductos;
         private System.Windows.Forms.TextBox txtDescripcionProducto;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ErrorProvider erpProductos;
+        private System.Windows.Forms.ComboBox cboPrincipiosActivosProducto;
+        private System.Windows.Forms.ComboBox cboMarcaProducto;
+        private System.Windows.Forms.ComboBox cboTipoDeProducto;
+        private System.Windows.Forms.Label lblTipoDeProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDeProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn principiosActivos;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.ErrorProvider erpProductos;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
