@@ -43,7 +43,6 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosProducto = new System.Windows.Forms.GroupBox();
             this.cboTipoDeProducto = new System.Windows.Forms.ComboBox();
             this.lblTipoDeProducto = new System.Windows.Forms.Label();
-            this.cboPrincipiosActivosProducto = new System.Windows.Forms.ComboBox();
             this.cboMarcaProducto = new System.Windows.Forms.ComboBox();
             this.txtDescripcionProducto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -65,6 +64,7 @@ namespace ProyectoFinal_Progra_I
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.erpProductos = new System.Windows.Forms.ErrorProvider(this.components);
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.grbNavegacionProducto.SuspendLayout();
             this.grbEdicionProducto.SuspendLayout();
             this.grbDatosProducto.SuspendLayout();
@@ -195,9 +195,9 @@ namespace ProyectoFinal_Progra_I
             // 
             // grbDatosProducto
             // 
+            this.grbDatosProducto.Controls.Add(this.listBox1);
             this.grbDatosProducto.Controls.Add(this.cboTipoDeProducto);
             this.grbDatosProducto.Controls.Add(this.lblTipoDeProducto);
-            this.grbDatosProducto.Controls.Add(this.cboPrincipiosActivosProducto);
             this.grbDatosProducto.Controls.Add(this.cboMarcaProducto);
             this.grbDatosProducto.Controls.Add(this.txtDescripcionProducto);
             this.grbDatosProducto.Controls.Add(this.label6);
@@ -218,7 +218,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.cboTipoDeProducto.Enabled = false;
             this.cboTipoDeProducto.FormattingEnabled = true;
-            this.cboTipoDeProducto.Location = new System.Drawing.Point(208, 88);
+            this.cboTipoDeProducto.Location = new System.Drawing.Point(208, 142);
             this.cboTipoDeProducto.Name = "cboTipoDeProducto";
             this.cboTipoDeProducto.Size = new System.Drawing.Size(430, 21);
             this.cboTipoDeProducto.TabIndex = 17;
@@ -227,26 +227,17 @@ namespace ProyectoFinal_Progra_I
             // 
             this.lblTipoDeProducto.AutoSize = true;
             this.lblTipoDeProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoDeProducto.Location = new System.Drawing.Point(50, 88);
+            this.lblTipoDeProducto.Location = new System.Drawing.Point(50, 142);
             this.lblTipoDeProducto.Name = "lblTipoDeProducto";
             this.lblTipoDeProducto.Size = new System.Drawing.Size(145, 20);
             this.lblTipoDeProducto.TabIndex = 16;
             this.lblTipoDeProducto.Text = "Tipo de Producto";
             // 
-            // cboPrincipiosActivosProducto
-            // 
-            this.cboPrincipiosActivosProducto.Enabled = false;
-            this.cboPrincipiosActivosProducto.FormattingEnabled = true;
-            this.cboPrincipiosActivosProducto.Location = new System.Drawing.Point(208, 252);
-            this.cboPrincipiosActivosProducto.Name = "cboPrincipiosActivosProducto";
-            this.cboPrincipiosActivosProducto.Size = new System.Drawing.Size(430, 21);
-            this.cboPrincipiosActivosProducto.TabIndex = 15;
-            // 
             // cboMarcaProducto
             // 
             this.cboMarcaProducto.Enabled = false;
             this.cboMarcaProducto.FormattingEnabled = true;
-            this.cboMarcaProducto.Location = new System.Drawing.Point(208, 197);
+            this.cboMarcaProducto.Location = new System.Drawing.Point(208, 88);
             this.cboMarcaProducto.Name = "cboMarcaProducto";
             this.cboMarcaProducto.Size = new System.Drawing.Size(430, 21);
             this.cboMarcaProducto.TabIndex = 14;
@@ -254,7 +245,7 @@ namespace ProyectoFinal_Progra_I
             // txtDescripcionProducto
             // 
             this.txtDescripcionProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionProducto.Location = new System.Drawing.Point(208, 324);
+            this.txtDescripcionProducto.Location = new System.Drawing.Point(207, 359);
             this.txtDescripcionProducto.Name = "txtDescripcionProducto";
             this.txtDescripcionProducto.ReadOnly = true;
             this.txtDescripcionProducto.Size = new System.Drawing.Size(430, 26);
@@ -264,7 +255,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(99, 327);
+            this.label6.Location = new System.Drawing.Point(98, 362);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 20);
             this.label6.TabIndex = 12;
@@ -273,7 +264,7 @@ namespace ProyectoFinal_Progra_I
             // txtPrecioProducto
             // 
             this.txtPrecioProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioProducto.Location = new System.Drawing.Point(208, 405);
+            this.txtPrecioProducto.Location = new System.Drawing.Point(207, 422);
             this.txtPrecioProducto.Name = "txtPrecioProducto";
             this.txtPrecioProducto.ReadOnly = true;
             this.txtPrecioProducto.Size = new System.Drawing.Size(430, 26);
@@ -283,7 +274,7 @@ namespace ProyectoFinal_Progra_I
             // txtNombreProducto
             // 
             this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreProducto.Location = new System.Drawing.Point(208, 137);
+            this.txtNombreProducto.Location = new System.Drawing.Point(208, 28);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.ReadOnly = true;
             this.txtNombreProducto.Size = new System.Drawing.Size(430, 26);
@@ -293,7 +284,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(109, 408);
+            this.label5.Location = new System.Drawing.Point(108, 425);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 20);
             this.label5.TabIndex = 5;
@@ -303,7 +294,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 250);
+            this.label2.Location = new System.Drawing.Point(55, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 20);
             this.label2.TabIndex = 2;
@@ -313,7 +304,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(124, 142);
+            this.label4.Location = new System.Drawing.Point(124, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 4;
@@ -323,7 +314,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(137, 195);
+            this.label3.Location = new System.Drawing.Point(137, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 20);
             this.label3.TabIndex = 3;
@@ -434,6 +425,16 @@ namespace ProyectoFinal_Progra_I
             // 
             this.erpProductos.ContainerControl = this;
             // 
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(208, 198);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(429, 124);
+            this.listBox1.TabIndex = 22;
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,7 +490,6 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.TextBox txtDescripcionProducto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ErrorProvider erpProductos;
-        private System.Windows.Forms.ComboBox cboPrincipiosActivosProducto;
         private System.Windows.Forms.ComboBox cboMarcaProducto;
         private System.Windows.Forms.ComboBox cboTipoDeProducto;
         private System.Windows.Forms.Label lblTipoDeProducto;
@@ -500,5 +500,6 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DataGridViewTextBoxColumn principiosActivos;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

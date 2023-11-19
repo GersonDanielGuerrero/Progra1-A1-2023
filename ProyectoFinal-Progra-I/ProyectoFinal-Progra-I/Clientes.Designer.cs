@@ -68,6 +68,8 @@ namespace ProyectoFinal_Progra_I
             this.btnAgregarFotoCliente = new System.Windows.Forms.Button();
             this.pbFotoCliente = new System.Windows.Forms.PictureBox();
             this.erpClientes = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label9 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosClientes)).BeginInit();
             this.grbEdicionCliente.SuspendLayout();
             this.grbNavegacionCliente.SuspendLayout();
@@ -89,7 +91,7 @@ namespace ProyectoFinal_Progra_I
             this.fechaNacimiento});
             this.grdDatosClientes.Location = new System.Drawing.Point(26, 106);
             this.grdDatosClientes.Name = "grdDatosClientes";
-            this.grdDatosClientes.Size = new System.Drawing.Size(490, 540);
+            this.grdDatosClientes.Size = new System.Drawing.Size(490, 603);
             this.grdDatosClientes.TabIndex = 0;
             this.grdDatosClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatosClientes_CellClick);
             // 
@@ -158,7 +160,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(104, 271);
+            this.label2.Location = new System.Drawing.Point(103, 259);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 2;
@@ -168,7 +170,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(99, 316);
+            this.label3.Location = new System.Drawing.Point(98, 304);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 20);
             this.label3.TabIndex = 3;
@@ -178,7 +180,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(112, 222);
+            this.label4.Location = new System.Drawing.Point(111, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 4;
@@ -188,7 +190,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 366);
+            this.label5.Location = new System.Drawing.Point(33, 354);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(156, 20);
             this.label5.TabIndex = 5;
@@ -198,7 +200,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 420);
+            this.label6.Location = new System.Drawing.Point(14, 529);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(176, 20);
             this.label6.TabIndex = 6;
@@ -208,7 +210,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(40, 464);
+            this.label7.Location = new System.Drawing.Point(40, 573);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(150, 20);
             this.label7.TabIndex = 7;
@@ -217,7 +219,7 @@ namespace ProyectoFinal_Progra_I
             // txtNombreCliente
             // 
             this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCliente.Location = new System.Drawing.Point(196, 217);
+            this.txtNombreCliente.Location = new System.Drawing.Point(195, 205);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.ReadOnly = true;
             this.txtNombreCliente.Size = new System.Drawing.Size(430, 26);
@@ -226,7 +228,7 @@ namespace ProyectoFinal_Progra_I
             // txtCorreoCliente
             // 
             this.txtCorreoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreoCliente.Location = new System.Drawing.Point(196, 366);
+            this.txtCorreoCliente.Location = new System.Drawing.Point(195, 354);
             this.txtCorreoCliente.Name = "txtCorreoCliente";
             this.txtCorreoCliente.ReadOnly = true;
             this.txtCorreoCliente.Size = new System.Drawing.Size(430, 26);
@@ -235,7 +237,7 @@ namespace ProyectoFinal_Progra_I
             // txtDireccionCliente
             // 
             this.txtDireccionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccionCliente.Location = new System.Drawing.Point(196, 316);
+            this.txtDireccionCliente.Location = new System.Drawing.Point(195, 304);
             this.txtDireccionCliente.Name = "txtDireccionCliente";
             this.txtDireccionCliente.ReadOnly = true;
             this.txtDireccionCliente.Size = new System.Drawing.Size(430, 26);
@@ -244,7 +246,7 @@ namespace ProyectoFinal_Progra_I
             // txtTelefonoCliente
             // 
             this.txtTelefonoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefonoCliente.Location = new System.Drawing.Point(196, 266);
+            this.txtTelefonoCliente.Location = new System.Drawing.Point(195, 254);
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
             this.txtTelefonoCliente.ReadOnly = true;
             this.txtTelefonoCliente.Size = new System.Drawing.Size(430, 26);
@@ -254,7 +256,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.dtpNacimietoCliente.Enabled = false;
             this.dtpNacimietoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNacimietoCliente.Location = new System.Drawing.Point(196, 415);
+            this.dtpNacimietoCliente.Location = new System.Drawing.Point(196, 524);
             this.dtpNacimietoCliente.Name = "dtpNacimietoCliente";
             this.dtpNacimietoCliente.Size = new System.Drawing.Size(336, 26);
             this.dtpNacimietoCliente.TabIndex = 12;
@@ -263,7 +265,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.dtpRegistroCliente.Enabled = false;
             this.dtpRegistroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpRegistroCliente.Location = new System.Drawing.Point(196, 464);
+            this.dtpRegistroCliente.Location = new System.Drawing.Point(196, 573);
             this.dtpRegistroCliente.Name = "dtpRegistroCliente";
             this.dtpRegistroCliente.Size = new System.Drawing.Size(336, 26);
             this.dtpRegistroCliente.TabIndex = 13;
@@ -393,7 +395,7 @@ namespace ProyectoFinal_Progra_I
             this.grbEdicionCliente.Controls.Add(this.btnNuevoCliente);
             this.grbEdicionCliente.Controls.Add(this.btnModificarCliente);
             this.grbEdicionCliente.Controls.Add(this.btnEliminarCliente);
-            this.grbEdicionCliente.Location = new System.Drawing.Point(536, 564);
+            this.grbEdicionCliente.Location = new System.Drawing.Point(536, 627);
             this.grbEdicionCliente.Name = "grbEdicionCliente";
             this.grbEdicionCliente.Size = new System.Drawing.Size(331, 82);
             this.grbEdicionCliente.TabIndex = 24;
@@ -408,7 +410,7 @@ namespace ProyectoFinal_Progra_I
             this.grbNavegacionCliente.Controls.Add(this.btnUltimoCliente);
             this.grbNavegacionCliente.Controls.Add(this.btnSiguienteCliente);
             this.grbNavegacionCliente.Controls.Add(this.lblPosicionCliente);
-            this.grbNavegacionCliente.Location = new System.Drawing.Point(915, 564);
+            this.grbNavegacionCliente.Location = new System.Drawing.Point(915, 627);
             this.grbNavegacionCliente.Name = "grbNavegacionCliente";
             this.grbNavegacionCliente.Size = new System.Drawing.Size(278, 82);
             this.grbNavegacionCliente.TabIndex = 25;
@@ -417,6 +419,8 @@ namespace ProyectoFinal_Progra_I
             // 
             // grbDatosCliente
             // 
+            this.grbDatosCliente.Controls.Add(this.listBox1);
+            this.grbDatosCliente.Controls.Add(this.label9);
             this.grbDatosCliente.Controls.Add(this.btnAgregarFotoCliente);
             this.grbDatosCliente.Controls.Add(this.pbFotoCliente);
             this.grbDatosCliente.Controls.Add(this.txtTelefonoCliente);
@@ -433,7 +437,7 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosCliente.Controls.Add(this.label3);
             this.grbDatosCliente.Location = new System.Drawing.Point(536, 12);
             this.grbDatosCliente.Name = "grbDatosCliente";
-            this.grbDatosCliente.Size = new System.Drawing.Size(657, 526);
+            this.grbDatosCliente.Size = new System.Drawing.Size(657, 609);
             this.grbDatosCliente.TabIndex = 26;
             this.grbDatosCliente.TabStop = false;
             this.grbDatosCliente.Text = "Datos del cliente";
@@ -464,6 +468,26 @@ namespace ProyectoFinal_Progra_I
             // erpClientes
             // 
             this.erpClientes.ContainerControl = this;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 401);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(183, 20);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Pacientes registrados";
+            // 
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(196, 401);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(429, 104);
+            this.listBox1.TabIndex = 20;
             // 
             // Clientes
             // 
@@ -534,5 +558,7 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimiento;
         private System.Windows.Forms.Button btnAgregarFotoCliente;
         private System.Windows.Forms.PictureBox pbFotoCliente;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label9;
     }
 }

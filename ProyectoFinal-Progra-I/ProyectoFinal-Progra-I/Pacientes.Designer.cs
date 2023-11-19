@@ -34,6 +34,19 @@ namespace ProyectoFinal_Progra_I
             this.txtBuscarPaciente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grbDatosPaciente = new System.Windows.Forms.GroupBox();
+            this.rdoMachoPaciente = new System.Windows.Forms.RadioButton();
+            this.rdoHembraPaciente = new System.Windows.Forms.RadioButton();
+            this.lblSexoPaciente = new System.Windows.Forms.Label();
+            this.cboTutorPaciente = new System.Windows.Forms.ComboBox();
+            this.lblTutorPaciente = new System.Windows.Forms.Label();
+            this.cboEspeciePaciente = new System.Windows.Forms.ComboBox();
+            this.cboColorPaciente = new System.Windows.Forms.ComboBox();
+            this.cboRazaPaciente = new System.Windows.Forms.ComboBox();
+            this.txtNombrePaciente = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtDescripcionPaciente = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dtpNacimietoPaciente = new System.Windows.Forms.DateTimePicker();
@@ -51,19 +64,6 @@ namespace ProyectoFinal_Progra_I
             this.btnModificarPaciente = new System.Windows.Forms.Button();
             this.btnEliminarPaciente = new System.Windows.Forms.Button();
             this.erpPacientes = new System.Windows.Forms.ErrorProvider(this.components);
-            this.rdoMachoPaciente = new System.Windows.Forms.RadioButton();
-            this.rdoHembraPaciente = new System.Windows.Forms.RadioButton();
-            this.lblSexoPaciente = new System.Windows.Forms.Label();
-            this.cboTutorPaciente = new System.Windows.Forms.ComboBox();
-            this.lblTutorPaciente = new System.Windows.Forms.Label();
-            this.cboEspeciePaciente = new System.Windows.Forms.ComboBox();
-            this.cboColorPaciente = new System.Windows.Forms.ComboBox();
-            this.cboRazaEspecie = new System.Windows.Forms.ComboBox();
-            this.txtNombrePaciente = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.grdDatosPacientes = new System.Windows.Forms.DataGridView();
             this.idPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -128,7 +128,7 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosPaciente.Controls.Add(this.lblTutorPaciente);
             this.grbDatosPaciente.Controls.Add(this.cboEspeciePaciente);
             this.grbDatosPaciente.Controls.Add(this.cboColorPaciente);
-            this.grbDatosPaciente.Controls.Add(this.cboRazaEspecie);
+            this.grbDatosPaciente.Controls.Add(this.cboRazaPaciente);
             this.grbDatosPaciente.Controls.Add(this.txtNombrePaciente);
             this.grbDatosPaciente.Controls.Add(this.label5);
             this.grbDatosPaciente.Controls.Add(this.label2);
@@ -146,6 +146,135 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosPaciente.TabIndex = 27;
             this.grbDatosPaciente.TabStop = false;
             this.grbDatosPaciente.Text = "Datos del paciente";
+            // 
+            // rdoMachoPaciente
+            // 
+            this.rdoMachoPaciente.AutoSize = true;
+            this.rdoMachoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoMachoPaciente.Location = new System.Drawing.Point(297, 305);
+            this.rdoMachoPaciente.Name = "rdoMachoPaciente";
+            this.rdoMachoPaciente.Size = new System.Drawing.Size(80, 24);
+            this.rdoMachoPaciente.TabIndex = 40;
+            this.rdoMachoPaciente.TabStop = true;
+            this.rdoMachoPaciente.Text = "Macho";
+            this.rdoMachoPaciente.UseVisualStyleBackColor = true;
+            // 
+            // rdoHembraPaciente
+            // 
+            this.rdoHembraPaciente.AutoSize = true;
+            this.rdoHembraPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoHembraPaciente.Location = new System.Drawing.Point(197, 303);
+            this.rdoHembraPaciente.Name = "rdoHembraPaciente";
+            this.rdoHembraPaciente.Size = new System.Drawing.Size(90, 24);
+            this.rdoHembraPaciente.TabIndex = 39;
+            this.rdoHembraPaciente.TabStop = true;
+            this.rdoHembraPaciente.Text = "Hembra";
+            this.rdoHembraPaciente.UseVisualStyleBackColor = true;
+            // 
+            // lblSexoPaciente
+            // 
+            this.lblSexoPaciente.AutoSize = true;
+            this.lblSexoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexoPaciente.Location = new System.Drawing.Point(131, 305);
+            this.lblSexoPaciente.Name = "lblSexoPaciente";
+            this.lblSexoPaciente.Size = new System.Drawing.Size(49, 20);
+            this.lblSexoPaciente.TabIndex = 38;
+            this.lblSexoPaciente.Text = "Sexo";
+            // 
+            // cboTutorPaciente
+            // 
+            this.cboTutorPaciente.Enabled = false;
+            this.cboTutorPaciente.FormattingEnabled = true;
+            this.cboTutorPaciente.Location = new System.Drawing.Point(197, 139);
+            this.cboTutorPaciente.Name = "cboTutorPaciente";
+            this.cboTutorPaciente.Size = new System.Drawing.Size(430, 21);
+            this.cboTutorPaciente.TabIndex = 37;
+            // 
+            // lblTutorPaciente
+            // 
+            this.lblTutorPaciente.AutoSize = true;
+            this.lblTutorPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTutorPaciente.Location = new System.Drawing.Point(131, 140);
+            this.lblTutorPaciente.Name = "lblTutorPaciente";
+            this.lblTutorPaciente.Size = new System.Drawing.Size(51, 20);
+            this.lblTutorPaciente.TabIndex = 36;
+            this.lblTutorPaciente.Text = "Tutor";
+            // 
+            // cboEspeciePaciente
+            // 
+            this.cboEspeciePaciente.Enabled = false;
+            this.cboEspeciePaciente.FormattingEnabled = true;
+            this.cboEspeciePaciente.Location = new System.Drawing.Point(195, 175);
+            this.cboEspeciePaciente.Name = "cboEspeciePaciente";
+            this.cboEspeciePaciente.Size = new System.Drawing.Size(430, 21);
+            this.cboEspeciePaciente.TabIndex = 35;
+            // 
+            // cboColorPaciente
+            // 
+            this.cboColorPaciente.Enabled = false;
+            this.cboColorPaciente.FormattingEnabled = true;
+            this.cboColorPaciente.Location = new System.Drawing.Point(195, 266);
+            this.cboColorPaciente.Name = "cboColorPaciente";
+            this.cboColorPaciente.Size = new System.Drawing.Size(430, 21);
+            this.cboColorPaciente.TabIndex = 34;
+            // 
+            // cboRazaPaciente
+            // 
+            this.cboRazaPaciente.Enabled = false;
+            this.cboRazaPaciente.FormattingEnabled = true;
+            this.cboRazaPaciente.Location = new System.Drawing.Point(195, 219);
+            this.cboRazaPaciente.Name = "cboRazaPaciente";
+            this.cboRazaPaciente.Size = new System.Drawing.Size(430, 21);
+            this.cboRazaPaciente.TabIndex = 33;
+            // 
+            // txtNombrePaciente
+            // 
+            this.txtNombrePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombrePaciente.Location = new System.Drawing.Point(195, 86);
+            this.txtNombrePaciente.Name = "txtNombrePaciente";
+            this.txtNombrePaciente.ReadOnly = true;
+            this.txtNombrePaciente.Size = new System.Drawing.Size(430, 26);
+            this.txtNombrePaciente.TabIndex = 32;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(131, 266);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 20);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Color";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(109, 173);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 20);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Especie";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(111, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Nombre";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(131, 220);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Raza";
             // 
             // txtDescripcionPaciente
             // 
@@ -329,135 +458,6 @@ namespace ProyectoFinal_Progra_I
             // 
             this.erpPacientes.ContainerControl = this;
             // 
-            // rdoMachoPaciente
-            // 
-            this.rdoMachoPaciente.AutoSize = true;
-            this.rdoMachoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoMachoPaciente.Location = new System.Drawing.Point(297, 305);
-            this.rdoMachoPaciente.Name = "rdoMachoPaciente";
-            this.rdoMachoPaciente.Size = new System.Drawing.Size(80, 24);
-            this.rdoMachoPaciente.TabIndex = 40;
-            this.rdoMachoPaciente.TabStop = true;
-            this.rdoMachoPaciente.Text = "Macho";
-            this.rdoMachoPaciente.UseVisualStyleBackColor = true;
-            // 
-            // rdoHembraPaciente
-            // 
-            this.rdoHembraPaciente.AutoSize = true;
-            this.rdoHembraPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoHembraPaciente.Location = new System.Drawing.Point(197, 303);
-            this.rdoHembraPaciente.Name = "rdoHembraPaciente";
-            this.rdoHembraPaciente.Size = new System.Drawing.Size(90, 24);
-            this.rdoHembraPaciente.TabIndex = 39;
-            this.rdoHembraPaciente.TabStop = true;
-            this.rdoHembraPaciente.Text = "Hembra";
-            this.rdoHembraPaciente.UseVisualStyleBackColor = true;
-            // 
-            // lblSexoPaciente
-            // 
-            this.lblSexoPaciente.AutoSize = true;
-            this.lblSexoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexoPaciente.Location = new System.Drawing.Point(131, 305);
-            this.lblSexoPaciente.Name = "lblSexoPaciente";
-            this.lblSexoPaciente.Size = new System.Drawing.Size(49, 20);
-            this.lblSexoPaciente.TabIndex = 38;
-            this.lblSexoPaciente.Text = "Sexo";
-            // 
-            // cboTutorPaciente
-            // 
-            this.cboTutorPaciente.Enabled = false;
-            this.cboTutorPaciente.FormattingEnabled = true;
-            this.cboTutorPaciente.Location = new System.Drawing.Point(197, 139);
-            this.cboTutorPaciente.Name = "cboTutorPaciente";
-            this.cboTutorPaciente.Size = new System.Drawing.Size(430, 21);
-            this.cboTutorPaciente.TabIndex = 37;
-            // 
-            // lblTutorPaciente
-            // 
-            this.lblTutorPaciente.AutoSize = true;
-            this.lblTutorPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTutorPaciente.Location = new System.Drawing.Point(131, 140);
-            this.lblTutorPaciente.Name = "lblTutorPaciente";
-            this.lblTutorPaciente.Size = new System.Drawing.Size(51, 20);
-            this.lblTutorPaciente.TabIndex = 36;
-            this.lblTutorPaciente.Text = "Tutor";
-            // 
-            // cboEspeciePaciente
-            // 
-            this.cboEspeciePaciente.Enabled = false;
-            this.cboEspeciePaciente.FormattingEnabled = true;
-            this.cboEspeciePaciente.Location = new System.Drawing.Point(195, 175);
-            this.cboEspeciePaciente.Name = "cboEspeciePaciente";
-            this.cboEspeciePaciente.Size = new System.Drawing.Size(430, 21);
-            this.cboEspeciePaciente.TabIndex = 35;
-            // 
-            // cboColorPaciente
-            // 
-            this.cboColorPaciente.Enabled = false;
-            this.cboColorPaciente.FormattingEnabled = true;
-            this.cboColorPaciente.Location = new System.Drawing.Point(195, 266);
-            this.cboColorPaciente.Name = "cboColorPaciente";
-            this.cboColorPaciente.Size = new System.Drawing.Size(430, 21);
-            this.cboColorPaciente.TabIndex = 34;
-            // 
-            // cboRazaEspecie
-            // 
-            this.cboRazaEspecie.Enabled = false;
-            this.cboRazaEspecie.FormattingEnabled = true;
-            this.cboRazaEspecie.Location = new System.Drawing.Point(195, 219);
-            this.cboRazaEspecie.Name = "cboRazaEspecie";
-            this.cboRazaEspecie.Size = new System.Drawing.Size(430, 21);
-            this.cboRazaEspecie.TabIndex = 33;
-            // 
-            // txtNombrePaciente
-            // 
-            this.txtNombrePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombrePaciente.Location = new System.Drawing.Point(195, 86);
-            this.txtNombrePaciente.Name = "txtNombrePaciente";
-            this.txtNombrePaciente.ReadOnly = true;
-            this.txtNombrePaciente.Size = new System.Drawing.Size(430, 26);
-            this.txtNombrePaciente.TabIndex = 32;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(131, 266);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 20);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Color";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(109, 173);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 20);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Especie";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(111, 91);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Nombre";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(131, 220);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Raza";
-            // 
             // grdDatosPacientes
             // 
             this.grdDatosPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -610,7 +610,7 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.Label lblTutorPaciente;
         private System.Windows.Forms.ComboBox cboEspeciePaciente;
         private System.Windows.Forms.ComboBox cboColorPaciente;
-        private System.Windows.Forms.ComboBox cboRazaEspecie;
+        private System.Windows.Forms.ComboBox cboRazaPaciente;
         private System.Windows.Forms.TextBox txtNombrePaciente;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;

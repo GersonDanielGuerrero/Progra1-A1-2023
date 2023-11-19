@@ -70,11 +70,11 @@ namespace ProyectoFinal_Progra_I
             {
 
                 txtNombrePaciente.Text = miTabla.Rows[posicion].ItemArray[1].ToString().Trim();
-                txtEspeciePaciente.Text = miTabla.Rows[posicion].ItemArray[2].ToString().Trim();
-                txtRazaPaciente.Text = miTabla.Rows[posicion].ItemArray[3].ToString().Trim();
-                txtColorPaciente.Text = miTabla.Rows[posicion].ItemArray[4].ToString().Trim();
-                txtEstaturaPaciente.Text = miTabla.Rows[posicion].ItemArray[5].ToString().Trim();
-                txtPesoPaciente.Text = miTabla.Rows[posicion].ItemArray[6].ToString().Trim();
+
+                cboEspeciePaciente.Text = miTabla.Rows[posicion].ItemArray[2].ToString().Trim();
+                cboRazaPaciente.Text = miTabla.Rows[posicion].ItemArray[3].ToString().Trim();
+                cboColorPaciente.Text = miTabla.Rows[posicion].ItemArray[4].ToString().Trim();
+                //sexo,tutor
                 dtpNacimietoPaciente.Value = (DateTime)miTabla.Rows[posicion].ItemArray[7];
                 dtpRegistroPaciente.Value = (DateTime)miTabla.Rows[posicion].ItemArray[8];
                 txtDescripcionPaciente.Text = miTabla.Rows[posicion].ItemArray[9].ToString().Trim();

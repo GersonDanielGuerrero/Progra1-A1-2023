@@ -31,6 +31,12 @@ namespace ProyectoFinal_Progra_I
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
             this.grbDatosUsuario = new System.Windows.Forms.GroupBox();
+            this.txtConfirmacionDeContraseñaUsuario = new System.Windows.Forms.TextBox();
+            this.lblConfirmacionDeContraseñaUsuario = new System.Windows.Forms.Label();
+            this.txtContraseñaUsuario = new System.Windows.Forms.TextBox();
+            this.lblContraseñaUsuarios = new System.Windows.Forms.Label();
+            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.btnAgregarFotoUsuario = new System.Windows.Forms.Button();
             this.pbFotoUsuario = new System.Windows.Forms.PictureBox();
             this.txtTelefonoUsuario = new System.Windows.Forms.TextBox();
@@ -49,6 +55,15 @@ namespace ProyectoFinal_Progra_I
             this.txtBuscarUsuario = new System.Windows.Forms.TextBox();
             this.lblBuscarUsuario = new System.Windows.Forms.Label();
             this.grdDatosUsuarios = new System.Windows.Forms.DataGridView();
+            this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbNavegacionUsuario = new System.Windows.Forms.GroupBox();
             this.btnPrimeroUsuario = new System.Windows.Forms.Button();
             this.btnAnteriorUsuario = new System.Windows.Forms.Button();
@@ -59,21 +74,6 @@ namespace ProyectoFinal_Progra_I
             this.btnNuevoUsuario = new System.Windows.Forms.Button();
             this.btnModificarUsuario = new System.Windows.Forms.Button();
             this.btnEliminarUsuario = new System.Windows.Forms.Button();
-            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
-            this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.txtContraseñaUsuario = new System.Windows.Forms.TextBox();
-            this.lblContraseñaUsuarios = new System.Windows.Forms.Label();
-            this.txtConfirmacionDeContraseñaUsuario = new System.Windows.Forms.TextBox();
-            this.lblConfirmacionDeContraseñaUsuario = new System.Windows.Forms.Label();
-            this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbDatosUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosUsuarios)).BeginInit();
@@ -109,6 +109,63 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosUsuario.TabIndex = 31;
             this.grbDatosUsuario.TabStop = false;
             this.grbDatosUsuario.Text = "Datos del usuario";
+            // 
+            // txtConfirmacionDeContraseñaUsuario
+            // 
+            this.txtConfirmacionDeContraseñaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmacionDeContraseñaUsuario.Location = new System.Drawing.Point(262, 314);
+            this.txtConfirmacionDeContraseñaUsuario.Name = "txtConfirmacionDeContraseñaUsuario";
+            this.txtConfirmacionDeContraseñaUsuario.ReadOnly = true;
+            this.txtConfirmacionDeContraseñaUsuario.Size = new System.Drawing.Size(430, 26);
+            this.txtConfirmacionDeContraseñaUsuario.TabIndex = 23;
+            // 
+            // lblConfirmacionDeContraseñaUsuario
+            // 
+            this.lblConfirmacionDeContraseñaUsuario.AutoSize = true;
+            this.lblConfirmacionDeContraseñaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmacionDeContraseñaUsuario.Location = new System.Drawing.Point(15, 320);
+            this.lblConfirmacionDeContraseñaUsuario.Name = "lblConfirmacionDeContraseñaUsuario";
+            this.lblConfirmacionDeContraseñaUsuario.Size = new System.Drawing.Size(234, 20);
+            this.lblConfirmacionDeContraseñaUsuario.TabIndex = 22;
+            this.lblConfirmacionDeContraseñaUsuario.Text = "Confirmación de contraseña";
+            // 
+            // txtContraseñaUsuario
+            // 
+            this.txtContraseñaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaUsuario.Location = new System.Drawing.Point(262, 270);
+            this.txtContraseñaUsuario.Name = "txtContraseñaUsuario";
+            this.txtContraseñaUsuario.ReadOnly = true;
+            this.txtContraseñaUsuario.Size = new System.Drawing.Size(430, 26);
+            this.txtContraseñaUsuario.TabIndex = 21;
+            // 
+            // lblContraseñaUsuarios
+            // 
+            this.lblContraseñaUsuarios.AutoSize = true;
+            this.lblContraseñaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseñaUsuarios.Location = new System.Drawing.Point(147, 273);
+            this.lblContraseñaUsuarios.Name = "lblContraseñaUsuarios";
+            this.lblContraseñaUsuarios.Size = new System.Drawing.Size(102, 20);
+            this.lblContraseñaUsuarios.TabIndex = 20;
+            this.lblContraseñaUsuarios.Text = "Contraseña";
+            // 
+            // txtNombreUsuario
+            // 
+            this.txtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreUsuario.Location = new System.Drawing.Point(262, 183);
+            this.txtNombreUsuario.Name = "txtNombreUsuario";
+            this.txtNombreUsuario.ReadOnly = true;
+            this.txtNombreUsuario.Size = new System.Drawing.Size(430, 26);
+            this.txtNombreUsuario.TabIndex = 19;
+            // 
+            // lblNombreUsuario
+            // 
+            this.lblNombreUsuario.AutoSize = true;
+            this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreUsuario.Location = new System.Drawing.Point(178, 188);
+            this.lblNombreUsuario.Name = "lblNombreUsuario";
+            this.lblNombreUsuario.Size = new System.Drawing.Size(71, 20);
+            this.lblNombreUsuario.TabIndex = 18;
+            this.lblNombreUsuario.Text = "Nombre";
             // 
             // btnAgregarFotoUsuario
             // 
@@ -299,6 +356,69 @@ namespace ProyectoFinal_Progra_I
             this.grdDatosUsuarios.Size = new System.Drawing.Size(490, 540);
             this.grdDatosUsuarios.TabIndex = 27;
             // 
+            // idCliente
+            // 
+            this.idCliente.DataPropertyName = "idCliente";
+            this.idCliente.HeaderText = "ID";
+            this.idCliente.Name = "idCliente";
+            this.idCliente.ReadOnly = true;
+            this.idCliente.Visible = false;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // usuario
+            // 
+            this.usuario.HeaderText = "Usuario";
+            this.usuario.Name = "usuario";
+            this.usuario.ReadOnly = true;
+            // 
+            // contraseña
+            // 
+            this.contraseña.HeaderText = "Contraseña";
+            this.contraseña.Name = "contraseña";
+            this.contraseña.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            this.telefono.DataPropertyName = "telefono";
+            this.telefono.HeaderText = "Teléfono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            this.telefono.Width = 50;
+            // 
+            // direccion
+            // 
+            this.direccion.DataPropertyName = "direccion";
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            // 
+            // correo
+            // 
+            this.correo.DataPropertyName = "correo";
+            this.correo.HeaderText = "Correo";
+            this.correo.Name = "correo";
+            this.correo.ReadOnly = true;
+            // 
+            // fechaRegistro
+            // 
+            this.fechaRegistro.DataPropertyName = "fechaRegistro";
+            this.fechaRegistro.HeaderText = "Fecha de registro";
+            this.fechaRegistro.Name = "fechaRegistro";
+            this.fechaRegistro.ReadOnly = true;
+            // 
+            // fechaNacimiento
+            // 
+            this.fechaNacimiento.DataPropertyName = "fechaNacimiento";
+            this.fechaNacimiento.HeaderText = "Fecha de nacimiento";
+            this.fechaNacimiento.Name = "fechaNacimiento";
+            this.fechaNacimiento.ReadOnly = true;
+            // 
             // grbNavegacionUsuario
             // 
             this.grbNavegacionUsuario.BackColor = System.Drawing.SystemColors.Control;
@@ -413,131 +533,12 @@ namespace ProyectoFinal_Progra_I
             this.btnEliminarUsuario.Text = "Eliminar Cliente";
             this.btnEliminarUsuario.UseVisualStyleBackColor = false;
             // 
-            // txtNombreUsuario
-            // 
-            this.txtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreUsuario.Location = new System.Drawing.Point(262, 183);
-            this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.ReadOnly = true;
-            this.txtNombreUsuario.Size = new System.Drawing.Size(430, 26);
-            this.txtNombreUsuario.TabIndex = 19;
-            // 
-            // lblNombreUsuario
-            // 
-            this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreUsuario.Location = new System.Drawing.Point(178, 188);
-            this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(71, 20);
-            this.lblNombreUsuario.TabIndex = 18;
-            this.lblNombreUsuario.Text = "Nombre";
-            // 
-            // txtContraseñaUsuario
-            // 
-            this.txtContraseñaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaUsuario.Location = new System.Drawing.Point(262, 270);
-            this.txtContraseñaUsuario.Name = "txtContraseñaUsuario";
-            this.txtContraseñaUsuario.ReadOnly = true;
-            this.txtContraseñaUsuario.Size = new System.Drawing.Size(430, 26);
-            this.txtContraseñaUsuario.TabIndex = 21;
-            // 
-            // lblContraseñaUsuarios
-            // 
-            this.lblContraseñaUsuarios.AutoSize = true;
-            this.lblContraseñaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseñaUsuarios.Location = new System.Drawing.Point(147, 273);
-            this.lblContraseñaUsuarios.Name = "lblContraseñaUsuarios";
-            this.lblContraseñaUsuarios.Size = new System.Drawing.Size(102, 20);
-            this.lblContraseñaUsuarios.TabIndex = 20;
-            this.lblContraseñaUsuarios.Text = "Contraseña";
-            // 
-            // txtConfirmacionDeContraseñaUsuario
-            // 
-            this.txtConfirmacionDeContraseñaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmacionDeContraseñaUsuario.Location = new System.Drawing.Point(262, 314);
-            this.txtConfirmacionDeContraseñaUsuario.Name = "txtConfirmacionDeContraseñaUsuario";
-            this.txtConfirmacionDeContraseñaUsuario.ReadOnly = true;
-            this.txtConfirmacionDeContraseñaUsuario.Size = new System.Drawing.Size(430, 26);
-            this.txtConfirmacionDeContraseñaUsuario.TabIndex = 23;
-            // 
-            // lblConfirmacionDeContraseñaUsuario
-            // 
-            this.lblConfirmacionDeContraseñaUsuario.AutoSize = true;
-            this.lblConfirmacionDeContraseñaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmacionDeContraseñaUsuario.Location = new System.Drawing.Point(15, 320);
-            this.lblConfirmacionDeContraseñaUsuario.Name = "lblConfirmacionDeContraseñaUsuario";
-            this.lblConfirmacionDeContraseñaUsuario.Size = new System.Drawing.Size(234, 20);
-            this.lblConfirmacionDeContraseñaUsuario.TabIndex = 22;
-            this.lblConfirmacionDeContraseñaUsuario.Text = "Confirmación de contraseña";
-            // 
-            // idCliente
-            // 
-            this.idCliente.DataPropertyName = "idCliente";
-            this.idCliente.HeaderText = "ID";
-            this.idCliente.Name = "idCliente";
-            this.idCliente.ReadOnly = true;
-            this.idCliente.Visible = false;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // usuario
-            // 
-            this.usuario.HeaderText = "Usuario";
-            this.usuario.Name = "usuario";
-            this.usuario.ReadOnly = true;
-            // 
-            // contraseña
-            // 
-            this.contraseña.HeaderText = "Contraseña";
-            this.contraseña.Name = "contraseña";
-            this.contraseña.ReadOnly = true;
-            // 
-            // telefono
-            // 
-            this.telefono.DataPropertyName = "telefono";
-            this.telefono.HeaderText = "Teléfono";
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            this.telefono.Width = 50;
-            // 
-            // direccion
-            // 
-            this.direccion.DataPropertyName = "direccion";
-            this.direccion.HeaderText = "Dirección";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            // 
-            // correo
-            // 
-            this.correo.DataPropertyName = "correo";
-            this.correo.HeaderText = "Correo";
-            this.correo.Name = "correo";
-            this.correo.ReadOnly = true;
-            // 
-            // fechaRegistro
-            // 
-            this.fechaRegistro.DataPropertyName = "fechaRegistro";
-            this.fechaRegistro.HeaderText = "Fecha de registro";
-            this.fechaRegistro.Name = "fechaRegistro";
-            this.fechaRegistro.ReadOnly = true;
-            // 
-            // fechaNacimiento
-            // 
-            this.fechaNacimiento.DataPropertyName = "fechaNacimiento";
-            this.fechaNacimiento.HeaderText = "Fecha de nacimiento";
-            this.fechaNacimiento.Name = "fechaNacimiento";
-            this.fechaNacimiento.ReadOnly = true;
-            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ControlBox = false;
             this.Controls.Add(this.grbNavegacionUsuario);
             this.Controls.Add(this.grbEdicionUsuario);
             this.Controls.Add(this.grbDatosUsuario);
@@ -547,6 +548,7 @@ namespace ProyectoFinal_Progra_I
             this.Controls.Add(this.grdDatosUsuarios);
             this.Name = "Usuarios";
             this.Text = "Usuarios";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.grbDatosUsuario.ResumeLayout(false);
             this.grbDatosUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoUsuario)).EndInit();
