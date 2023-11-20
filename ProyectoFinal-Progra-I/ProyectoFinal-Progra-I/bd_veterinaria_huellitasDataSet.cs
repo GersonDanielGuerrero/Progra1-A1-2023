@@ -6,3 +6,10 @@
     {
     }
 }
+
+namespace ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters {
+    
+    
+    public partial class pacientesColoresTableAdapter {
+    }
+}

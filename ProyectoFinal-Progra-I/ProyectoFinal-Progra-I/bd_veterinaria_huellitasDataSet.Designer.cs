@@ -56,6 +56,8 @@ namespace ProyectoFinal_Progra_I {
         
         private datosPacientesDataTable tabledatosPacientes;
         
+        private pacientesColoresDataTable tablepacientesColores;
+        
         private global::System.Data.DataRelation relationfk_fallecimientos_pacientes;
         
         private global::System.Data.DataRelation relationFK_pacientes_Clientes;
@@ -83,6 +85,8 @@ namespace ProyectoFinal_Progra_I {
         private global::System.Data.DataRelation relationfk_idProducto_tratamiento;
         
         private global::System.Data.DataRelation relationFK_pacientes_Clientes1;
+        
+        private global::System.Data.DataRelation relationFK_pacientes_colores1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -159,6 +163,9 @@ namespace ProyectoFinal_Progra_I {
                 }
                 if ((ds.Tables["datosPacientes"] != null)) {
                     base.Tables.Add(new datosPacientesDataTable(ds.Tables["datosPacientes"]));
+                }
+                if ((ds.Tables["pacientesColores"] != null)) {
+                    base.Tables.Add(new pacientesColoresDataTable(ds.Tables["pacientesColores"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -340,6 +347,16 @@ namespace ProyectoFinal_Progra_I {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public pacientesColoresDataTable pacientesColores {
+            get {
+                return this.tablepacientesColores;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -452,6 +469,9 @@ namespace ProyectoFinal_Progra_I {
                 }
                 if ((ds.Tables["datosPacientes"] != null)) {
                     base.Tables.Add(new datosPacientesDataTable(ds.Tables["datosPacientes"]));
+                }
+                if ((ds.Tables["pacientesColores"] != null)) {
+                    base.Tables.Add(new pacientesColoresDataTable(ds.Tables["pacientesColores"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -582,6 +602,12 @@ namespace ProyectoFinal_Progra_I {
                     this.tabledatosPacientes.InitVars();
                 }
             }
+            this.tablepacientesColores = ((pacientesColoresDataTable)(base.Tables["pacientesColores"]));
+            if ((initTable == true)) {
+                if ((this.tablepacientesColores != null)) {
+                    this.tablepacientesColores.InitVars();
+                }
+            }
             this.relationfk_fallecimientos_pacientes = this.Relations["fk_fallecimientos_pacientes"];
             this.relationFK_pacientes_Clientes = this.Relations["FK_pacientes_Clientes"];
             this.relationFK_pacientes_especies = this.Relations["FK_pacientes_especies"];
@@ -596,6 +622,7 @@ namespace ProyectoFinal_Progra_I {
             this.relationfk_idPaciente_tratamiento = this.Relations["fk_idPaciente_tratamiento"];
             this.relationfk_idProducto_tratamiento = this.Relations["fk_idProducto_tratamiento"];
             this.relationFK_pacientes_Clientes1 = this.Relations["FK_pacientes_Clientes1"];
+            this.relationFK_pacientes_colores1 = this.Relations["FK_pacientes_colores1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -638,6 +665,8 @@ namespace ProyectoFinal_Progra_I {
             base.Tables.Add(this.tableusuarios);
             this.tabledatosPacientes = new datosPacientesDataTable();
             base.Tables.Add(this.tabledatosPacientes);
+            this.tablepacientesColores = new pacientesColoresDataTable();
+            base.Tables.Add(this.tablepacientesColores);
             this.relationfk_fallecimientos_pacientes = new global::System.Data.DataRelation("fk_fallecimientos_pacientes", new global::System.Data.DataColumn[] {
                         this.tablepacientes.idPacienteColumn}, new global::System.Data.DataColumn[] {
                         this.tablefallecimientos.idPacienteColumn}, false);
@@ -694,6 +723,10 @@ namespace ProyectoFinal_Progra_I {
                         this.tabledatosPacientes.idClienteColumn}, new global::System.Data.DataColumn[] {
                         this.tablepacientes.idClienteColumn}, false);
             this.Relations.Add(this.relationFK_pacientes_Clientes1);
+            this.relationFK_pacientes_colores1 = new global::System.Data.DataRelation("FK_pacientes_colores1", new global::System.Data.DataColumn[] {
+                        this.tablepacientesColores.idColorColumn}, new global::System.Data.DataColumn[] {
+                        this.tablepacientes_colores.idColorColumn}, false);
+            this.Relations.Add(this.relationFK_pacientes_colores1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -789,6 +822,12 @@ namespace ProyectoFinal_Progra_I {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializedatosPacientes() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializepacientesColores() {
             return false;
         }
         
@@ -894,6 +933,9 @@ namespace ProyectoFinal_Progra_I {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void datosPacientesRowChangeEventHandler(object sender, datosPacientesRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void pacientesColoresRowChangeEventHandler(object sender, pacientesColoresRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5568,27 +5610,19 @@ namespace ProyectoFinal_Progra_I {
             
             private global::System.Data.DataColumn columnidPaciente;
             
-            private global::System.Data.DataColumn columnnombre;
-            
-            private global::System.Data.DataColumn columnsexo;
-            
-            private global::System.Data.DataColumn columnraza;
-            
-            private global::System.Data.DataColumn columnespecie;
-            
-            private global::System.Data.DataColumn columnfechaNacimiento;
-            
-            private global::System.Data.DataColumn columndescripcion;
-            
             private global::System.Data.DataColumn columnidCliente;
-            
-            private global::System.Data.DataColumn columnTutor;
-            
-            private global::System.Data.DataColumn columnfechaRegistro;
             
             private global::System.Data.DataColumn columnidEspecie;
             
             private global::System.Data.DataColumn columnidRaza;
+            
+            private global::System.Data.DataColumn columnnombre;
+            
+            private global::System.Data.DataColumn columntutor;
+            
+            private global::System.Data.DataColumn columnespecie;
+            
+            private global::System.Data.DataColumn columnraza;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -5633,73 +5667,9 @@ namespace ProyectoFinal_Progra_I {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn nombreColumn {
-                get {
-                    return this.columnnombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn sexoColumn {
-                get {
-                    return this.columnsexo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn razaColumn {
-                get {
-                    return this.columnraza;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn especieColumn {
-                get {
-                    return this.columnespecie;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fechaNacimientoColumn {
-                get {
-                    return this.columnfechaNacimiento;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn descripcionColumn {
-                get {
-                    return this.columndescripcion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn idClienteColumn {
                 get {
                     return this.columnidCliente;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TutorColumn {
-                get {
-                    return this.columnTutor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fechaRegistroColumn {
-                get {
-                    return this.columnfechaRegistro;
                 }
             }
             
@@ -5716,6 +5686,38 @@ namespace ProyectoFinal_Progra_I {
             public global::System.Data.DataColumn idRazaColumn {
                 get {
                     return this.columnidRaza;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn nombreColumn {
+                get {
+                    return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn tutorColumn {
+                get {
+                    return this.columntutor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn especieColumn {
+                get {
+                    return this.columnespecie;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn razaColumn {
+                get {
+                    return this.columnraza;
                 }
             }
             
@@ -5756,21 +5758,17 @@ namespace ProyectoFinal_Progra_I {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public datosPacientesRow AdddatosPacientesRow(string nombre, string sexo, string raza, string especie, System.DateTime fechaNacimiento, string descripcion, string Tutor, System.DateTime fechaRegistro) {
+            public datosPacientesRow AdddatosPacientesRow(int idCliente, int idEspecie, int idRaza, string nombre, string tutor, string especie, string raza) {
                 datosPacientesRow rowdatosPacientesRow = ((datosPacientesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
+                        idCliente,
+                        idEspecie,
+                        idRaza,
                         nombre,
-                        sexo,
-                        raza,
+                        tutor,
                         especie,
-                        fechaNacimiento,
-                        descripcion,
-                        null,
-                        Tutor,
-                        fechaRegistro,
-                        null,
-                        null};
+                        raza};
                 rowdatosPacientesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdatosPacientesRow);
                 return rowdatosPacientesRow;
@@ -5778,12 +5776,9 @@ namespace ProyectoFinal_Progra_I {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public datosPacientesRow FindByidPacienteidClienteidEspecieidRaza(int idPaciente, int idCliente, int idEspecie, int idRaza) {
+            public datosPacientesRow FindByidPaciente(int idPaciente) {
                 return ((datosPacientesRow)(this.Rows.Find(new object[] {
-                            idPaciente,
-                            idCliente,
-                            idEspecie,
-                            idRaza})));
+                            idPaciente})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5804,17 +5799,13 @@ namespace ProyectoFinal_Progra_I {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnidPaciente = base.Columns["idPaciente"];
-                this.columnnombre = base.Columns["nombre"];
-                this.columnsexo = base.Columns["sexo"];
-                this.columnraza = base.Columns["raza"];
-                this.columnespecie = base.Columns["especie"];
-                this.columnfechaNacimiento = base.Columns["fechaNacimiento"];
-                this.columndescripcion = base.Columns["descripcion"];
                 this.columnidCliente = base.Columns["idCliente"];
-                this.columnTutor = base.Columns["Tutor"];
-                this.columnfechaRegistro = base.Columns["fechaRegistro"];
                 this.columnidEspecie = base.Columns["idEspecie"];
                 this.columnidRaza = base.Columns["idRaza"];
+                this.columnnombre = base.Columns["nombre"];
+                this.columntutor = base.Columns["tutor"];
+                this.columnespecie = base.Columns["especie"];
+                this.columnraza = base.Columns["raza"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5822,66 +5813,39 @@ namespace ProyectoFinal_Progra_I {
             private void InitClass() {
                 this.columnidPaciente = new global::System.Data.DataColumn("idPaciente", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidPaciente);
-                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre);
-                this.columnsexo = new global::System.Data.DataColumn("sexo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsexo);
-                this.columnraza = new global::System.Data.DataColumn("raza", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnraza);
-                this.columnespecie = new global::System.Data.DataColumn("especie", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnespecie);
-                this.columnfechaNacimiento = new global::System.Data.DataColumn("fechaNacimiento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfechaNacimiento);
-                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndescripcion);
                 this.columnidCliente = new global::System.Data.DataColumn("idCliente", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidCliente);
-                this.columnTutor = new global::System.Data.DataColumn("Tutor", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTutor);
-                this.columnfechaRegistro = new global::System.Data.DataColumn("fechaRegistro", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfechaRegistro);
                 this.columnidEspecie = new global::System.Data.DataColumn("idEspecie", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidEspecie);
                 this.columnidRaza = new global::System.Data.DataColumn("idRaza", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidRaza);
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
+                this.columntutor = new global::System.Data.DataColumn("tutor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntutor);
+                this.columnespecie = new global::System.Data.DataColumn("especie", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnespecie);
+                this.columnraza = new global::System.Data.DataColumn("raza", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnraza);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidPaciente,
-                                this.columnidCliente,
-                                this.columnidEspecie,
-                                this.columnidRaza}, true));
+                                this.columnidPaciente}, true));
                 this.columnidPaciente.AutoIncrement = true;
                 this.columnidPaciente.AutoIncrementSeed = -1;
                 this.columnidPaciente.AutoIncrementStep = -1;
                 this.columnidPaciente.AllowDBNull = false;
                 this.columnidPaciente.ReadOnly = true;
+                this.columnidPaciente.Unique = true;
+                this.columnidCliente.AllowDBNull = false;
+                this.columnidEspecie.AllowDBNull = false;
+                this.columnidRaza.AllowDBNull = false;
                 this.columnnombre.AllowDBNull = false;
                 this.columnnombre.MaxLength = 75;
-                this.columnsexo.AllowDBNull = false;
-                this.columnsexo.MaxLength = 6;
-                this.columnraza.AllowDBNull = false;
-                this.columnraza.MaxLength = 75;
+                this.columntutor.AllowDBNull = false;
+                this.columntutor.MaxLength = 75;
                 this.columnespecie.AllowDBNull = false;
                 this.columnespecie.MaxLength = 75;
-                this.columnfechaNacimiento.AllowDBNull = false;
-                this.columndescripcion.MaxLength = 500;
-                this.columnidCliente.AutoIncrement = true;
-                this.columnidCliente.AutoIncrementSeed = -1;
-                this.columnidCliente.AutoIncrementStep = -1;
-                this.columnidCliente.AllowDBNull = false;
-                this.columnidCliente.ReadOnly = true;
-                this.columnTutor.AllowDBNull = false;
-                this.columnTutor.MaxLength = 75;
-                this.columnfechaRegistro.AllowDBNull = false;
-                this.columnidEspecie.AutoIncrement = true;
-                this.columnidEspecie.AutoIncrementSeed = -1;
-                this.columnidEspecie.AutoIncrementStep = -1;
-                this.columnidEspecie.AllowDBNull = false;
-                this.columnidEspecie.ReadOnly = true;
-                this.columnidRaza.AutoIncrement = true;
-                this.columnidRaza.AutoIncrementSeed = -1;
-                this.columnidRaza.AutoIncrementStep = -1;
-                this.columnidRaza.AllowDBNull = false;
-                this.columnidRaza.ReadOnly = true;
+                this.columnraza.AllowDBNull = false;
+                this.columnraza.MaxLength = 75;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5968,6 +5932,301 @@ namespace ProyectoFinal_Progra_I {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "datosPacientesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class pacientesColoresDataTable : global::System.Data.TypedTableBase<pacientesColoresRow> {
+            
+            private global::System.Data.DataColumn columnnombre;
+            
+            private global::System.Data.DataColumn columnidPaciente;
+            
+            private global::System.Data.DataColumn columnidColor;
+            
+            private global::System.Data.DataColumn columncolor;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pacientesColoresDataTable() {
+                this.TableName = "pacientesColores";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal pacientesColoresDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected pacientesColoresDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn nombreColumn {
+                get {
+                    return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idPacienteColumn {
+                get {
+                    return this.columnidPaciente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idColorColumn {
+                get {
+                    return this.columnidColor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn colorColumn {
+                get {
+                    return this.columncolor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pacientesColoresRow this[int index] {
+                get {
+                    return ((pacientesColoresRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event pacientesColoresRowChangeEventHandler pacientesColoresRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event pacientesColoresRowChangeEventHandler pacientesColoresRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event pacientesColoresRowChangeEventHandler pacientesColoresRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event pacientesColoresRowChangeEventHandler pacientesColoresRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddpacientesColoresRow(pacientesColoresRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pacientesColoresRow AddpacientesColoresRow(string nombre, int idPaciente, int idColor, string color) {
+                pacientesColoresRow rowpacientesColoresRow = ((pacientesColoresRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        nombre,
+                        idPaciente,
+                        idColor,
+                        color};
+                rowpacientesColoresRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowpacientesColoresRow);
+                return rowpacientesColoresRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                pacientesColoresDataTable cln = ((pacientesColoresDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new pacientesColoresDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnnombre = base.Columns["nombre"];
+                this.columnidPaciente = base.Columns["idPaciente"];
+                this.columnidColor = base.Columns["idColor"];
+                this.columncolor = base.Columns["color"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
+                this.columnidPaciente = new global::System.Data.DataColumn("idPaciente", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidPaciente);
+                this.columnidColor = new global::System.Data.DataColumn("idColor", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidColor);
+                this.columncolor = new global::System.Data.DataColumn("color", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncolor);
+                this.columnnombre.AllowDBNull = false;
+                this.columnnombre.MaxLength = 75;
+                this.columnidPaciente.AllowDBNull = false;
+                this.columnidColor.AllowDBNull = false;
+                this.columncolor.AllowDBNull = false;
+                this.columncolor.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pacientesColoresRow NewpacientesColoresRow() {
+                return ((pacientesColoresRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new pacientesColoresRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(pacientesColoresRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.pacientesColoresRowChanged != null)) {
+                    this.pacientesColoresRowChanged(this, new pacientesColoresRowChangeEvent(((pacientesColoresRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.pacientesColoresRowChanging != null)) {
+                    this.pacientesColoresRowChanging(this, new pacientesColoresRowChangeEvent(((pacientesColoresRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.pacientesColoresRowDeleted != null)) {
+                    this.pacientesColoresRowDeleted(this, new pacientesColoresRowChangeEvent(((pacientesColoresRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.pacientesColoresRowDeleting != null)) {
+                    this.pacientesColoresRowDeleting(this, new pacientesColoresRowChangeEvent(((pacientesColoresRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovepacientesColoresRow(pacientesColoresRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                bd_veterinaria_huellitasDataSet ds = new bd_veterinaria_huellitasDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "pacientesColoresDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -6663,6 +6922,17 @@ namespace ProyectoFinal_Progra_I {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_pacientes_colores"]);
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pacientesColoresRow pacientesColoresRow {
+                get {
+                    return ((pacientesColoresRow)(this.GetParentRow(this.Table.ParentRelations["FK_pacientes_colores1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_pacientes_colores1"]);
+                }
+            }
         }
         
         /// <summary>
@@ -7341,105 +7611,12 @@ namespace ProyectoFinal_Progra_I {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string nombre {
-                get {
-                    return ((string)(this[this.tabledatosPacientes.nombreColumn]));
-                }
-                set {
-                    this[this.tabledatosPacientes.nombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string sexo {
-                get {
-                    return ((string)(this[this.tabledatosPacientes.sexoColumn]));
-                }
-                set {
-                    this[this.tabledatosPacientes.sexoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string raza {
-                get {
-                    return ((string)(this[this.tabledatosPacientes.razaColumn]));
-                }
-                set {
-                    this[this.tabledatosPacientes.razaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string especie {
-                get {
-                    return ((string)(this[this.tabledatosPacientes.especieColumn]));
-                }
-                set {
-                    this[this.tabledatosPacientes.especieColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fechaNacimiento {
-                get {
-                    return ((global::System.DateTime)(this[this.tabledatosPacientes.fechaNacimientoColumn]));
-                }
-                set {
-                    this[this.tabledatosPacientes.fechaNacimientoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string descripcion {
-                get {
-                    try {
-                        return ((string)(this[this.tabledatosPacientes.descripcionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'datosPacientes\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledatosPacientes.descripcionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int idCliente {
                 get {
                     return ((int)(this[this.tabledatosPacientes.idClienteColumn]));
                 }
                 set {
                     this[this.tabledatosPacientes.idClienteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Tutor {
-                get {
-                    return ((string)(this[this.tabledatosPacientes.TutorColumn]));
-                }
-                set {
-                    this[this.tabledatosPacientes.TutorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fechaRegistro {
-                get {
-                    return ((global::System.DateTime)(this[this.tabledatosPacientes.fechaRegistroColumn]));
-                }
-                set {
-                    this[this.tabledatosPacientes.fechaRegistroColumn] = value;
                 }
             }
             
@@ -7467,14 +7644,46 @@ namespace ProyectoFinal_Progra_I {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsdescripcionNull() {
-                return this.IsNull(this.tabledatosPacientes.descripcionColumn);
+            public string nombre {
+                get {
+                    return ((string)(this[this.tabledatosPacientes.nombreColumn]));
+                }
+                set {
+                    this[this.tabledatosPacientes.nombreColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetdescripcionNull() {
-                this[this.tabledatosPacientes.descripcionColumn] = global::System.Convert.DBNull;
+            public string tutor {
+                get {
+                    return ((string)(this[this.tabledatosPacientes.tutorColumn]));
+                }
+                set {
+                    this[this.tabledatosPacientes.tutorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string especie {
+                get {
+                    return ((string)(this[this.tabledatosPacientes.especieColumn]));
+                }
+                set {
+                    this[this.tabledatosPacientes.especieColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string raza {
+                get {
+                    return ((string)(this[this.tabledatosPacientes.razaColumn]));
+                }
+                set {
+                    this[this.tabledatosPacientes.razaColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7485,6 +7694,76 @@ namespace ProyectoFinal_Progra_I {
                 }
                 else {
                     return ((pacientesRow[])(base.GetChildRows(this.Table.ChildRelations["FK_pacientes_Clientes1"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class pacientesColoresRow : global::System.Data.DataRow {
+            
+            private pacientesColoresDataTable tablepacientesColores;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal pacientesColoresRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablepacientesColores = ((pacientesColoresDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string nombre {
+                get {
+                    return ((string)(this[this.tablepacientesColores.nombreColumn]));
+                }
+                set {
+                    this[this.tablepacientesColores.nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int idPaciente {
+                get {
+                    return ((int)(this[this.tablepacientesColores.idPacienteColumn]));
+                }
+                set {
+                    this[this.tablepacientesColores.idPacienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int idColor {
+                get {
+                    return ((int)(this[this.tablepacientesColores.idColorColumn]));
+                }
+                set {
+                    this[this.tablepacientesColores.idColorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string color {
+                get {
+                    return ((string)(this[this.tablepacientesColores.colorColumn]));
+                }
+                set {
+                    this[this.tablepacientesColores.colorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pacientes_coloresRow[] Getpacientes_coloresRows() {
+                if ((this.Table.ChildRelations["FK_pacientes_colores1"] == null)) {
+                    return new pacientes_coloresRow[0];
+                }
+                else {
+                    return ((pacientes_coloresRow[])(base.GetChildRows(this.Table.ChildRelations["FK_pacientes_colores1"])));
                 }
             }
         }
@@ -8019,6 +8298,40 @@ namespace ProyectoFinal_Progra_I {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public datosPacientesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class pacientesColoresRowChangeEvent : global::System.EventArgs {
+            
+            private pacientesColoresRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pacientesColoresRowChangeEvent(pacientesColoresRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pacientesColoresRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -13321,17 +13634,13 @@ SELECT idUsuario, nombre, usuario, clave, direccion, telefono FROM usuarios WHER
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "datosPacientes";
             tableMapping.ColumnMappings.Add("idPaciente", "idPaciente");
-            tableMapping.ColumnMappings.Add("nombre", "nombre");
-            tableMapping.ColumnMappings.Add("sexo", "sexo");
-            tableMapping.ColumnMappings.Add("raza", "raza");
-            tableMapping.ColumnMappings.Add("especie", "especie");
-            tableMapping.ColumnMappings.Add("fechaNacimiento", "fechaNacimiento");
-            tableMapping.ColumnMappings.Add("descripcion", "descripcion");
             tableMapping.ColumnMappings.Add("idCliente", "idCliente");
-            tableMapping.ColumnMappings.Add("Tutor", "Tutor");
-            tableMapping.ColumnMappings.Add("fechaRegistro", "fechaRegistro");
             tableMapping.ColumnMappings.Add("idEspecie", "idEspecie");
             tableMapping.ColumnMappings.Add("idRaza", "idRaza");
+            tableMapping.ColumnMappings.Add("nombre", "nombre");
+            tableMapping.ColumnMappings.Add("tutor", "tutor");
+            tableMapping.ColumnMappings.Add("especie", "especie");
+            tableMapping.ColumnMappings.Add("raza", "raza");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -13348,12 +13657,11 @@ SELECT idUsuario, nombre, usuario, clave, direccion, telefono FROM usuarios WHER
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        pacientes.idPaciente, pacientes.nombre, pacientes.sexo, razas.raza, especies.especie, pacientes.fechaNacimiento, pacientes.descripcion, clientes.idCliente, clientes.nombre AS Tutor, pacientes.fechaRegistro, 
-                         especies.idEspecie, razas.idRaza
+            this._commandCollection[0].CommandText = @"SELECT        pacientes.idPaciente, pacientes.idCliente, pacientes.idEspecie, pacientes.idRaza, pacientes.nombre, clientes.nombre AS tutor, especies.especie, razas.raza
 FROM            pacientes INNER JOIN
                          clientes ON pacientes.idCliente = clientes.idCliente INNER JOIN
-                         razas ON pacientes.idRaza = razas.idRaza INNER JOIN
-                         especies ON pacientes.idEspecie = especies.idEspecie AND razas.idEspecie = especies.idEspecie";
+                         especies ON pacientes.idEspecie = especies.idEspecie INNER JOIN
+                         razas ON pacientes.idRaza = razas.idRaza";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -13377,6 +13685,179 @@ FROM            pacientes INNER JOIN
         public virtual bd_veterinaria_huellitasDataSet.datosPacientesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             bd_veterinaria_huellitasDataSet.datosPacientesDataTable dataTable = new bd_veterinaria_huellitasDataSet.datosPacientesDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class pacientesColoresTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public pacientesColoresTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "pacientesColores";
+            tableMapping.ColumnMappings.Add("nombre", "nombre");
+            tableMapping.ColumnMappings.Add("idPaciente", "idPaciente");
+            tableMapping.ColumnMappings.Add("idColor", "idColor");
+            tableMapping.ColumnMappings.Add("color", "color");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::ProyectoFinal_Progra_I.Properties.Settings.Default.bd_veterinaria_huellitasConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        pacientes.nombre, pacientes_colores.idPaciente, pacientes_colores.idColor, colores.color
+FROM            pacientes INNER JOIN
+                         pacientes_colores ON pacientes_colores.idPaciente = pacientes.idPaciente INNER JOIN
+                         colores ON pacientes_colores.idColor = colores.IdColor";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(bd_veterinaria_huellitasDataSet.pacientesColoresDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual bd_veterinaria_huellitasDataSet.pacientesColoresDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            bd_veterinaria_huellitasDataSet.pacientesColoresDataTable dataTable = new bd_veterinaria_huellitasDataSet.pacientesColoresDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -13815,12 +14296,12 @@ FROM            pacientes INNER JOIN
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._marcasTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.marcas.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tipoProductoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tipoProducto.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._marcasTableAdapter.Update(updatedRows));
+                    result = (result + this._tipoProductoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -13833,30 +14314,12 @@ FROM            pacientes INNER JOIN
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tipoProductoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tipoProducto.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._marcasTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.marcas.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tipoProductoTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._coloresTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.colores.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._coloresTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._pacientesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.pacientes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._pacientesTableAdapter.Update(updatedRows));
+                    result = (result + this._marcasTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -13878,21 +14341,21 @@ FROM            pacientes INNER JOIN
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._fallecimientosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.fallecimientos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._pacientesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.pacientes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._fallecimientosTableAdapter.Update(updatedRows));
+                    result = (result + this._pacientesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._pacientes_coloresTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.pacientes_colores.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._coloresTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.colores.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._pacientes_coloresTableAdapter.Update(updatedRows));
+                    result = (result + this._coloresTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -13902,6 +14365,15 @@ FROM            pacientes INNER JOIN
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._productos_principiosActivosTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._fallecimientosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.fallecimientos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._fallecimientosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -13932,6 +14404,15 @@ FROM            pacientes INNER JOIN
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._pacientes_coloresTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.pacientes_colores.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._pacientes_coloresTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -13958,11 +14439,11 @@ FROM            pacientes INNER JOIN
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._marcasTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.marcas.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tipoProductoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tipoProducto.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._marcasTableAdapter.Update(addedRows));
+                    result = (result + this._tipoProductoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -13974,27 +14455,11 @@ FROM            pacientes INNER JOIN
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tipoProductoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tipoProducto.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._marcasTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.marcas.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tipoProductoTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._coloresTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.colores.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._coloresTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._pacientesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.pacientes.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._pacientesTableAdapter.Update(addedRows));
+                    result = (result + this._marcasTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -14014,19 +14479,19 @@ FROM            pacientes INNER JOIN
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._fallecimientosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.fallecimientos.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._pacientesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.pacientes.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._fallecimientosTableAdapter.Update(addedRows));
+                    result = (result + this._pacientesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._pacientes_coloresTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.pacientes_colores.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._coloresTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.colores.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._pacientes_coloresTableAdapter.Update(addedRows));
+                    result = (result + this._coloresTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -14035,6 +14500,14 @@ FROM            pacientes INNER JOIN
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._productos_principiosActivosTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._fallecimientosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.fallecimientos.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._fallecimientosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -14062,6 +14535,14 @@ FROM            pacientes INNER JOIN
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._pacientes_coloresTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.pacientes_colores.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._pacientes_coloresTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -14072,6 +14553,14 @@ FROM            pacientes INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(bd_veterinaria_huellitasDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._pacientes_coloresTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.pacientes_colores.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._pacientes_coloresTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._usuariosTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.usuarios.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -14096,6 +14585,14 @@ FROM            pacientes INNER JOIN
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._fallecimientosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.fallecimientos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._fallecimientosTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._productos_principiosActivosTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.productos_principiosActivos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -14104,19 +14601,19 @@ FROM            pacientes INNER JOIN
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._pacientes_coloresTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.pacientes_colores.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._coloresTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.colores.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._pacientes_coloresTableAdapter.Update(deletedRows));
+                    result = (result + this._coloresTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._fallecimientosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.fallecimientos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._pacientesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.pacientes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._fallecimientosTableAdapter.Update(deletedRows));
+                    result = (result + this._pacientesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -14136,27 +14633,11 @@ FROM            pacientes INNER JOIN
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._pacientesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.pacientes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._marcasTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.marcas.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._pacientesTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._coloresTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.colores.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._coloresTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tipoProductoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tipoProducto.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tipoProductoTableAdapter.Update(deletedRows));
+                    result = (result + this._marcasTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -14168,11 +14649,11 @@ FROM            pacientes INNER JOIN
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._marcasTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.marcas.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tipoProductoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tipoProducto.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._marcasTableAdapter.Update(deletedRows));
+                    result = (result + this._tipoProductoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

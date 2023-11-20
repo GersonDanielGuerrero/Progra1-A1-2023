@@ -18,6 +18,7 @@ namespace ProyectoFinal_Progra_I
         DataTable miTabla = new DataTable();
         public int posicion = 0;
         String accion = "nuevo";
+        int idPacienteSeleccionado = 1;
         public Pacientes()
         {
             InitializeComponent();
@@ -25,53 +26,121 @@ namespace ProyectoFinal_Progra_I
 
         private void Pacientes_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet1.datosPacientes' Puede moverla o quitarla según sea necesario.
-            this.datosPacientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet1.datosPacientes);
-
-            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet1.pacientes' Puede moverla o quitarla según sea necesario.
-            this.pacientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet1.pacientes);
-            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet1.colores' Puede moverla o quitarla según sea necesario.
-            this.coloresTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet1.colores);
-            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet1.razas' Puede moverla o quitarla según sea necesario.
-            this.razasTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet1.razas);
-            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet1.clientes' Puede moverla o quitarla según sea necesario.
-            this.clientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet1.clientes);
+            
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.pacientesColores' Puede moverla o quitarla según sea necesario.
+            this.pacientesColoresTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.pacientesColores);
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.datosPacientes' Puede moverla o quitarla según sea necesario.
+            this.datosPacientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.datosPacientes);
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.razas' Puede moverla o quitarla según sea necesario.
+            this.razasTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.razas);
             // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.especies' Puede moverla o quitarla según sea necesario.
             this.especiesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.especies);
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.clientes' Puede moverla o quitarla según sea necesario.
+            this.clientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.clientes);
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.pacientes' Puede moverla o quitarla según sea necesario.
+            this.pacientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.pacientes);
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.clientes' Puede moverla o quitarla según sea necesario.
+            this.clientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.clientes);
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet2.datosPacientes' Puede moverla o quitarla según sea necesario.
+            this.datosPacientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.datosPacientes);
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet1.datosPacientes' Puede moverla o quitarla según sea necesario.
+            this.datosPacientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.datosPacientes);
 
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet1.pacientes' Puede moverla o quitarla según sea necesario.
+            this.pacientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.pacientes);
+            
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet1.razas' Puede moverla o quitarla según sea necesario.
+            this.razasTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.razas);
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet1.clientes' Puede moverla o quitarla según sea necesario.
+            this.clientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.clientes);
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.especies' Puede moverla o quitarla según sea necesario.
+            this.especiesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.especies);
+            actualizarDatosPaciente();
         }
         private void actualizarDatosPaciente()
         {
-            lblSexoPaciente.Text = cboRazaPaciente.SelectedValue.ToString();
+            DataRowView pacienteSelecionado = (DataRowView)pacientesBindingSource.Current;
+           idPacienteSeleccionado = (int)pacienteSelecionado["idPaciente"];
+            pacientesColoresBindingSource.Filter = $"idPaciente = {idPacienteSeleccionado}";
+            txtNombrePaciente.Text.Trim();
         }
         private void btnPrimeroPaciente_Click(object sender, EventArgs e)
         {
             pacientesBindingSource.MoveFirst();
+            datosPacientesBindingSource.MoveFirst();
+            actualizarDatosPaciente();
         }
 
         private void btnAnteriorPaciente_Click(object sender, EventArgs e)
         {
             datosPacientesBindingSource.MovePrevious();
             pacientesBindingSource.MovePrevious();
+            actualizarDatosPaciente();
         }
 
         private void btnSiguientePaciente_Click(object sender, EventArgs e)
         {
             datosPacientesBindingSource.MoveNext();
             pacientesBindingSource.MoveNext();
+            actualizarDatosPaciente();
         }
 
         private void btnUltimoPaciente_Click(object sender, EventArgs e)
         {
             pacientesBindingSource.MoveLast();
+            datosPacientesBindingSource.MoveLast();
+            
+            actualizarDatosPaciente();
         }
 
         private void btnNuevoPaciente_Click(object sender, EventArgs e)
         {
-            actualizarDatosPaciente();
+
+            if (btnNuevoPaciente.Text == "Nuevo paciente")
+            {
+                btnNuevoPaciente.Text = "Guardar";
+                btnModificarPaciente.Text = "Cancelar";
+                //estadoControles(true);
+
+                pacientesBindingSource.AddNew();
+            }
+            else
+            {
+                pacientesBindingSource.EndEdit();
+                this.pacientesTableAdapter.Update(bd_veterinaria_huellitasDataSet);
+                this.datosPacientesTableAdapter.Fill(bd_veterinaria_huellitasDataSet.datosPacientes);
+                //estadoControles(false);
+                btnNuevoPaciente.Text = "Nuevo paciente";
+                btnModificarPaciente.Text = "Modificar datos";
+               
+            }
         }
 
         private void grdDatosPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnModificarPaciente_Click(object sender, EventArgs e)
+        {
+            if (btnModificarPaciente.Text == "Modificar datos")
+            {
+                btnNuevoPaciente.Text = "Guardar";
+                btnModificarPaciente.Text = "Cancelar";
+               // estadoControles(true);
+
+            }
+            else
+            {
+                pacientesBindingSource.CancelEdit();
+
+                //estadoControles(false);
+                btnNuevoPaciente.Text = "Nuevo paciente";
+                btnModificarPaciente.Text = "Modificar datos";
+            }
+        }
+
+        private void grbDatosPaciente_Enter(object sender, EventArgs e)
         {
 
         }
