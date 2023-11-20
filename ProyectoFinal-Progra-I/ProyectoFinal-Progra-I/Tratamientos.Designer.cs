@@ -29,6 +29,7 @@ namespace ProyectoFinal_Progra_I
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtNombrePaciente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -39,12 +40,17 @@ namespace ProyectoFinal_Progra_I
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtpNacimietoUsuario = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.lblFechaDeNacimientoUsuario = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateFechaFin = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
+            this.tratamientosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tratamientosTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.tratamientosTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tratamientosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombrePaciente
@@ -145,14 +151,14 @@ namespace ProyectoFinal_Progra_I
             this.label3.TabIndex = 41;
             this.label3.Text = "Dosis";
             // 
-            // dtpNacimietoUsuario
+            // dtpFechaInicio
             // 
-            this.dtpNacimietoUsuario.Enabled = false;
-            this.dtpNacimietoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNacimietoUsuario.Location = new System.Drawing.Point(397, 184);
-            this.dtpNacimietoUsuario.Name = "dtpNacimietoUsuario";
-            this.dtpNacimietoUsuario.Size = new System.Drawing.Size(336, 26);
-            this.dtpNacimietoUsuario.TabIndex = 44;
+            this.dtpFechaInicio.Enabled = false;
+            this.dtpFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaInicio.Location = new System.Drawing.Point(397, 184);
+            this.dtpFechaInicio.Name = "dtpFechaInicio";
+            this.dtpFechaInicio.Size = new System.Drawing.Size(336, 26);
+            this.dtpFechaInicio.TabIndex = 44;
             // 
             // lblFechaDeNacimientoUsuario
             // 
@@ -164,14 +170,14 @@ namespace ProyectoFinal_Progra_I
             this.lblFechaDeNacimientoUsuario.TabIndex = 43;
             this.lblFechaDeNacimientoUsuario.Text = "Inicio del tratamiento";
             // 
-            // dateTimePicker1
+            // dateFechaFin
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(397, 216);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(336, 26);
-            this.dateTimePicker1.TabIndex = 46;
+            this.dateFechaFin.Enabled = false;
+            this.dateFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateFechaFin.Location = new System.Drawing.Point(397, 216);
+            this.dateFechaFin.Name = "dateFechaFin";
+            this.dateFechaFin.Size = new System.Drawing.Size(336, 26);
+            this.dateFechaFin.TabIndex = 46;
             // 
             // label5
             // 
@@ -202,6 +208,20 @@ namespace ProyectoFinal_Progra_I
             this.label6.TabIndex = 47;
             this.label6.Text = "Dias de tratamiento";
             // 
+            // bd_veterinaria_huellitasDataSet
+            // 
+            this.bd_veterinaria_huellitasDataSet.DataSetName = "bd_veterinaria_huellitasDataSet";
+            this.bd_veterinaria_huellitasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tratamientosBindingSource
+            // 
+            this.tratamientosBindingSource.DataMember = "tratamientos";
+            this.tratamientosBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
+            // 
+            // tratamientosTableAdapter
+            // 
+            this.tratamientosTableAdapter.ClearBeforeFill = true;
+            // 
             // Tratamientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,9 +230,9 @@ namespace ProyectoFinal_Progra_I
             this.ControlBox = false;
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateFechaFin);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dtpNacimietoUsuario);
+            this.Controls.Add(this.dtpFechaInicio);
             this.Controls.Add(this.lblFechaDeNacimientoUsuario);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
@@ -226,6 +246,9 @@ namespace ProyectoFinal_Progra_I
             this.Controls.Add(this.label4);
             this.Name = "Tratamientos";
             this.Text = "Tratamientos";
+            this.Load += new System.EventHandler(this.Tratamientos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tratamientosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,11 +266,14 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtpNacimietoUsuario;
+        private System.Windows.Forms.DateTimePicker dtpFechaInicio;
         private System.Windows.Forms.Label lblFechaDeNacimientoUsuario;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateFechaFin;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
+        private bd_veterinaria_huellitasDataSet bd_veterinaria_huellitasDataSet;
+        private System.Windows.Forms.BindingSource tratamientosBindingSource;
+        private bd_veterinaria_huellitasDataSetTableAdapters.tratamientosTableAdapter tratamientosTableAdapter;
     }
 }

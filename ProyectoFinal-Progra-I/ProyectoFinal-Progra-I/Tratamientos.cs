@@ -16,5 +16,12 @@ namespace ProyectoFinal_Progra_I
         {
             InitializeComponent();
         }
+
+        private void Tratamientos_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.tratamientos' Puede moverla o quitarla según sea necesario.
+            this.tratamientosTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.tratamientos);
+
+        }
     }
 }

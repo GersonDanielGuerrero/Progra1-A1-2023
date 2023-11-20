@@ -93,7 +93,6 @@ namespace ProyectoFinal_Progra_I
             this.grdDatosClientes.Name = "grdDatosClientes";
             this.grdDatosClientes.Size = new System.Drawing.Size(490, 603);
             this.grdDatosClientes.TabIndex = 0;
-            this.grdDatosClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatosClientes_CellClick);
             // 
             // idCliente
             // 
@@ -277,7 +276,6 @@ namespace ProyectoFinal_Progra_I
             this.txtBuscarCliente.Name = "txtBuscarCliente";
             this.txtBuscarCliente.Size = new System.Drawing.Size(249, 26);
             this.txtBuscarCliente.TabIndex = 14;
-            this.txtBuscarCliente.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarCliente_KeyUp);
             // 
             // cboOpcionBuscarCliente
             // 
@@ -306,7 +304,6 @@ namespace ProyectoFinal_Progra_I
             this.btnModificarCliente.TabIndex = 16;
             this.btnModificarCliente.Text = "Modificar datos";
             this.btnModificarCliente.UseVisualStyleBackColor = false;
-            this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
             // btnEliminarCliente
             // 
@@ -318,7 +315,6 @@ namespace ProyectoFinal_Progra_I
             this.btnEliminarCliente.TabIndex = 17;
             this.btnEliminarCliente.Text = "Eliminar Cliente";
             this.btnEliminarCliente.UseVisualStyleBackColor = false;
-            this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
             // btnNuevoCliente
             // 
@@ -330,7 +326,6 @@ namespace ProyectoFinal_Progra_I
             this.btnNuevoCliente.TabIndex = 18;
             this.btnNuevoCliente.Text = "Nuevo cliente";
             this.btnNuevoCliente.UseVisualStyleBackColor = false;
-            this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
             // 
             // btnPrimeroCliente
             // 
@@ -342,7 +337,6 @@ namespace ProyectoFinal_Progra_I
             this.btnPrimeroCliente.TabIndex = 19;
             this.btnPrimeroCliente.Text = "|<";
             this.btnPrimeroCliente.UseVisualStyleBackColor = false;
-            this.btnPrimeroCliente.Click += new System.EventHandler(this.btnPrimeroCliente_Click);
             // 
             // btnUltimoCliente
             // 
@@ -354,7 +348,6 @@ namespace ProyectoFinal_Progra_I
             this.btnUltimoCliente.TabIndex = 20;
             this.btnUltimoCliente.Text = ">|";
             this.btnUltimoCliente.UseVisualStyleBackColor = false;
-            this.btnUltimoCliente.Click += new System.EventHandler(this.btnUltimoCliente_Click);
             // 
             // btnSiguienteCliente
             // 
@@ -366,7 +359,6 @@ namespace ProyectoFinal_Progra_I
             this.btnSiguienteCliente.TabIndex = 21;
             this.btnSiguienteCliente.Text = ">";
             this.btnSiguienteCliente.UseVisualStyleBackColor = false;
-            this.btnSiguienteCliente.Click += new System.EventHandler(this.btnSiguienteCliente_Click);
             // 
             // btnAnteriorCliente
             // 
@@ -378,7 +370,6 @@ namespace ProyectoFinal_Progra_I
             this.btnAnteriorCliente.TabIndex = 22;
             this.btnAnteriorCliente.Text = "<";
             this.btnAnteriorCliente.UseVisualStyleBackColor = false;
-            this.btnAnteriorCliente.Click += new System.EventHandler(this.btnAnteriorCliente_Click);
             // 
             // lblPosicionCliente
             // 
@@ -453,7 +444,6 @@ namespace ProyectoFinal_Progra_I
             this.btnAgregarFotoCliente.TabIndex = 17;
             this.btnAgregarFotoCliente.Text = "Añadir foto";
             this.btnAgregarFotoCliente.UseVisualStyleBackColor = false;
-            this.btnAgregarFotoCliente.Click += new System.EventHandler(this.btnAgregarFotoCliente_Click);
             // 
             // pbFotoCliente
             // 
@@ -505,7 +495,6 @@ namespace ProyectoFinal_Progra_I
             this.Name = "Clientes";
             this.Text = "Clientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Clientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosClientes)).EndInit();
             this.grbEdicionCliente.ResumeLayout(false);
             this.grbNavegacionCliente.ResumeLayout(false);

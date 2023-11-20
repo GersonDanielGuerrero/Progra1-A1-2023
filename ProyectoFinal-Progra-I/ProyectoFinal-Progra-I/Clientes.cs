@@ -28,7 +28,7 @@ namespace ProyectoFinal_Progra_I
             InitializeComponent();
 
         }
-        
+        /*
         private void Clientes_Load(object sender, EventArgs e)
         {
             actualizarDsClientes();
@@ -301,6 +301,6 @@ namespace ProyectoFinal_Progra_I
             }
         }
 
-        
+        */
     }
 }

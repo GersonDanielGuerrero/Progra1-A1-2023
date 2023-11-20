@@ -29,7 +29,13 @@ namespace ProyectoFinal_Progra_I
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grbDatosUsuario = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -56,19 +62,24 @@ namespace ProyectoFinal_Progra_I
             this.btnNuevoPaciente = new System.Windows.Forms.Button();
             this.btnModificarPaciente = new System.Windows.Forms.Button();
             this.btnEliminarPaciente = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.cboTutorPaciente = new System.Windows.Forms.ComboBox();
+            this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
+            this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productosTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.productosTableAdapter();
+            this.marcasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.marcasTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.marcasTableAdapter();
             this.grbDatosUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosUsuarios)).BeginInit();
             this.grbNavegacionPaciente.SuspendLayout();
             this.grbEdicionPaciente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grbDatosUsuario
             // 
+            this.grbDatosUsuario.Controls.Add(this.cboTutorPaciente);
             this.grbDatosUsuario.Controls.Add(this.textBox3);
             this.grbDatosUsuario.Controls.Add(this.label2);
             this.grbDatosUsuario.Controls.Add(this.textBox2);
@@ -83,6 +94,53 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosUsuario.TabIndex = 36;
             this.grbDatosUsuario.TabStop = false;
             this.grbDatosUsuario.Text = "Datos del usuario";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(262, 294);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(430, 26);
+            this.textBox3.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(197, 297);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Precio";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(262, 262);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(430, 26);
+            this.textBox2.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(153, 268);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 20);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Descripcion";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(262, 230);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(430, 26);
+            this.textBox1.TabIndex = 20;
             // 
             // txtNombreUsuario
             // 
@@ -343,52 +401,41 @@ namespace ProyectoFinal_Progra_I
             this.btnEliminarPaciente.Text = "Eliminar servicio";
             this.btnEliminarPaciente.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // cboTutorPaciente
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(262, 230);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(430, 26);
-            this.textBox1.TabIndex = 20;
+            this.cboTutorPaciente.DataSource = this.marcasBindingSource;
+            this.cboTutorPaciente.DisplayMember = "marca";
+            this.cboTutorPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTutorPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cboTutorPaciente.FormattingEnabled = true;
+            this.cboTutorPaciente.Location = new System.Drawing.Point(17, 399);
+            this.cboTutorPaciente.Name = "cboTutorPaciente";
+            this.cboTutorPaciente.Size = new System.Drawing.Size(430, 28);
+            this.cboTutorPaciente.TabIndex = 39;
+            this.cboTutorPaciente.ValueMember = "idMarca";
             // 
-            // textBox2
+            // bd_veterinaria_huellitasDataSet
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(262, 262);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(430, 26);
-            this.textBox2.TabIndex = 22;
+            this.bd_veterinaria_huellitasDataSet.DataSetName = "bd_veterinaria_huellitasDataSet";
+            this.bd_veterinaria_huellitasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label1
+            // productosBindingSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(153, 268);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 20);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Descripcion";
+            this.productosBindingSource.DataMember = "productos";
+            this.productosBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
             // 
-            // textBox3
+            // productosTableAdapter
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(262, 294);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(430, 26);
-            this.textBox3.TabIndex = 24;
+            this.productosTableAdapter.ClearBeforeFill = true;
             // 
-            // label2
+            // marcasBindingSource
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(197, 297);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Precio";
+            this.marcasBindingSource.DataMember = "marcas";
+            this.marcasBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
+            // 
+            // marcasTableAdapter
+            // 
+            this.marcasTableAdapter.ClearBeforeFill = true;
             // 
             // Servicios
             // 
@@ -405,12 +452,16 @@ namespace ProyectoFinal_Progra_I
             this.Controls.Add(this.grdDatosUsuarios);
             this.Name = "Servicios";
             this.Text = "Servicios";
+            this.Load += new System.EventHandler(this.Servicios_Load);
             this.grbDatosUsuario.ResumeLayout(false);
             this.grbDatosUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatosUsuarios)).EndInit();
             this.grbNavegacionPaciente.ResumeLayout(false);
             this.grbNavegacionPaciente.PerformLayout();
             this.grbEdicionPaciente.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,5 +501,11 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cboTutorPaciente;
+        private bd_veterinaria_huellitasDataSet bd_veterinaria_huellitasDataSet;
+        private System.Windows.Forms.BindingSource productosBindingSource;
+        private bd_veterinaria_huellitasDataSetTableAdapters.productosTableAdapter productosTableAdapter;
+        private System.Windows.Forms.BindingSource marcasBindingSource;
+        private bd_veterinaria_huellitasDataSetTableAdapters.marcasTableAdapter marcasTableAdapter;
     }
 }

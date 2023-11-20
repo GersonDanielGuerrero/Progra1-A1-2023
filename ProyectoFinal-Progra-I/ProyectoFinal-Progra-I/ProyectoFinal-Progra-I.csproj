@@ -63,6 +63,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bd_veterinaria_huellitasDataSet.cs">
+      <DependentUpon>bd_veterinaria_huellitasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bd_veterinaria_huellitasDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
