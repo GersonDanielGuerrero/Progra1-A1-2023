@@ -37,7 +37,6 @@ namespace ProyectoFinal_Progra_I
             this.btnSiguienteProducto = new System.Windows.Forms.Button();
             this.lblPosicionProducto = new System.Windows.Forms.Label();
             this.grbDatosProducto = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.txtPrecioProducto = new System.Windows.Forms.TextBox();
             this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
@@ -49,7 +48,6 @@ namespace ProyectoFinal_Progra_I
             this.tipoProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescripcionProducto = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -157,7 +155,6 @@ namespace ProyectoFinal_Progra_I
             // 
             // grbDatosProducto
             // 
-            this.grbDatosProducto.Controls.Add(this.listBox1);
             this.grbDatosProducto.Controls.Add(this.txtPrecioProducto);
             this.grbDatosProducto.Controls.Add(this.lblSexoPaciente);
             this.grbDatosProducto.Controls.Add(this.cboMarcaProducto);
@@ -165,7 +162,6 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosProducto.Controls.Add(this.cboTipoProducto);
             this.grbDatosProducto.Controls.Add(this.txtNombreProducto);
             this.grbDatosProducto.Controls.Add(this.label5);
-            this.grbDatosProducto.Controls.Add(this.label2);
             this.grbDatosProducto.Controls.Add(this.label4);
             this.grbDatosProducto.Controls.Add(this.txtDescripcionProducto);
             this.grbDatosProducto.Controls.Add(this.label10);
@@ -176,21 +172,11 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosProducto.TabStop = false;
             this.grbDatosProducto.Text = "Datos del paciente";
             // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(195, 259);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(431, 124);
-            this.listBox1.TabIndex = 40;
-            // 
             // txtPrecioProducto
             // 
             this.txtPrecioProducto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosBindingSource, "precio", true));
             this.txtPrecioProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioProducto.Location = new System.Drawing.Point(195, 429);
+            this.txtPrecioProducto.Location = new System.Drawing.Point(195, 253);
             this.txtPrecioProducto.Name = "txtPrecioProducto";
             this.txtPrecioProducto.Size = new System.Drawing.Size(71, 26);
             this.txtPrecioProducto.TabIndex = 39;
@@ -276,21 +262,11 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(131, 432);
+            this.label5.Location = new System.Drawing.Point(103, 259);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 20);
+            this.label5.Size = new System.Drawing.Size(86, 20);
             this.label5.TabIndex = 31;
-            this.label5.Text = "Precio";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 259);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 20);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Principios activos";
+            this.label5.Text = "Precio ($)";
             // 
             // label4
             // 
@@ -517,11 +493,9 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.ComboBox cboTipoProducto;
         private System.Windows.Forms.TextBox txtNombreProducto;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDescripcionProducto;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox txtPrecioProducto;
         private System.Windows.Forms.GroupBox grbEdicionProducto;
         private System.Windows.Forms.Button btnNuevoProducto;
