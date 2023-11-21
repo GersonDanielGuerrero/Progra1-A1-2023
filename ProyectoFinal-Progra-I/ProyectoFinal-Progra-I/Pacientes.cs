@@ -26,7 +26,9 @@ namespace ProyectoFinal_Progra_I
 
         private void Pacientes_Load(object sender, EventArgs e)
         {
-            
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.fallecimientos' Puede moverla o quitarla según sea necesario.
+            this.fallecimientosTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.fallecimientos);
+
             // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.pacientesColores' Puede moverla o quitarla según sea necesario.
             this.pacientesColoresTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.pacientesColores);
             // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.datosPacientes' Puede moverla o quitarla según sea necesario.
@@ -62,6 +64,11 @@ namespace ProyectoFinal_Progra_I
             DataRowView pacienteSelecionado = (DataRowView)pacientesBindingSource.Current;
            idPacienteSeleccionado = (int)pacienteSelecionado["idPaciente"];
             pacientesColoresBindingSource.Filter = $"idPaciente = {idPacienteSeleccionado}";
+
+            bool pacienteFallecido = (bool)pacienteSelecionado["fallecido"];
+            grbFallecimientoPaciente.Visible = pacienteFallecido;
+            btnModificarPaciente.Enabled = !pacienteFallecido;
+            btnFallecimientoPaciente.Visible = !pacienteFallecido;
             txtNombrePaciente.Text.Trim();
         }
         private void btnPrimeroPaciente_Click(object sender, EventArgs e)
@@ -143,6 +150,13 @@ namespace ProyectoFinal_Progra_I
         private void grbDatosPaciente_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFallecimientoPaciente_Click(object sender, EventArgs e)
+        {
+            Fallecimiento objFallecimiento = new Fallecimiento(idPacienteSeleccionado);
+            if (objFallecimiento.ShowDialog() == DialogResult.OK)
+                actualizarDatosPaciente();
         }
         /*
 private void Pacientes_Load(object sender, EventArgs e)

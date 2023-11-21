@@ -19,11 +19,70 @@ namespace ProyectoFinal_Progra_I
 
         private void Servicios_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.marcas' Puede moverla o quitarla según sea necesario.
-            this.marcasTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.marcas);
-            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.productos' Puede moverla o quitarla según sea necesario.
-            this.productosTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.productos);
+            // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.tipoServicios' Puede moverla o quitarla según sea necesario.
+            this.tipoServiciosTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.tipoServicios);
+            
 
+        }
+
+        private void btnPrimeroPaciente_Click(object sender, EventArgs e)
+        {
+            tipoServiciosBindingSource.MoveFirst();
+        }
+
+        private void btnAnteriorServicio_Click(object sender, EventArgs e)
+        {
+            tipoServiciosBindingSource.MovePrevious();
+        }
+
+        private void btnSiguienteServicio_Click(object sender, EventArgs e)
+        {
+            tipoServiciosBindingSource.MoveNext();
+        }
+
+        private void btnUltimoServicio_Click(object sender, EventArgs e)
+        {
+            tipoServiciosBindingSource.MoveLast();
+        }
+
+        private void btnNuevoServicio_Click(object sender, EventArgs e)
+        {
+            if (btnNuevoServicio.Text == "Nuevo servicio")
+            {
+                btnNuevoServicio.Text = "Guardar";
+                btnModificarServicio.Text = "Cancelar";
+                //estadoControles(true);
+
+                tipoServiciosBindingSource.AddNew();
+            }
+            else
+            {
+                tipoServiciosBindingSource.EndEdit();
+                this.tipoServiciosTableAdapter.Update(bd_veterinaria_huellitasDataSet);
+                //estadoControles(false);
+                btnNuevoServicio.Text = "Nuevo servicio";
+                btnModificarServicio.Text = "Modificar datos";
+
+            }
+        }
+
+        private void btnModificarServicio_Click(object sender, EventArgs e)
+        {
+            if (btnModificarServicio.Text == "Modificar datos")
+            {
+                btnNuevoServicio.Text = "Guardar";
+                btnModificarServicio.Text = "Cancelar";
+                // estadoControles(true);
+
+            }
+            else
+            {
+                tipoServiciosBindingSource.CancelEdit();
+
+                //estadoControles(false);
+                btnNuevoServicio.Text = "Nuevo servicio";
+                btnModificarServicio.Text = "Modificar datos";
+            }
         }
     }
 }

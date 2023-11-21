@@ -29,6 +29,7 @@ namespace ProyectoFinal_Progra_I
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lblFallecimientoPaciente = new System.Windows.Forms.Label();
@@ -36,6 +37,15 @@ namespace ProyectoFinal_Progra_I
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpFechaFallecimiento = new System.Windows.Forms.DateTimePicker();
+            this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
+            this.fallecimientosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fallecimientosTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.fallecimientosTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pacientesTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.pacientesTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fallecimientosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -59,30 +69,32 @@ namespace ProyectoFinal_Progra_I
             this.btnAceptar.TabIndex = 26;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // lblFallecimientoPaciente
             // 
             this.lblFallecimientoPaciente.AutoSize = true;
             this.lblFallecimientoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFallecimientoPaciente.Location = new System.Drawing.Point(226, 28);
+            this.lblFallecimientoPaciente.Location = new System.Drawing.Point(199, 31);
             this.lblFallecimientoPaciente.Name = "lblFallecimientoPaciente";
-            this.lblFallecimientoPaciente.Size = new System.Drawing.Size(215, 20);
+            this.lblFallecimientoPaciente.Size = new System.Drawing.Size(145, 20);
             this.lblFallecimientoPaciente.TabIndex = 25;
-            this.lblFallecimientoPaciente.Text = "Fallecimiento de Paciente";
+            this.lblFallecimientoPaciente.Text = "Fallecimiento de ";
             // 
             // txtCausaFallecimiento
             // 
             this.txtCausaFallecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCausaFallecimiento.Location = new System.Drawing.Point(212, 165);
+            this.txtCausaFallecimiento.Location = new System.Drawing.Point(212, 144);
+            this.txtCausaFallecimiento.Multiline = true;
             this.txtCausaFallecimiento.Name = "txtCausaFallecimiento";
-            this.txtCausaFallecimiento.Size = new System.Drawing.Size(430, 26);
+            this.txtCausaFallecimiento.Size = new System.Drawing.Size(430, 60);
             this.txtCausaFallecimiento.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 168);
+            this.label2.Location = new System.Drawing.Point(15, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(191, 20);
             this.label2.TabIndex = 21;
@@ -109,11 +121,46 @@ namespace ProyectoFinal_Progra_I
             this.dtpFechaFallecimiento.Size = new System.Drawing.Size(430, 26);
             this.dtpFechaFallecimiento.TabIndex = 28;
             // 
+            // bd_veterinaria_huellitasDataSet
+            // 
+            this.bd_veterinaria_huellitasDataSet.DataSetName = "bd_veterinaria_huellitasDataSet";
+            this.bd_veterinaria_huellitasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fallecimientosBindingSource
+            // 
+            this.fallecimientosBindingSource.DataMember = "fallecimientos";
+            this.fallecimientosBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
+            // 
+            // fallecimientosTableAdapter
+            // 
+            this.fallecimientosTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "nombre", true));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(340, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Paciente";
+            // 
+            // pacientesBindingSource
+            // 
+            this.pacientesBindingSource.DataMember = "pacientes";
+            this.pacientesBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
+            // 
+            // pacientesTableAdapter
+            // 
+            this.pacientesTableAdapter.ClearBeforeFill = true;
+            // 
             // Fallecimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 291);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpFechaFallecimiento);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -123,6 +170,10 @@ namespace ProyectoFinal_Progra_I
             this.Controls.Add(this.label4);
             this.Name = "Fallecimiento";
             this.Text = "Fallecimiento";
+            this.Load += new System.EventHandler(this.Fallecimiento_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fallecimientosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +188,11 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpFechaFallecimiento;
+        private bd_veterinaria_huellitasDataSet bd_veterinaria_huellitasDataSet;
+        private System.Windows.Forms.BindingSource fallecimientosBindingSource;
+        private bd_veterinaria_huellitasDataSetTableAdapters.fallecimientosTableAdapter fallecimientosTableAdapter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource pacientesBindingSource;
+        private bd_veterinaria_huellitasDataSetTableAdapters.pacientesTableAdapter pacientesTableAdapter;
     }
 }

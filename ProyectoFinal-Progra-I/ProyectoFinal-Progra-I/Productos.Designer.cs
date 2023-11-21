@@ -36,34 +36,50 @@ namespace ProyectoFinal_Progra_I
             this.btnUltimoProducto = new System.Windows.Forms.Button();
             this.btnSiguienteProducto = new System.Windows.Forms.Button();
             this.lblPosicionProducto = new System.Windows.Forms.Label();
-            this.grbDatosPaciente = new System.Windows.Forms.GroupBox();
+            this.grbDatosProducto = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.txtPrecioProducto = new System.Windows.Forms.TextBox();
+            this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
             this.lblSexoPaciente = new System.Windows.Forms.Label();
-            this.cboTutorPaciente = new System.Windows.Forms.ComboBox();
+            this.cboMarcaProducto = new System.Windows.Forms.ComboBox();
+            this.marcasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblTutorPaciente = new System.Windows.Forms.Label();
-            this.cboEspeciePaciente = new System.Windows.Forms.ComboBox();
-            this.txtNombrePaciente = new System.Windows.Forms.TextBox();
+            this.cboTipoProducto = new System.Windows.Forms.ComboBox();
+            this.tipoProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtDescripcionPaciente = new System.Windows.Forms.TextBox();
+            this.txtDescripcionProducto = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.grbEdicionPaciente = new System.Windows.Forms.GroupBox();
-            this.btnNuevoPaciente = new System.Windows.Forms.Button();
-            this.btnModificarPaciente = new System.Windows.Forms.Button();
-            this.btnEliminarPaciente = new System.Windows.Forms.Button();
-            this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
-            this.marcasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grbEdicionProducto = new System.Windows.Forms.GroupBox();
+            this.btnNuevoProducto = new System.Windows.Forms.Button();
+            this.btnModificarProducto = new System.Windows.Forms.Button();
+            this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.marcasTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.marcasTableAdapter();
-            this.tipoProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoProductoTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.tipoProductoTableAdapter();
+            this.productosTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.productosTableAdapter();
+            this.datosProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datosProductosTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.datosProductosTableAdapter();
+            this.tableAdapterManager = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager();
+            this.datosProductosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbNavegacionProducto.SuspendLayout();
-            this.grbDatosPaciente.SuspendLayout();
-            this.grbEdicionPaciente.SuspendLayout();
+            this.grbDatosProducto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoProductoBindingSource)).BeginInit();
+            this.grbEdicionProducto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datosProductosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosProductosDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // grbNavegacionProducto
@@ -74,7 +90,7 @@ namespace ProyectoFinal_Progra_I
             this.grbNavegacionProducto.Controls.Add(this.btnUltimoProducto);
             this.grbNavegacionProducto.Controls.Add(this.btnSiguienteProducto);
             this.grbNavegacionProducto.Controls.Add(this.lblPosicionProducto);
-            this.grbNavegacionProducto.Location = new System.Drawing.Point(885, 541);
+            this.grbNavegacionProducto.Location = new System.Drawing.Point(96, 317);
             this.grbNavegacionProducto.Name = "grbNavegacionProducto";
             this.grbNavegacionProducto.Size = new System.Drawing.Size(282, 82);
             this.grbNavegacionProducto.TabIndex = 28;
@@ -91,6 +107,7 @@ namespace ProyectoFinal_Progra_I
             this.btnPrimeroProducto.TabIndex = 19;
             this.btnPrimeroProducto.Text = "|<";
             this.btnPrimeroProducto.UseVisualStyleBackColor = false;
+            this.btnPrimeroProducto.Click += new System.EventHandler(this.btnPrimeroProducto_Click);
             // 
             // btnAnteriorProducto
             // 
@@ -102,6 +119,7 @@ namespace ProyectoFinal_Progra_I
             this.btnAnteriorProducto.TabIndex = 22;
             this.btnAnteriorProducto.Text = "<";
             this.btnAnteriorProducto.UseVisualStyleBackColor = false;
+            this.btnAnteriorProducto.Click += new System.EventHandler(this.btnAnteriorProducto_Click);
             // 
             // btnUltimoProducto
             // 
@@ -113,6 +131,7 @@ namespace ProyectoFinal_Progra_I
             this.btnUltimoProducto.TabIndex = 20;
             this.btnUltimoProducto.Text = ">|";
             this.btnUltimoProducto.UseVisualStyleBackColor = false;
+            this.btnUltimoProducto.Click += new System.EventHandler(this.btnUltimoProducto_Click);
             // 
             // btnSiguienteProducto
             // 
@@ -124,6 +143,7 @@ namespace ProyectoFinal_Progra_I
             this.btnSiguienteProducto.TabIndex = 21;
             this.btnSiguienteProducto.Text = ">";
             this.btnSiguienteProducto.UseVisualStyleBackColor = false;
+            this.btnSiguienteProducto.Click += new System.EventHandler(this.btnSiguienteProducto_Click);
             // 
             // lblPosicionProducto
             // 
@@ -135,26 +155,55 @@ namespace ProyectoFinal_Progra_I
             this.lblPosicionProducto.TabIndex = 23;
             this.lblPosicionProducto.Text = "x de n";
             // 
-            // grbDatosPaciente
+            // grbDatosProducto
             // 
-            this.grbDatosPaciente.Controls.Add(this.listBox1);
-            this.grbDatosPaciente.Controls.Add(this.textBox1);
-            this.grbDatosPaciente.Controls.Add(this.lblSexoPaciente);
-            this.grbDatosPaciente.Controls.Add(this.cboTutorPaciente);
-            this.grbDatosPaciente.Controls.Add(this.lblTutorPaciente);
-            this.grbDatosPaciente.Controls.Add(this.cboEspeciePaciente);
-            this.grbDatosPaciente.Controls.Add(this.txtNombrePaciente);
-            this.grbDatosPaciente.Controls.Add(this.label5);
-            this.grbDatosPaciente.Controls.Add(this.label2);
-            this.grbDatosPaciente.Controls.Add(this.label4);
-            this.grbDatosPaciente.Controls.Add(this.txtDescripcionPaciente);
-            this.grbDatosPaciente.Controls.Add(this.label10);
-            this.grbDatosPaciente.Location = new System.Drawing.Point(510, 32);
-            this.grbDatosPaciente.Name = "grbDatosPaciente";
-            this.grbDatosPaciente.Size = new System.Drawing.Size(657, 472);
-            this.grbDatosPaciente.TabIndex = 29;
-            this.grbDatosPaciente.TabStop = false;
-            this.grbDatosPaciente.Text = "Datos del paciente";
+            this.grbDatosProducto.Controls.Add(this.listBox1);
+            this.grbDatosProducto.Controls.Add(this.txtPrecioProducto);
+            this.grbDatosProducto.Controls.Add(this.lblSexoPaciente);
+            this.grbDatosProducto.Controls.Add(this.cboMarcaProducto);
+            this.grbDatosProducto.Controls.Add(this.lblTutorPaciente);
+            this.grbDatosProducto.Controls.Add(this.cboTipoProducto);
+            this.grbDatosProducto.Controls.Add(this.txtNombreProducto);
+            this.grbDatosProducto.Controls.Add(this.label5);
+            this.grbDatosProducto.Controls.Add(this.label2);
+            this.grbDatosProducto.Controls.Add(this.label4);
+            this.grbDatosProducto.Controls.Add(this.txtDescripcionProducto);
+            this.grbDatosProducto.Controls.Add(this.label10);
+            this.grbDatosProducto.Location = new System.Drawing.Point(510, 32);
+            this.grbDatosProducto.Name = "grbDatosProducto";
+            this.grbDatosProducto.Size = new System.Drawing.Size(657, 472);
+            this.grbDatosProducto.TabIndex = 29;
+            this.grbDatosProducto.TabStop = false;
+            this.grbDatosProducto.Text = "Datos del paciente";
+            // 
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(195, 259);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(431, 124);
+            this.listBox1.TabIndex = 40;
+            // 
+            // txtPrecioProducto
+            // 
+            this.txtPrecioProducto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosBindingSource, "precio", true));
+            this.txtPrecioProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioProducto.Location = new System.Drawing.Point(195, 429);
+            this.txtPrecioProducto.Name = "txtPrecioProducto";
+            this.txtPrecioProducto.Size = new System.Drawing.Size(71, 26);
+            this.txtPrecioProducto.TabIndex = 39;
+            // 
+            // productosBindingSource
+            // 
+            this.productosBindingSource.DataMember = "productos";
+            this.productosBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
+            // 
+            // bd_veterinaria_huellitasDataSet
+            // 
+            this.bd_veterinaria_huellitasDataSet.DataSetName = "bd_veterinaria_huellitasDataSet";
+            this.bd_veterinaria_huellitasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblSexoPaciente
             // 
@@ -166,18 +215,24 @@ namespace ProyectoFinal_Progra_I
             this.lblSexoPaciente.TabIndex = 38;
             this.lblSexoPaciente.Text = "Tipo";
             // 
-            // cboTutorPaciente
+            // cboMarcaProducto
             // 
-            this.cboTutorPaciente.DataSource = this.marcasBindingSource;
-            this.cboTutorPaciente.DisplayMember = "marca";
-            this.cboTutorPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTutorPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.cboTutorPaciente.FormattingEnabled = true;
-            this.cboTutorPaciente.Location = new System.Drawing.Point(195, 132);
-            this.cboTutorPaciente.Name = "cboTutorPaciente";
-            this.cboTutorPaciente.Size = new System.Drawing.Size(430, 28);
-            this.cboTutorPaciente.TabIndex = 37;
-            this.cboTutorPaciente.ValueMember = "idMarca";
+            this.cboMarcaProducto.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productosBindingSource, "idMarca", true));
+            this.cboMarcaProducto.DataSource = this.marcasBindingSource;
+            this.cboMarcaProducto.DisplayMember = "marca";
+            this.cboMarcaProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMarcaProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cboMarcaProducto.FormattingEnabled = true;
+            this.cboMarcaProducto.Location = new System.Drawing.Point(195, 132);
+            this.cboMarcaProducto.Name = "cboMarcaProducto";
+            this.cboMarcaProducto.Size = new System.Drawing.Size(430, 28);
+            this.cboMarcaProducto.TabIndex = 37;
+            this.cboMarcaProducto.ValueMember = "idMarca";
+            // 
+            // marcasBindingSource
+            // 
+            this.marcasBindingSource.DataMember = "marcas";
+            this.marcasBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
             // 
             // lblTutorPaciente
             // 
@@ -189,27 +244,33 @@ namespace ProyectoFinal_Progra_I
             this.lblTutorPaciente.TabIndex = 36;
             this.lblTutorPaciente.Text = "Marca";
             // 
-            // cboEspeciePaciente
+            // cboTipoProducto
             // 
-            this.cboEspeciePaciente.DataSource = this.tipoProductoBindingSource;
-            this.cboEspeciePaciente.DisplayMember = "tipoProducto";
-            this.cboEspeciePaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEspeciePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.cboEspeciePaciente.FormattingEnabled = true;
-            this.cboEspeciePaciente.Location = new System.Drawing.Point(195, 177);
-            this.cboEspeciePaciente.Name = "cboEspeciePaciente";
-            this.cboEspeciePaciente.Size = new System.Drawing.Size(430, 28);
-            this.cboEspeciePaciente.TabIndex = 35;
-            this.cboEspeciePaciente.ValueMember = "idTipoProducto";
+            this.cboTipoProducto.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productosBindingSource, "idTipoProducto", true));
+            this.cboTipoProducto.DataSource = this.tipoProductoBindingSource;
+            this.cboTipoProducto.DisplayMember = "tipoProducto";
+            this.cboTipoProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cboTipoProducto.FormattingEnabled = true;
+            this.cboTipoProducto.Location = new System.Drawing.Point(195, 177);
+            this.cboTipoProducto.Name = "cboTipoProducto";
+            this.cboTipoProducto.Size = new System.Drawing.Size(430, 28);
+            this.cboTipoProducto.TabIndex = 35;
+            this.cboTipoProducto.ValueMember = "idTipoProducto";
             // 
-            // txtNombrePaciente
+            // tipoProductoBindingSource
             // 
-            this.txtNombrePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNombrePaciente.Location = new System.Drawing.Point(195, 86);
-            this.txtNombrePaciente.Name = "txtNombrePaciente";
-            this.txtNombrePaciente.ReadOnly = true;
-            this.txtNombrePaciente.Size = new System.Drawing.Size(430, 26);
-            this.txtNombrePaciente.TabIndex = 32;
+            this.tipoProductoBindingSource.DataMember = "tipoProducto";
+            this.tipoProductoBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
+            // 
+            // txtNombreProducto
+            // 
+            this.txtNombreProducto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosBindingSource, "nombre", true));
+            this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtNombreProducto.Location = new System.Drawing.Point(195, 86);
+            this.txtNombreProducto.Name = "txtNombreProducto";
+            this.txtNombreProducto.Size = new System.Drawing.Size(430, 26);
+            this.txtNombreProducto.TabIndex = 32;
             // 
             // label5
             // 
@@ -241,14 +302,14 @@ namespace ProyectoFinal_Progra_I
             this.label4.TabIndex = 30;
             this.label4.Text = "Nombre";
             // 
-            // txtDescripcionPaciente
+            // txtDescripcionProducto
             // 
-            this.txtDescripcionPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionPaciente.Location = new System.Drawing.Point(195, 211);
-            this.txtDescripcionPaciente.Name = "txtDescripcionPaciente";
-            this.txtDescripcionPaciente.ReadOnly = true;
-            this.txtDescripcionPaciente.Size = new System.Drawing.Size(430, 26);
-            this.txtDescripcionPaciente.TabIndex = 19;
+            this.txtDescripcionProducto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productosBindingSource, "descripcion", true));
+            this.txtDescripcionProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcionProducto.Location = new System.Drawing.Point(195, 211);
+            this.txtDescripcionProducto.Name = "txtDescripcionProducto";
+            this.txtDescripcionProducto.Size = new System.Drawing.Size(430, 26);
+            this.txtDescripcionProducto.TabIndex = 19;
             // 
             // label10
             // 
@@ -260,100 +321,163 @@ namespace ProyectoFinal_Progra_I
             this.label10.TabIndex = 18;
             this.label10.Text = "Descripción";
             // 
-            // textBox1
+            // grbEdicionProducto
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(195, 429);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(71, 26);
-            this.textBox1.TabIndex = 39;
+            this.grbEdicionProducto.Controls.Add(this.btnNuevoProducto);
+            this.grbEdicionProducto.Controls.Add(this.btnModificarProducto);
+            this.grbEdicionProducto.Controls.Add(this.btnEliminarProducto);
+            this.grbEdicionProducto.Location = new System.Drawing.Point(69, 405);
+            this.grbEdicionProducto.Name = "grbEdicionProducto";
+            this.grbEdicionProducto.Size = new System.Drawing.Size(320, 82);
+            this.grbEdicionProducto.TabIndex = 30;
+            this.grbEdicionProducto.TabStop = false;
+            this.grbEdicionProducto.Text = "Edición";
             // 
-            // listBox1
+            // btnNuevoProducto
             // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(195, 259);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(431, 124);
-            this.listBox1.TabIndex = 40;
+            this.btnNuevoProducto.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnNuevoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoProducto.Location = new System.Drawing.Point(17, 19);
+            this.btnNuevoProducto.Name = "btnNuevoProducto";
+            this.btnNuevoProducto.Size = new System.Drawing.Size(90, 55);
+            this.btnNuevoProducto.TabIndex = 18;
+            this.btnNuevoProducto.Text = "Nuevo paciente";
+            this.btnNuevoProducto.UseVisualStyleBackColor = false;
+            this.btnNuevoProducto.Click += new System.EventHandler(this.btnNuevoProducto_Click);
             // 
-            // grbEdicionPaciente
+            // btnModificarProducto
             // 
-            this.grbEdicionPaciente.Controls.Add(this.btnNuevoPaciente);
-            this.grbEdicionPaciente.Controls.Add(this.btnModificarPaciente);
-            this.grbEdicionPaciente.Controls.Add(this.btnEliminarPaciente);
-            this.grbEdicionPaciente.Location = new System.Drawing.Point(510, 541);
-            this.grbEdicionPaciente.Name = "grbEdicionPaciente";
-            this.grbEdicionPaciente.Size = new System.Drawing.Size(320, 82);
-            this.grbEdicionPaciente.TabIndex = 30;
-            this.grbEdicionPaciente.TabStop = false;
-            this.grbEdicionPaciente.Text = "Edición";
+            this.btnModificarProducto.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnModificarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarProducto.Location = new System.Drawing.Point(112, 19);
+            this.btnModificarProducto.Name = "btnModificarProducto";
+            this.btnModificarProducto.Size = new System.Drawing.Size(90, 55);
+            this.btnModificarProducto.TabIndex = 16;
+            this.btnModificarProducto.Text = "Modificar datos";
+            this.btnModificarProducto.UseVisualStyleBackColor = false;
+            this.btnModificarProducto.Click += new System.EventHandler(this.btnModificarProducto_Click);
             // 
-            // btnNuevoPaciente
+            // btnEliminarProducto
             // 
-            this.btnNuevoPaciente.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnNuevoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoPaciente.Location = new System.Drawing.Point(17, 19);
-            this.btnNuevoPaciente.Name = "btnNuevoPaciente";
-            this.btnNuevoPaciente.Size = new System.Drawing.Size(90, 55);
-            this.btnNuevoPaciente.TabIndex = 18;
-            this.btnNuevoPaciente.Text = "Nuevo paciente";
-            this.btnNuevoPaciente.UseVisualStyleBackColor = false;
-            // 
-            // btnModificarPaciente
-            // 
-            this.btnModificarPaciente.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnModificarPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarPaciente.Location = new System.Drawing.Point(112, 19);
-            this.btnModificarPaciente.Name = "btnModificarPaciente";
-            this.btnModificarPaciente.Size = new System.Drawing.Size(90, 55);
-            this.btnModificarPaciente.TabIndex = 16;
-            this.btnModificarPaciente.Text = "Modificar datos";
-            this.btnModificarPaciente.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminarPaciente
-            // 
-            this.btnEliminarPaciente.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnEliminarPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarPaciente.Location = new System.Drawing.Point(208, 19);
-            this.btnEliminarPaciente.Name = "btnEliminarPaciente";
-            this.btnEliminarPaciente.Size = new System.Drawing.Size(90, 55);
-            this.btnEliminarPaciente.TabIndex = 17;
-            this.btnEliminarPaciente.Text = "Eliminar paciente";
-            this.btnEliminarPaciente.UseVisualStyleBackColor = false;
-            // 
-            // bd_veterinaria_huellitasDataSet
-            // 
-            this.bd_veterinaria_huellitasDataSet.DataSetName = "bd_veterinaria_huellitasDataSet";
-            this.bd_veterinaria_huellitasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // marcasBindingSource
-            // 
-            this.marcasBindingSource.DataMember = "marcas";
-            this.marcasBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
+            this.btnEliminarProducto.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarProducto.Location = new System.Drawing.Point(208, 19);
+            this.btnEliminarProducto.Name = "btnEliminarProducto";
+            this.btnEliminarProducto.Size = new System.Drawing.Size(90, 55);
+            this.btnEliminarProducto.TabIndex = 17;
+            this.btnEliminarProducto.Text = "Eliminar paciente";
+            this.btnEliminarProducto.UseVisualStyleBackColor = false;
             // 
             // marcasTableAdapter
             // 
             this.marcasTableAdapter.ClearBeforeFill = true;
             // 
-            // tipoProductoBindingSource
-            // 
-            this.tipoProductoBindingSource.DataMember = "tipoProducto";
-            this.tipoProductoBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
-            // 
             // tipoProductoTableAdapter
             // 
             this.tipoProductoTableAdapter.ClearBeforeFill = true;
+            // 
+            // productosTableAdapter
+            // 
+            this.productosTableAdapter.ClearBeforeFill = true;
+            // 
+            // datosProductosBindingSource
+            // 
+            this.datosProductosBindingSource.DataMember = "datosProductos";
+            this.datosProductosBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
+            // 
+            // datosProductosTableAdapter
+            // 
+            this.datosProductosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.clientesTableAdapter = null;
+            this.tableAdapterManager.coloresTableAdapter = null;
+            this.tableAdapterManager.especiesTableAdapter = null;
+            this.tableAdapterManager.fallecimientosTableAdapter = null;
+            this.tableAdapterManager.marcasTableAdapter = this.marcasTableAdapter;
+            this.tableAdapterManager.pacientes_coloresTableAdapter = null;
+            this.tableAdapterManager.pacientesTableAdapter = null;
+            this.tableAdapterManager.principiosActivosTableAdapter = null;
+            this.tableAdapterManager.productos_principiosActivosTableAdapter = null;
+            this.tableAdapterManager.productosTableAdapter = this.productosTableAdapter;
+            this.tableAdapterManager.razasTableAdapter = null;
+            this.tableAdapterManager.tipoProductoTableAdapter = this.tipoProductoTableAdapter;
+            this.tableAdapterManager.tipoServiciosTableAdapter = null;
+            this.tableAdapterManager.tratamientosTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usuariosTableAdapter = null;
+            // 
+            // datosProductosDataGridView
+            // 
+            this.datosProductosDataGridView.AutoGenerateColumns = false;
+            this.datosProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datosProductosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.datosProductosDataGridView.DataSource = this.datosProductosBindingSource;
+            this.datosProductosDataGridView.Location = new System.Drawing.Point(12, 17);
+            this.datosProductosDataGridView.Name = "datosProductosDataGridView";
+            this.datosProductosDataGridView.Size = new System.Drawing.Size(471, 294);
+            this.datosProductosDataGridView.TabIndex = 30;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn1.HeaderText = "nombre";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "idProducto";
+            this.dataGridViewTextBoxColumn2.HeaderText = "idProducto";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "idMarca";
+            this.dataGridViewTextBoxColumn3.HeaderText = "idMarca";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "precio";
+            this.dataGridViewTextBoxColumn4.HeaderText = "precio";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "idTipoProducto";
+            this.dataGridViewTextBoxColumn5.HeaderText = "idTipoProducto";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "marca";
+            this.dataGridViewTextBoxColumn6.HeaderText = "marca";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "tipoProducto";
+            this.dataGridViewTextBoxColumn7.HeaderText = "tipoProducto";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.grbEdicionPaciente);
-            this.Controls.Add(this.grbDatosPaciente);
+            this.Controls.Add(this.datosProductosDataGridView);
+            this.Controls.Add(this.grbEdicionProducto);
+            this.Controls.Add(this.grbDatosProducto);
             this.Controls.Add(this.grbNavegacionProducto);
             this.Name = "Productos";
             this.Text = "Productos";
@@ -361,12 +485,15 @@ namespace ProyectoFinal_Progra_I
             this.Load += new System.EventHandler(this.Productos_Load);
             this.grbNavegacionProducto.ResumeLayout(false);
             this.grbNavegacionProducto.PerformLayout();
-            this.grbDatosPaciente.ResumeLayout(false);
-            this.grbDatosPaciente.PerformLayout();
-            this.grbEdicionPaciente.ResumeLayout(false);
+            this.grbDatosProducto.ResumeLayout(false);
+            this.grbDatosProducto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoProductoBindingSource)).EndInit();
+            this.grbEdicionProducto.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datosProductosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosProductosDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -379,27 +506,40 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.Button btnUltimoProducto;
         private System.Windows.Forms.Button btnSiguienteProducto;
         private System.Windows.Forms.Label lblPosicionProducto;
-        private System.Windows.Forms.GroupBox grbDatosPaciente;
+        private System.Windows.Forms.GroupBox grbDatosProducto;
         private System.Windows.Forms.Label lblSexoPaciente;
-        private System.Windows.Forms.ComboBox cboTutorPaciente;
+        private System.Windows.Forms.ComboBox cboMarcaProducto;
         private System.Windows.Forms.Label lblTutorPaciente;
-        private System.Windows.Forms.ComboBox cboEspeciePaciente;
-        private System.Windows.Forms.TextBox txtNombrePaciente;
+        private System.Windows.Forms.ComboBox cboTipoProducto;
+        private System.Windows.Forms.TextBox txtNombreProducto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtDescripcionPaciente;
+        private System.Windows.Forms.TextBox txtDescripcionProducto;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox grbEdicionPaciente;
-        private System.Windows.Forms.Button btnNuevoPaciente;
-        private System.Windows.Forms.Button btnModificarPaciente;
-        private System.Windows.Forms.Button btnEliminarPaciente;
+        private System.Windows.Forms.TextBox txtPrecioProducto;
+        private System.Windows.Forms.GroupBox grbEdicionProducto;
+        private System.Windows.Forms.Button btnNuevoProducto;
+        private System.Windows.Forms.Button btnModificarProducto;
+        private System.Windows.Forms.Button btnEliminarProducto;
         private bd_veterinaria_huellitasDataSet bd_veterinaria_huellitasDataSet;
         private System.Windows.Forms.BindingSource marcasBindingSource;
         private bd_veterinaria_huellitasDataSetTableAdapters.marcasTableAdapter marcasTableAdapter;
         private System.Windows.Forms.BindingSource tipoProductoBindingSource;
         private bd_veterinaria_huellitasDataSetTableAdapters.tipoProductoTableAdapter tipoProductoTableAdapter;
+        private System.Windows.Forms.BindingSource productosBindingSource;
+        private bd_veterinaria_huellitasDataSetTableAdapters.productosTableAdapter productosTableAdapter;
+        private System.Windows.Forms.BindingSource datosProductosBindingSource;
+        private bd_veterinaria_huellitasDataSetTableAdapters.datosProductosTableAdapter datosProductosTableAdapter;
+        private bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView datosProductosDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

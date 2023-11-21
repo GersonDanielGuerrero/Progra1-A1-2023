@@ -29,11 +29,14 @@ namespace ProyectoFinal_Progra_I
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
             this.grbDatosUsuario = new System.Windows.Forms.GroupBox();
             this.txtConfirmacionDeContraseñaUsuario = new System.Windows.Forms.TextBox();
             this.lblConfirmacionDeContraseñaUsuario = new System.Windows.Forms.Label();
             this.txtContraseñaUsuario = new System.Windows.Forms.TextBox();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
             this.lblContraseñaUsuarios = new System.Windows.Forms.Label();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
@@ -54,16 +57,6 @@ namespace ProyectoFinal_Progra_I
             this.cboOpcionBuscarUsuario = new System.Windows.Forms.ComboBox();
             this.txtBuscarUsuario = new System.Windows.Forms.TextBox();
             this.lblBuscarUsuario = new System.Windows.Forms.Label();
-            this.grdDatosUsuarios = new System.Windows.Forms.DataGridView();
-            this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbNavegacionUsuario = new System.Windows.Forms.GroupBox();
             this.btnPrimeroUsuario = new System.Windows.Forms.Button();
             this.btnAnteriorUsuario = new System.Windows.Forms.Button();
@@ -74,11 +67,25 @@ namespace ProyectoFinal_Progra_I
             this.btnNuevoUsuario = new System.Windows.Forms.Button();
             this.btnModificarUsuario = new System.Windows.Forms.Button();
             this.btnEliminarUsuario = new System.Windows.Forms.Button();
+            this.usuariosTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.usuariosTableAdapter();
+            this.tableAdapterManager = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager();
+            this.usuariosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbDatosUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdDatosUsuarios)).BeginInit();
             this.grbNavegacionUsuario.SuspendLayout();
             this.grbEdicionUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // grbDatosUsuario
@@ -115,7 +122,6 @@ namespace ProyectoFinal_Progra_I
             this.txtConfirmacionDeContraseñaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmacionDeContraseñaUsuario.Location = new System.Drawing.Point(262, 314);
             this.txtConfirmacionDeContraseñaUsuario.Name = "txtConfirmacionDeContraseñaUsuario";
-            this.txtConfirmacionDeContraseñaUsuario.ReadOnly = true;
             this.txtConfirmacionDeContraseñaUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtConfirmacionDeContraseñaUsuario.TabIndex = 23;
             // 
@@ -131,12 +137,22 @@ namespace ProyectoFinal_Progra_I
             // 
             // txtContraseñaUsuario
             // 
+            this.txtContraseñaUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "clave", true));
             this.txtContraseñaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseñaUsuario.Location = new System.Drawing.Point(262, 270);
             this.txtContraseñaUsuario.Name = "txtContraseñaUsuario";
-            this.txtContraseñaUsuario.ReadOnly = true;
             this.txtContraseñaUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtContraseñaUsuario.TabIndex = 21;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "usuarios";
+            this.usuariosBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
+            // 
+            // bd_veterinaria_huellitasDataSet
+            // 
+            this.bd_veterinaria_huellitasDataSet.DataSetName = "bd_veterinaria_huellitasDataSet";
+            this.bd_veterinaria_huellitasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblContraseñaUsuarios
             // 
@@ -150,10 +166,10 @@ namespace ProyectoFinal_Progra_I
             // 
             // txtNombreUsuario
             // 
+            this.txtNombreUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "nombre", true));
             this.txtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreUsuario.Location = new System.Drawing.Point(262, 183);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.ReadOnly = true;
             this.txtNombreUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtNombreUsuario.TabIndex = 19;
             // 
@@ -191,42 +207,44 @@ namespace ProyectoFinal_Progra_I
             // 
             // txtTelefonoUsuario
             // 
+            this.txtTelefonoUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "telefono", true));
             this.txtTelefonoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoUsuario.Location = new System.Drawing.Point(262, 361);
             this.txtTelefonoUsuario.Name = "txtTelefonoUsuario";
-            this.txtTelefonoUsuario.ReadOnly = true;
             this.txtTelefonoUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtTelefonoUsuario.TabIndex = 11;
             // 
             // txtDireccionUsuario
             // 
+            this.txtDireccionUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "direccion", true));
             this.txtDireccionUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccionUsuario.Location = new System.Drawing.Point(262, 408);
             this.txtDireccionUsuario.Name = "txtDireccionUsuario";
-            this.txtDireccionUsuario.ReadOnly = true;
             this.txtDireccionUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtDireccionUsuario.TabIndex = 10;
             // 
             // txtCorreoUsuario
             // 
+            this.txtCorreoUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "correo", true));
             this.txtCorreoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreoUsuario.Location = new System.Drawing.Point(262, 455);
             this.txtCorreoUsuario.Name = "txtCorreoUsuario";
-            this.txtCorreoUsuario.ReadOnly = true;
             this.txtCorreoUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtCorreoUsuario.TabIndex = 9;
             // 
             // txtUsuario
             // 
+            this.txtUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "usuario", true));
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(262, 225);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.ReadOnly = true;
             this.txtUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtUsuario.TabIndex = 8;
             // 
             // dtpNacimietoUsuario
             // 
+            this.dtpNacimietoUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "fechaNacimiento", true));
+            this.dtpNacimietoUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuariosBindingSource, "fechaNacimiento", true));
             this.dtpNacimietoUsuario.Enabled = false;
             this.dtpNacimietoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNacimietoUsuario.Location = new System.Drawing.Point(262, 500);
@@ -256,6 +274,8 @@ namespace ProyectoFinal_Progra_I
             // 
             // dtpRegistroCliente
             // 
+            this.dtpRegistroCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "fechaRegistro", true));
+            this.dtpRegistroCliente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuariosBindingSource, "fechaRegistro", true));
             this.dtpRegistroCliente.Enabled = false;
             this.dtpRegistroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpRegistroCliente.Location = new System.Drawing.Point(262, 543);
@@ -338,87 +358,6 @@ namespace ProyectoFinal_Progra_I
             this.lblBuscarUsuario.TabIndex = 28;
             this.lblBuscarUsuario.Text = "Buscar";
             // 
-            // grdDatosUsuarios
-            // 
-            this.grdDatosUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDatosUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idCliente,
-            this.nombre,
-            this.usuario,
-            this.contraseña,
-            this.telefono,
-            this.direccion,
-            this.correo,
-            this.fechaRegistro,
-            this.fechaNacimiento});
-            this.grdDatosUsuarios.Location = new System.Drawing.Point(28, 129);
-            this.grdDatosUsuarios.Name = "grdDatosUsuarios";
-            this.grdDatosUsuarios.Size = new System.Drawing.Size(490, 540);
-            this.grdDatosUsuarios.TabIndex = 27;
-            // 
-            // idCliente
-            // 
-            this.idCliente.DataPropertyName = "idCliente";
-            this.idCliente.HeaderText = "ID";
-            this.idCliente.Name = "idCliente";
-            this.idCliente.ReadOnly = true;
-            this.idCliente.Visible = false;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // usuario
-            // 
-            this.usuario.HeaderText = "Usuario";
-            this.usuario.Name = "usuario";
-            this.usuario.ReadOnly = true;
-            // 
-            // contraseña
-            // 
-            this.contraseña.HeaderText = "Contraseña";
-            this.contraseña.Name = "contraseña";
-            this.contraseña.ReadOnly = true;
-            // 
-            // telefono
-            // 
-            this.telefono.DataPropertyName = "telefono";
-            this.telefono.HeaderText = "Teléfono";
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            this.telefono.Width = 50;
-            // 
-            // direccion
-            // 
-            this.direccion.DataPropertyName = "direccion";
-            this.direccion.HeaderText = "Dirección";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            // 
-            // correo
-            // 
-            this.correo.DataPropertyName = "correo";
-            this.correo.HeaderText = "Correo";
-            this.correo.Name = "correo";
-            this.correo.ReadOnly = true;
-            // 
-            // fechaRegistro
-            // 
-            this.fechaRegistro.DataPropertyName = "fechaRegistro";
-            this.fechaRegistro.HeaderText = "Fecha de registro";
-            this.fechaRegistro.Name = "fechaRegistro";
-            this.fechaRegistro.ReadOnly = true;
-            // 
-            // fechaNacimiento
-            // 
-            this.fechaNacimiento.DataPropertyName = "fechaNacimiento";
-            this.fechaNacimiento.HeaderText = "Fecha de nacimiento";
-            this.fechaNacimiento.Name = "fechaNacimiento";
-            this.fechaNacimiento.ReadOnly = true;
-            // 
             // grbNavegacionUsuario
             // 
             this.grbNavegacionUsuario.BackColor = System.Drawing.SystemColors.Control;
@@ -444,6 +383,7 @@ namespace ProyectoFinal_Progra_I
             this.btnPrimeroUsuario.TabIndex = 19;
             this.btnPrimeroUsuario.Text = "|<";
             this.btnPrimeroUsuario.UseVisualStyleBackColor = false;
+            this.btnPrimeroUsuario.Click += new System.EventHandler(this.btnPrimeroUsuario_Click);
             // 
             // btnAnteriorUsuario
             // 
@@ -455,6 +395,7 @@ namespace ProyectoFinal_Progra_I
             this.btnAnteriorUsuario.TabIndex = 22;
             this.btnAnteriorUsuario.Text = "<";
             this.btnAnteriorUsuario.UseVisualStyleBackColor = false;
+            this.btnAnteriorUsuario.Click += new System.EventHandler(this.btnAnteriorUsuario_Click);
             // 
             // btnUltimoUsuario
             // 
@@ -466,6 +407,7 @@ namespace ProyectoFinal_Progra_I
             this.btnUltimoUsuario.TabIndex = 20;
             this.btnUltimoUsuario.Text = ">|";
             this.btnUltimoUsuario.UseVisualStyleBackColor = false;
+            this.btnUltimoUsuario.Click += new System.EventHandler(this.btnUltimoUsuario_Click);
             // 
             // btnSiguienteUsuario
             // 
@@ -477,6 +419,7 @@ namespace ProyectoFinal_Progra_I
             this.btnSiguienteUsuario.TabIndex = 21;
             this.btnSiguienteUsuario.Text = ">";
             this.btnSiguienteUsuario.UseVisualStyleBackColor = false;
+            this.btnSiguienteUsuario.Click += new System.EventHandler(this.btnSiguienteUsuario_Click);
             // 
             // lblPosicionUsuario
             // 
@@ -508,8 +451,9 @@ namespace ProyectoFinal_Progra_I
             this.btnNuevoUsuario.Name = "btnNuevoUsuario";
             this.btnNuevoUsuario.Size = new System.Drawing.Size(90, 55);
             this.btnNuevoUsuario.TabIndex = 18;
-            this.btnNuevoUsuario.Text = "Nuevo cliente";
+            this.btnNuevoUsuario.Text = "Nuevo usuario";
             this.btnNuevoUsuario.UseVisualStyleBackColor = false;
+            this.btnNuevoUsuario.Click += new System.EventHandler(this.btnNuevoUsuario_Click);
             // 
             // btnModificarUsuario
             // 
@@ -521,6 +465,7 @@ namespace ProyectoFinal_Progra_I
             this.btnModificarUsuario.TabIndex = 16;
             this.btnModificarUsuario.Text = "Modificar datos";
             this.btnModificarUsuario.UseVisualStyleBackColor = false;
+            this.btnModificarUsuario.Click += new System.EventHandler(this.btnModificarUsuario_Click);
             // 
             // btnEliminarUsuario
             // 
@@ -533,29 +478,131 @@ namespace ProyectoFinal_Progra_I
             this.btnEliminarUsuario.Text = "Eliminar Cliente";
             this.btnEliminarUsuario.UseVisualStyleBackColor = false;
             // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.clientesTableAdapter = null;
+            this.tableAdapterManager.coloresTableAdapter = null;
+            this.tableAdapterManager.especiesTableAdapter = null;
+            this.tableAdapterManager.fallecimientosTableAdapter = null;
+            this.tableAdapterManager.marcasTableAdapter = null;
+            this.tableAdapterManager.pacientes_coloresTableAdapter = null;
+            this.tableAdapterManager.pacientesTableAdapter = null;
+            this.tableAdapterManager.principiosActivosTableAdapter = null;
+            this.tableAdapterManager.productos_principiosActivosTableAdapter = null;
+            this.tableAdapterManager.productosTableAdapter = null;
+            this.tableAdapterManager.razasTableAdapter = null;
+            this.tableAdapterManager.tipoProductoTableAdapter = null;
+            this.tableAdapterManager.tipoServiciosTableAdapter = null;
+            this.tableAdapterManager.tratamientosTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usuariosTableAdapter = this.usuariosTableAdapter;
+            // 
+            // usuariosDataGridView
+            // 
+            this.usuariosDataGridView.AutoGenerateColumns = false;
+            this.usuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usuariosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.usuariosDataGridView.DataSource = this.usuariosBindingSource;
+            this.usuariosDataGridView.Location = new System.Drawing.Point(12, 132);
+            this.usuariosDataGridView.Name = "usuariosDataGridView";
+            this.usuariosDataGridView.Size = new System.Drawing.Size(506, 308);
+            this.usuariosDataGridView.TabIndex = 33;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idUsuario";
+            this.dataGridViewTextBoxColumn1.HeaderText = "idUsuario";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "usuario";
+            this.dataGridViewTextBoxColumn3.HeaderText = "usuario";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "clave";
+            this.dataGridViewTextBoxColumn4.HeaderText = "clave";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "direccion";
+            this.dataGridViewTextBoxColumn5.HeaderText = "direccion";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "telefono";
+            this.dataGridViewTextBoxColumn6.HeaderText = "telefono";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "correo";
+            this.dataGridViewTextBoxColumn7.HeaderText = "correo";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn8.HeaderText = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "fechaRegistro";
+            this.dataGridViewTextBoxColumn9.HeaderText = "fechaRegistro";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.ControlBox = false;
+            this.Controls.Add(this.usuariosDataGridView);
             this.Controls.Add(this.grbNavegacionUsuario);
             this.Controls.Add(this.grbEdicionUsuario);
             this.Controls.Add(this.grbDatosUsuario);
             this.Controls.Add(this.cboOpcionBuscarUsuario);
             this.Controls.Add(this.txtBuscarUsuario);
             this.Controls.Add(this.lblBuscarUsuario);
-            this.Controls.Add(this.grdDatosUsuarios);
             this.Name = "Usuarios";
             this.Text = "Usuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Usuarios_Load);
             this.grbDatosUsuario.ResumeLayout(false);
             this.grbDatosUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdDatosUsuarios)).EndInit();
             this.grbNavegacionUsuario.ResumeLayout(false);
             this.grbNavegacionUsuario.PerformLayout();
             this.grbEdicionUsuario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -581,7 +628,6 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.ComboBox cboOpcionBuscarUsuario;
         private System.Windows.Forms.TextBox txtBuscarUsuario;
         private System.Windows.Forms.Label lblBuscarUsuario;
-        private System.Windows.Forms.DataGridView grdDatosUsuarios;
         private System.Windows.Forms.GroupBox grbNavegacionUsuario;
         private System.Windows.Forms.Button btnPrimeroUsuario;
         private System.Windows.Forms.Button btnAnteriorUsuario;
@@ -598,14 +644,19 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.Label lblContraseñaUsuarios;
         private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.Windows.Forms.Label lblNombreUsuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contraseña;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaRegistro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimiento;
+        private bd_veterinaria_huellitasDataSet bd_veterinaria_huellitasDataSet;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private bd_veterinaria_huellitasDataSetTableAdapters.usuariosTableAdapter usuariosTableAdapter;
+        private bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView usuariosDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoFinal_Progra_I
 {
-    partial class Form1
+    partial class Principal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -32,17 +32,22 @@ namespace ProyectoFinal_Progra_I
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ServiciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem,
             this.pacientesToolStripMenuItem,
-            this.productosToolStripMenuItem});
+            this.toolStripMenuItem1,
+            this.usuariosToolStripMenuItem,
+            this.ServiciosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(128, 749);
@@ -72,30 +77,57 @@ namespace ProyectoFinal_Progra_I
             this.pacientesToolStripMenuItem.Text = "Pacientes";
             this.pacientesToolStripMenuItem.Click += new System.EventHandler(this.pacientesToolStripMenuItem_Click);
             // 
-            // productosToolStripMenuItem
+            // usuariosToolStripMenuItem
             // 
-            this.productosToolStripMenuItem.AutoSize = false;
-            this.productosToolStripMenuItem.BackColor = System.Drawing.Color.Teal;
-            this.productosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.productosToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1);
-            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(120, 60);
-            this.productosToolStripMenuItem.Text = "Productos";
-            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            this.usuariosToolStripMenuItem.AutoSize = false;
+            this.usuariosToolStripMenuItem.BackColor = System.Drawing.Color.Teal;
+            this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuariosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.usuariosToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1);
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(120, 60);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
-            // Form1
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.AutoSize = false;
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.Teal;
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.toolStripMenuItem1.Margin = new System.Windows.Forms.Padding(1);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(120, 60);
+            this.toolStripMenuItem1.Text = "Productos";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
+            // ServiciosToolStripMenuItem
+            // 
+            this.ServiciosToolStripMenuItem.AutoSize = false;
+            this.ServiciosToolStripMenuItem.BackColor = System.Drawing.Color.Teal;
+            this.ServiciosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServiciosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ServiciosToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1);
+            this.ServiciosToolStripMenuItem.Name = "ServiciosToolStripMenuItem";
+            this.ServiciosToolStripMenuItem.Size = new System.Drawing.Size(120, 60);
+            this.ServiciosToolStripMenuItem.Text = "Servicios";
+            this.ServiciosToolStripMenuItem.Click += new System.EventHandler(this.ServiciosToolStripMenuItem_Click);
+            // 
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "Principal";
             this.Text = "Veterinaria Huellitas";
+            this.TransparencyKey = System.Drawing.Color.White;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -108,7 +140,9 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pacientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ServiciosToolStripMenuItem;
     }
 }
 

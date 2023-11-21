@@ -42,7 +42,7 @@ namespace ProyectoFinal_Progra_I
             }
             if (permitirIngreso) { 
                 MessageBox.Show("Bienvenido, " + txtUsuarioLogIn.Text);
-                Form1 objPrincipal = new Form1();
+                Principal objPrincipal = new Principal();
                 objPrincipal.Show();
                 
             }

@@ -39,6 +39,8 @@ namespace ProyectoFinal_Progra_I
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
             this.txtCorreoCliente = new System.Windows.Forms.TextBox();
             this.txtDireccionCliente = new System.Windows.Forms.TextBox();
             this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
@@ -58,23 +60,32 @@ namespace ProyectoFinal_Progra_I
             this.grbNavegacionCliente = new System.Windows.Forms.GroupBox();
             this.grbDatosCliente = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.pacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.btnAgregarFotoCliente = new System.Windows.Forms.Button();
             this.pbFotoCliente = new System.Windows.Forms.PictureBox();
             this.erpClientes = new System.Windows.Forms.ErrorProvider(this.components);
-            this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
-            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientesTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.clientesTableAdapter();
-            this.pacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pacientesTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.pacientesTableAdapter();
+            this.tableAdapterManager = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientesDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
             this.grbEdicionCliente.SuspendLayout();
             this.grbNavegacionCliente.SuspendLayout();
             this.grbDatosCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -153,9 +164,18 @@ namespace ProyectoFinal_Progra_I
             this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreCliente.Location = new System.Drawing.Point(195, 205);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.ReadOnly = true;
             this.txtNombreCliente.Size = new System.Drawing.Size(430, 26);
             this.txtNombreCliente.TabIndex = 8;
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "clientes";
+            this.clientesBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
+            // 
+            // bd_veterinaria_huellitasDataSet
+            // 
+            this.bd_veterinaria_huellitasDataSet.DataSetName = "bd_veterinaria_huellitasDataSet";
+            this.bd_veterinaria_huellitasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtCorreoCliente
             // 
@@ -163,7 +183,6 @@ namespace ProyectoFinal_Progra_I
             this.txtCorreoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreoCliente.Location = new System.Drawing.Point(195, 354);
             this.txtCorreoCliente.Name = "txtCorreoCliente";
-            this.txtCorreoCliente.ReadOnly = true;
             this.txtCorreoCliente.Size = new System.Drawing.Size(430, 26);
             this.txtCorreoCliente.TabIndex = 9;
             // 
@@ -173,7 +192,6 @@ namespace ProyectoFinal_Progra_I
             this.txtDireccionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccionCliente.Location = new System.Drawing.Point(195, 304);
             this.txtDireccionCliente.Name = "txtDireccionCliente";
-            this.txtDireccionCliente.ReadOnly = true;
             this.txtDireccionCliente.Size = new System.Drawing.Size(430, 26);
             this.txtDireccionCliente.TabIndex = 10;
             // 
@@ -183,13 +201,13 @@ namespace ProyectoFinal_Progra_I
             this.txtTelefonoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoCliente.Location = new System.Drawing.Point(195, 254);
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
-            this.txtTelefonoCliente.ReadOnly = true;
             this.txtTelefonoCliente.Size = new System.Drawing.Size(430, 26);
             this.txtTelefonoCliente.TabIndex = 11;
             // 
             // dtpNacimietoCliente
             // 
-            this.dtpNacimietoCliente.Enabled = false;
+            this.dtpNacimietoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientesBindingSource, "fechaNacimiento", true));
+            this.dtpNacimietoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "fechaNacimiento", true));
             this.dtpNacimietoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNacimietoCliente.Location = new System.Drawing.Point(196, 524);
             this.dtpNacimietoCliente.Name = "dtpNacimietoCliente";
@@ -198,7 +216,8 @@ namespace ProyectoFinal_Progra_I
             // 
             // dtpRegistroCliente
             // 
-            this.dtpRegistroCliente.Enabled = false;
+            this.dtpRegistroCliente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientesBindingSource, "fechaRegistro", true));
+            this.dtpRegistroCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "fechaRegistro", true));
             this.dtpRegistroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpRegistroCliente.Location = new System.Drawing.Point(196, 573);
             this.dtpRegistroCliente.Name = "dtpRegistroCliente";
@@ -240,6 +259,7 @@ namespace ProyectoFinal_Progra_I
             this.btnModificarCliente.TabIndex = 16;
             this.btnModificarCliente.Text = "Modificar datos";
             this.btnModificarCliente.UseVisualStyleBackColor = false;
+            this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
             // btnEliminarCliente
             // 
@@ -262,6 +282,7 @@ namespace ProyectoFinal_Progra_I
             this.btnNuevoCliente.TabIndex = 18;
             this.btnNuevoCliente.Text = "Nuevo cliente";
             this.btnNuevoCliente.UseVisualStyleBackColor = false;
+            this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
             // 
             // btnPrimeroCliente
             // 
@@ -273,6 +294,7 @@ namespace ProyectoFinal_Progra_I
             this.btnPrimeroCliente.TabIndex = 19;
             this.btnPrimeroCliente.Text = "|<";
             this.btnPrimeroCliente.UseVisualStyleBackColor = false;
+            this.btnPrimeroCliente.Click += new System.EventHandler(this.btnPrimeroCliente_Click);
             // 
             // btnUltimoCliente
             // 
@@ -284,6 +306,7 @@ namespace ProyectoFinal_Progra_I
             this.btnUltimoCliente.TabIndex = 20;
             this.btnUltimoCliente.Text = ">|";
             this.btnUltimoCliente.UseVisualStyleBackColor = false;
+            this.btnUltimoCliente.Click += new System.EventHandler(this.btnUltimoCliente_Click);
             // 
             // btnSiguienteCliente
             // 
@@ -295,6 +318,7 @@ namespace ProyectoFinal_Progra_I
             this.btnSiguienteCliente.TabIndex = 21;
             this.btnSiguienteCliente.Text = ">";
             this.btnSiguienteCliente.UseVisualStyleBackColor = false;
+            this.btnSiguienteCliente.Click += new System.EventHandler(this.btnSiguienteCliente_Click);
             // 
             // btnAnteriorCliente
             // 
@@ -306,6 +330,7 @@ namespace ProyectoFinal_Progra_I
             this.btnAnteriorCliente.TabIndex = 22;
             this.btnAnteriorCliente.Text = "<";
             this.btnAnteriorCliente.UseVisualStyleBackColor = false;
+            this.btnAnteriorCliente.Click += new System.EventHandler(this.btnAnteriorCliente_Click);
             // 
             // lblPosicionCliente
             // 
@@ -322,7 +347,7 @@ namespace ProyectoFinal_Progra_I
             this.grbEdicionCliente.Controls.Add(this.btnNuevoCliente);
             this.grbEdicionCliente.Controls.Add(this.btnModificarCliente);
             this.grbEdicionCliente.Controls.Add(this.btnEliminarCliente);
-            this.grbEdicionCliente.Location = new System.Drawing.Point(536, 627);
+            this.grbEdicionCliente.Location = new System.Drawing.Point(116, 523);
             this.grbEdicionCliente.Name = "grbEdicionCliente";
             this.grbEdicionCliente.Size = new System.Drawing.Size(331, 82);
             this.grbEdicionCliente.TabIndex = 24;
@@ -337,7 +362,7 @@ namespace ProyectoFinal_Progra_I
             this.grbNavegacionCliente.Controls.Add(this.btnUltimoCliente);
             this.grbNavegacionCliente.Controls.Add(this.btnSiguienteCliente);
             this.grbNavegacionCliente.Controls.Add(this.lblPosicionCliente);
-            this.grbNavegacionCliente.Location = new System.Drawing.Point(915, 627);
+            this.grbNavegacionCliente.Location = new System.Drawing.Point(131, 439);
             this.grbNavegacionCliente.Name = "grbNavegacionCliente";
             this.grbNavegacionCliente.Size = new System.Drawing.Size(278, 82);
             this.grbNavegacionCliente.TabIndex = 25;
@@ -364,7 +389,7 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosCliente.Controls.Add(this.label3);
             this.grbDatosCliente.Location = new System.Drawing.Point(536, 12);
             this.grbDatosCliente.Name = "grbDatosCliente";
-            this.grbDatosCliente.Size = new System.Drawing.Size(657, 609);
+            this.grbDatosCliente.Size = new System.Drawing.Size(657, 619);
             this.grbDatosCliente.TabIndex = 26;
             this.grbDatosCliente.TabStop = false;
             this.grbDatosCliente.Text = "Datos del cliente";
@@ -372,6 +397,7 @@ namespace ProyectoFinal_Progra_I
             // listBox1
             // 
             this.listBox1.DataSource = this.pacientesBindingSource;
+            this.listBox1.DisplayMember = "nombre";
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
@@ -379,6 +405,12 @@ namespace ProyectoFinal_Progra_I
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(429, 104);
             this.listBox1.TabIndex = 20;
+            this.listBox1.ValueMember = "nombre";
+            // 
+            // pacientesBindingSource
+            // 
+            this.pacientesBindingSource.DataMember = "pacientes";
+            this.pacientesBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
             // 
             // label9
             // 
@@ -393,7 +425,6 @@ namespace ProyectoFinal_Progra_I
             // btnAgregarFotoCliente
             // 
             this.btnAgregarFotoCliente.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAgregarFotoCliente.Enabled = false;
             this.btnAgregarFotoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarFotoCliente.Location = new System.Drawing.Point(271, 133);
             this.btnAgregarFotoCliente.Name = "btnAgregarFotoCliente";
@@ -401,9 +432,11 @@ namespace ProyectoFinal_Progra_I
             this.btnAgregarFotoCliente.TabIndex = 17;
             this.btnAgregarFotoCliente.Text = "Añadir foto";
             this.btnAgregarFotoCliente.UseVisualStyleBackColor = false;
+            this.btnAgregarFotoCliente.Click += new System.EventHandler(this.btnAgregarFotoCliente_Click);
             // 
             // pbFotoCliente
             // 
+            this.pbFotoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clientesBindingSource, "foto", true));
             this.pbFotoCliente.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbFotoCliente.InitialImage")));
             this.pbFotoCliente.Location = new System.Drawing.Point(271, 19);
             this.pbFotoCliente.Name = "pbFotoCliente";
@@ -416,28 +449,101 @@ namespace ProyectoFinal_Progra_I
             // 
             this.erpClientes.ContainerControl = this;
             // 
-            // bd_veterinaria_huellitasDataSet
-            // 
-            this.bd_veterinaria_huellitasDataSet.DataSetName = "bd_veterinaria_huellitasDataSet";
-            this.bd_veterinaria_huellitasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientesBindingSource
-            // 
-            this.clientesBindingSource.DataMember = "clientes";
-            this.clientesBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
-            // 
             // clientesTableAdapter
             // 
             this.clientesTableAdapter.ClearBeforeFill = true;
             // 
-            // pacientesBindingSource
-            // 
-            this.pacientesBindingSource.DataMember = "pacientes";
-            this.pacientesBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
-            // 
             // pacientesTableAdapter
             // 
             this.pacientesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.clientesTableAdapter = this.clientesTableAdapter;
+            this.tableAdapterManager.coloresTableAdapter = null;
+            this.tableAdapterManager.especiesTableAdapter = null;
+            this.tableAdapterManager.fallecimientosTableAdapter = null;
+            this.tableAdapterManager.marcasTableAdapter = null;
+            this.tableAdapterManager.pacientes_coloresTableAdapter = null;
+            this.tableAdapterManager.pacientesTableAdapter = this.pacientesTableAdapter;
+            this.tableAdapterManager.principiosActivosTableAdapter = null;
+            this.tableAdapterManager.productos_principiosActivosTableAdapter = null;
+            this.tableAdapterManager.productosTableAdapter = null;
+            this.tableAdapterManager.razasTableAdapter = null;
+            this.tableAdapterManager.tipoProductoTableAdapter = null;
+            this.tableAdapterManager.tipoServiciosTableAdapter = null;
+            this.tableAdapterManager.tratamientosTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usuariosTableAdapter = null;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.DataPropertyName = "foto";
+            this.dataGridViewImageColumn1.HeaderText = "foto";
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "fechaRegistro";
+            this.dataGridViewTextBoxColumn7.HeaderText = "fechaRegistro";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn6.HeaderText = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "telefono";
+            this.dataGridViewTextBoxColumn5.HeaderText = "telefono";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "correo";
+            this.dataGridViewTextBoxColumn4.HeaderText = "correo";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "direccion";
+            this.dataGridViewTextBoxColumn3.HeaderText = "direccion";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idCliente";
+            this.dataGridViewTextBoxColumn1.HeaderText = "idCliente";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // clientesDataGridView
+            // 
+            this.clientesDataGridView.AutoGenerateColumns = false;
+            this.clientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clientesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewImageColumn1});
+            this.clientesDataGridView.DataSource = this.clientesBindingSource;
+            this.clientesDataGridView.Location = new System.Drawing.Point(12, 100);
+            this.clientesDataGridView.Name = "clientesDataGridView";
+            this.clientesDataGridView.Size = new System.Drawing.Size(504, 333);
+            this.clientesDataGridView.TabIndex = 20;
             // 
             // Clientes
             // 
@@ -445,6 +551,7 @@ namespace ProyectoFinal_Progra_I
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 721);
             this.ControlBox = false;
+            this.Controls.Add(this.clientesDataGridView);
             this.Controls.Add(this.grbDatosCliente);
             this.Controls.Add(this.grbNavegacionCliente);
             this.Controls.Add(this.grbEdicionCliente);
@@ -455,16 +562,17 @@ namespace ProyectoFinal_Progra_I
             this.Text = "Clientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Clientes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).EndInit();
             this.grbEdicionCliente.ResumeLayout(false);
             this.grbNavegacionCliente.ResumeLayout(false);
             this.grbNavegacionCliente.PerformLayout();
             this.grbDatosCliente.ResumeLayout(false);
             this.grbDatosCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,12 +608,22 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.ErrorProvider erpClientes;
         private System.Windows.Forms.Button btnAgregarFotoCliente;
         private System.Windows.Forms.PictureBox pbFotoCliente;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label9;
         private bd_veterinaria_huellitasDataSet bd_veterinaria_huellitasDataSet;
         private System.Windows.Forms.BindingSource clientesBindingSource;
         private bd_veterinaria_huellitasDataSetTableAdapters.clientesTableAdapter clientesTableAdapter;
         private System.Windows.Forms.BindingSource pacientesBindingSource;
         private bd_veterinaria_huellitasDataSetTableAdapters.pacientesTableAdapter pacientesTableAdapter;
+        private bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView clientesDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
