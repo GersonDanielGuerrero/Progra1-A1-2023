@@ -134,7 +134,7 @@ namespace ProyectoFinal_Progra_I
             this.txtBuscarPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarPaciente.Location = new System.Drawing.Point(262, 75);
             this.txtBuscarPaciente.Name = "txtBuscarPaciente";
-            this.txtBuscarPaciente.Size = new System.Drawing.Size(249, 26);
+            this.txtBuscarPaciente.Size = new System.Drawing.Size(157, 26);
             this.txtBuscarPaciente.TabIndex = 18;
             // 
             // label1
@@ -663,9 +663,9 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.datosPacientesDataGridView.DataSource = this.datosPacientesBindingSource;
-            this.datosPacientesDataGridView.Location = new System.Drawing.Point(16, 56);
+            this.datosPacientesDataGridView.Location = new System.Drawing.Point(26, 56);
             this.datosPacientesDataGridView.Name = "datosPacientesDataGridView";
-            this.datosPacientesDataGridView.Size = new System.Drawing.Size(496, 411);
+            this.datosPacientesDataGridView.Size = new System.Drawing.Size(442, 411);
             this.datosPacientesDataGridView.TabIndex = 29;
             // 
             // dataGridViewTextBoxColumn1
@@ -674,24 +674,28 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn1.HeaderText = "idPaciente";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "idCliente";
             this.dataGridViewTextBoxColumn2.HeaderText = "idCliente";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Visible = false;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "idEspecie";
             this.dataGridViewTextBoxColumn4.HeaderText = "idEspecie";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Visible = false;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "idRaza";
             this.dataGridViewTextBoxColumn5.HeaderText = "idRaza";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Visible = false;
             // 
             // dataGridViewTextBoxColumn8
             // 

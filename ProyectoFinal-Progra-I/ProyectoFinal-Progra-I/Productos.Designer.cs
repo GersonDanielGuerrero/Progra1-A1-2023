@@ -365,7 +365,7 @@ namespace ProyectoFinal_Progra_I
             this.btnEliminarProducto.Name = "btnEliminarProducto";
             this.btnEliminarProducto.Size = new System.Drawing.Size(90, 55);
             this.btnEliminarProducto.TabIndex = 17;
-            this.btnEliminarProducto.Text = "Eliminar paciente";
+            this.btnEliminarProducto.Text = "Eliminar producto";
             this.btnEliminarProducto.UseVisualStyleBackColor = false;
             this.btnEliminarProducto.Click += new System.EventHandler(this.btnEliminarProducto_Click);
             // 
