@@ -9,6 +9,10 @@
 
 namespace ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters
 {
+    partial class detalleTratamientosTableAdapter
+    {
+    }
+
     partial class datosProductosTableAdapter
     {
     }

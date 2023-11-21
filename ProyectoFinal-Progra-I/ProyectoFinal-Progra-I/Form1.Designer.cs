@@ -32,8 +32,10 @@ namespace ProyectoFinal_Progra_I
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.datosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tratamientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ServiciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +71,9 @@ namespace ProyectoFinal_Progra_I
             // 
             this.pacientesToolStripMenuItem.AutoSize = false;
             this.pacientesToolStripMenuItem.BackColor = System.Drawing.Color.Teal;
+            this.pacientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.datosToolStripMenuItem,
+            this.tratamientosToolStripMenuItem});
             this.pacientesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pacientesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pacientesToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1);
@@ -77,17 +82,23 @@ namespace ProyectoFinal_Progra_I
             this.pacientesToolStripMenuItem.Text = "Pacientes";
             this.pacientesToolStripMenuItem.Click += new System.EventHandler(this.pacientesToolStripMenuItem_Click);
             // 
-            // usuariosToolStripMenuItem
+            // datosToolStripMenuItem
             // 
-            this.usuariosToolStripMenuItem.AutoSize = false;
-            this.usuariosToolStripMenuItem.BackColor = System.Drawing.Color.Teal;
-            this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuariosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.usuariosToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1);
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(120, 60);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            this.datosToolStripMenuItem.BackColor = System.Drawing.Color.Teal;
+            this.datosToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
+            this.datosToolStripMenuItem.Name = "datosToolStripMenuItem";
+            this.datosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.datosToolStripMenuItem.Text = "Datos";
+            this.datosToolStripMenuItem.Click += new System.EventHandler(this.datosToolStripMenuItem_Click);
+            // 
+            // tratamientosToolStripMenuItem
+            // 
+            this.tratamientosToolStripMenuItem.BackColor = System.Drawing.Color.Teal;
+            this.tratamientosToolStripMenuItem.Margin = new System.Windows.Forms.Padding(2);
+            this.tratamientosToolStripMenuItem.Name = "tratamientosToolStripMenuItem";
+            this.tratamientosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.tratamientosToolStripMenuItem.Text = "Tratamientos";
+            this.tratamientosToolStripMenuItem.Click += new System.EventHandler(this.tratamientosToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -100,6 +111,18 @@ namespace ProyectoFinal_Progra_I
             this.toolStripMenuItem1.Size = new System.Drawing.Size(120, 60);
             this.toolStripMenuItem1.Text = "Productos";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.AutoSize = false;
+            this.usuariosToolStripMenuItem.BackColor = System.Drawing.Color.Teal;
+            this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuariosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.usuariosToolStripMenuItem.Margin = new System.Windows.Forms.Padding(1);
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(120, 60);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // ServiciosToolStripMenuItem
             // 
@@ -143,6 +166,8 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ServiciosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem datosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tratamientosToolStripMenuItem;
     }
 }
 

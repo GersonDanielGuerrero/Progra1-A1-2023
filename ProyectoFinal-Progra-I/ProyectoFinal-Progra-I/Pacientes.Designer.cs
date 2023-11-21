@@ -51,11 +51,9 @@ namespace ProyectoFinal_Progra_I
             this.lblTutorPaciente = new System.Windows.Forms.Label();
             this.cboEspeciePaciente = new System.Windows.Forms.ComboBox();
             this.especiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cboColorPaciente = new System.Windows.Forms.ComboBox();
             this.cboRazaPaciente = new System.Windows.Forms.ComboBox();
             this.razasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtNombrePaciente = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -88,14 +86,14 @@ namespace ProyectoFinal_Progra_I
             this.pacientesColoresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fallecimientosTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.fallecimientosTableAdapter();
             this.datosPacientesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbDatosPaciente.SuspendLayout();
             this.grbFallecimientoPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fallecimientosBindingSource)).BeginInit();
@@ -159,10 +157,8 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosPaciente.Controls.Add(this.cboTutorPaciente);
             this.grbDatosPaciente.Controls.Add(this.lblTutorPaciente);
             this.grbDatosPaciente.Controls.Add(this.cboEspeciePaciente);
-            this.grbDatosPaciente.Controls.Add(this.cboColorPaciente);
             this.grbDatosPaciente.Controls.Add(this.cboRazaPaciente);
             this.grbDatosPaciente.Controls.Add(this.txtNombrePaciente);
-            this.grbDatosPaciente.Controls.Add(this.label5);
             this.grbDatosPaciente.Controls.Add(this.label2);
             this.grbDatosPaciente.Controls.Add(this.label4);
             this.grbDatosPaciente.Controls.Add(this.label3);
@@ -278,7 +274,7 @@ namespace ProyectoFinal_Progra_I
             this.comboBox1.Items.AddRange(new object[] {
             "Macho",
             "Hembra"});
-            this.comboBox1.Location = new System.Drawing.Point(195, 252);
+            this.comboBox1.Location = new System.Drawing.Point(195, 226);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(430, 28);
             this.comboBox1.TabIndex = 39;
@@ -293,7 +289,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.lblSexoPaciente.AutoSize = true;
             this.lblSexoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexoPaciente.Location = new System.Drawing.Point(131, 255);
+            this.lblSexoPaciente.Location = new System.Drawing.Point(131, 229);
             this.lblSexoPaciente.Name = "lblSexoPaciente";
             this.lblSexoPaciente.Size = new System.Drawing.Size(49, 20);
             this.lblSexoPaciente.TabIndex = 38;
@@ -336,7 +332,7 @@ namespace ProyectoFinal_Progra_I
             this.cboEspeciePaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEspeciePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.cboEspeciePaciente.FormattingEnabled = true;
-            this.cboEspeciePaciente.Location = new System.Drawing.Point(195, 125);
+            this.cboEspeciePaciente.Location = new System.Drawing.Point(195, 130);
             this.cboEspeciePaciente.Name = "cboEspeciePaciente";
             this.cboEspeciePaciente.Size = new System.Drawing.Size(430, 28);
             this.cboEspeciePaciente.TabIndex = 35;
@@ -347,18 +343,6 @@ namespace ProyectoFinal_Progra_I
             this.especiesBindingSource.DataMember = "especies";
             this.especiesBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
             // 
-            // cboColorPaciente
-            // 
-            this.cboColorPaciente.DisplayMember = "IdColor";
-            this.cboColorPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboColorPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.cboColorPaciente.FormattingEnabled = true;
-            this.cboColorPaciente.Location = new System.Drawing.Point(195, 216);
-            this.cboColorPaciente.Name = "cboColorPaciente";
-            this.cboColorPaciente.Size = new System.Drawing.Size(430, 28);
-            this.cboColorPaciente.TabIndex = 34;
-            this.cboColorPaciente.ValueMember = "IdColor";
-            // 
             // cboRazaPaciente
             // 
             this.cboRazaPaciente.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.pacientesBindingSource, "idRaza", true));
@@ -367,7 +351,7 @@ namespace ProyectoFinal_Progra_I
             this.cboRazaPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRazaPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.cboRazaPaciente.FormattingEnabled = true;
-            this.cboRazaPaciente.Location = new System.Drawing.Point(195, 169);
+            this.cboRazaPaciente.Location = new System.Drawing.Point(195, 174);
             this.cboRazaPaciente.Name = "cboRazaPaciente";
             this.cboRazaPaciente.Size = new System.Drawing.Size(430, 28);
             this.cboRazaPaciente.TabIndex = 33;
@@ -387,21 +371,11 @@ namespace ProyectoFinal_Progra_I
             this.txtNombrePaciente.Size = new System.Drawing.Size(430, 26);
             this.txtNombrePaciente.TabIndex = 32;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(131, 216);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 20);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Color";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(109, 123);
+            this.label2.Location = new System.Drawing.Point(109, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 28;
@@ -421,7 +395,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(131, 170);
+            this.label3.Location = new System.Drawing.Point(131, 175);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 29;
@@ -451,7 +425,7 @@ namespace ProyectoFinal_Progra_I
             this.dtpNacimietoPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.pacientesBindingSource, "fechaNacimiento", true));
             this.dtpNacimietoPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "fechaNacimiento", true));
             this.dtpNacimietoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNacimietoPaciente.Location = new System.Drawing.Point(195, 299);
+            this.dtpNacimietoPaciente.Location = new System.Drawing.Point(195, 276);
             this.dtpNacimietoPaciente.Name = "dtpNacimietoPaciente";
             this.dtpNacimietoPaciente.Size = new System.Drawing.Size(336, 26);
             this.dtpNacimietoPaciente.TabIndex = 12;
@@ -460,7 +434,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(39, 342);
+            this.label7.Location = new System.Drawing.Point(39, 330);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(150, 20);
             this.label7.TabIndex = 7;
@@ -470,7 +444,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 304);
+            this.label6.Location = new System.Drawing.Point(13, 281);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(176, 20);
             this.label6.TabIndex = 6;
@@ -481,7 +455,7 @@ namespace ProyectoFinal_Progra_I
             this.dtpRegistroPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.pacientesBindingSource, "fechaRegistro", true));
             this.dtpRegistroPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "fechaRegistro", true));
             this.dtpRegistroPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpRegistroPaciente.Location = new System.Drawing.Point(195, 342);
+            this.dtpRegistroPaciente.Location = new System.Drawing.Point(195, 330);
             this.dtpRegistroPaciente.Name = "dtpRegistroPaciente";
             this.dtpRegistroPaciente.Size = new System.Drawing.Size(336, 26);
             this.dtpRegistroPaciente.TabIndex = 13;
@@ -499,9 +473,9 @@ namespace ProyectoFinal_Progra_I
             this.grbNavegacionPaciente.Controls.Add(this.btnUltimoPaciente);
             this.grbNavegacionPaciente.Controls.Add(this.btnSiguientePaciente);
             this.grbNavegacionPaciente.Controls.Add(this.lblPosicionPaciente);
-            this.grbNavegacionPaciente.Location = new System.Drawing.Point(131, 479);
+            this.grbNavegacionPaciente.Location = new System.Drawing.Point(16, 479);
             this.grbNavegacionPaciente.Name = "grbNavegacionPaciente";
-            this.grbNavegacionPaciente.Size = new System.Drawing.Size(280, 82);
+            this.grbNavegacionPaciente.Size = new System.Drawing.Size(496, 82);
             this.grbNavegacionPaciente.TabIndex = 29;
             this.grbNavegacionPaciente.TabStop = false;
             this.grbNavegacionPaciente.Text = "Navegación";
@@ -510,7 +484,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.btnPrimeroPaciente.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnPrimeroPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrimeroPaciente.Location = new System.Drawing.Point(14, 31);
+            this.btnPrimeroPaciente.Location = new System.Drawing.Point(105, 29);
             this.btnPrimeroPaciente.Name = "btnPrimeroPaciente";
             this.btnPrimeroPaciente.Size = new System.Drawing.Size(37, 30);
             this.btnPrimeroPaciente.TabIndex = 19;
@@ -522,7 +496,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.btnAnteriorPaciente.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnAnteriorPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnteriorPaciente.Location = new System.Drawing.Point(57, 31);
+            this.btnAnteriorPaciente.Location = new System.Drawing.Point(148, 29);
             this.btnAnteriorPaciente.Name = "btnAnteriorPaciente";
             this.btnAnteriorPaciente.Size = new System.Drawing.Size(37, 30);
             this.btnAnteriorPaciente.TabIndex = 22;
@@ -534,7 +508,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.btnUltimoPaciente.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnUltimoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUltimoPaciente.Location = new System.Drawing.Point(231, 31);
+            this.btnUltimoPaciente.Location = new System.Drawing.Point(322, 29);
             this.btnUltimoPaciente.Name = "btnUltimoPaciente";
             this.btnUltimoPaciente.Size = new System.Drawing.Size(37, 30);
             this.btnUltimoPaciente.TabIndex = 20;
@@ -546,7 +520,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.btnSiguientePaciente.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnSiguientePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguientePaciente.Location = new System.Drawing.Point(188, 31);
+            this.btnSiguientePaciente.Location = new System.Drawing.Point(279, 29);
             this.btnSiguientePaciente.Name = "btnSiguientePaciente";
             this.btnSiguientePaciente.Size = new System.Drawing.Size(37, 30);
             this.btnSiguientePaciente.TabIndex = 21;
@@ -558,7 +532,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.lblPosicionPaciente.AutoSize = true;
             this.lblPosicionPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosicionPaciente.Location = new System.Drawing.Point(107, 36);
+            this.lblPosicionPaciente.Location = new System.Drawing.Point(200, 34);
             this.lblPosicionPaciente.Name = "lblPosicionPaciente";
             this.lblPosicionPaciente.Size = new System.Drawing.Size(57, 20);
             this.lblPosicionPaciente.TabIndex = 23;
@@ -569,9 +543,9 @@ namespace ProyectoFinal_Progra_I
             this.grbEdicionPaciente.Controls.Add(this.btnNuevoPaciente);
             this.grbEdicionPaciente.Controls.Add(this.btnModificarPaciente);
             this.grbEdicionPaciente.Controls.Add(this.btnEliminarPaciente);
-            this.grbEdicionPaciente.Location = new System.Drawing.Point(114, 567);
+            this.grbEdicionPaciente.Location = new System.Drawing.Point(12, 567);
             this.grbEdicionPaciente.Name = "grbEdicionPaciente";
-            this.grbEdicionPaciente.Size = new System.Drawing.Size(320, 82);
+            this.grbEdicionPaciente.Size = new System.Drawing.Size(500, 82);
             this.grbEdicionPaciente.TabIndex = 28;
             this.grbEdicionPaciente.TabStop = false;
             this.grbEdicionPaciente.Text = "Edición";
@@ -580,7 +554,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.btnNuevoPaciente.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnNuevoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoPaciente.Location = new System.Drawing.Point(17, 19);
+            this.btnNuevoPaciente.Location = new System.Drawing.Point(70, 19);
             this.btnNuevoPaciente.Name = "btnNuevoPaciente";
             this.btnNuevoPaciente.Size = new System.Drawing.Size(90, 55);
             this.btnNuevoPaciente.TabIndex = 18;
@@ -592,7 +566,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.btnModificarPaciente.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnModificarPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarPaciente.Location = new System.Drawing.Point(112, 19);
+            this.btnModificarPaciente.Location = new System.Drawing.Point(194, 19);
             this.btnModificarPaciente.Name = "btnModificarPaciente";
             this.btnModificarPaciente.Size = new System.Drawing.Size(90, 55);
             this.btnModificarPaciente.TabIndex = 16;
@@ -604,7 +578,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.btnEliminarPaciente.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnEliminarPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarPaciente.Location = new System.Drawing.Point(208, 19);
+            this.btnEliminarPaciente.Location = new System.Drawing.Point(317, 19);
             this.btnEliminarPaciente.Name = "btnEliminarPaciente";
             this.btnEliminarPaciente.Size = new System.Drawing.Size(90, 55);
             this.btnEliminarPaciente.TabIndex = 17;
@@ -693,41 +667,12 @@ namespace ProyectoFinal_Progra_I
             this.datosPacientesDataGridView.Size = new System.Drawing.Size(496, 379);
             this.datosPacientesDataGridView.TabIndex = 29;
             // 
-            // dataGridViewTextBoxColumn13
+            // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "raza";
-            this.dataGridViewTextBoxColumn13.HeaderText = "raza";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "especie";
-            this.dataGridViewTextBoxColumn12.HeaderText = "especie";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "tutor";
-            this.dataGridViewTextBoxColumn11.HeaderText = "tutor";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "nombre";
-            this.dataGridViewTextBoxColumn8.HeaderText = "nombre";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "idRaza";
-            this.dataGridViewTextBoxColumn5.HeaderText = "idRaza";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "idEspecie";
-            this.dataGridViewTextBoxColumn4.HeaderText = "idEspecie";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idPaciente";
+            this.dataGridViewTextBoxColumn1.HeaderText = "idPaciente";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -735,12 +680,41 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn2.HeaderText = "idCliente";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idPaciente";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idPaciente";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "idEspecie";
+            this.dataGridViewTextBoxColumn4.HeaderText = "idEspecie";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "idRaza";
+            this.dataGridViewTextBoxColumn5.HeaderText = "idRaza";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn8.HeaderText = "nombre";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "tutor";
+            this.dataGridViewTextBoxColumn11.HeaderText = "tutor";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "especie";
+            this.dataGridViewTextBoxColumn12.HeaderText = "especie";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "raza";
+            this.dataGridViewTextBoxColumn13.HeaderText = "raza";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
             // Pacientes
             // 
@@ -810,10 +784,8 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.ComboBox cboTutorPaciente;
         private System.Windows.Forms.Label lblTutorPaciente;
         private System.Windows.Forms.ComboBox cboEspeciePaciente;
-        private System.Windows.Forms.ComboBox cboColorPaciente;
         private System.Windows.Forms.ComboBox cboRazaPaciente;
         private System.Windows.Forms.TextBox txtNombrePaciente;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

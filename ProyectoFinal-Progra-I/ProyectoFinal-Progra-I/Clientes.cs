@@ -13,7 +13,7 @@ namespace ProyectoFinal_Progra_I
 {
     public partial class Clientes : Form
     {
-
+        Clinica cl = new Clinica();
         Conexion objConexion = new Conexion();
         DataSet miDs = new DataSet();
         DataTable miTabla = new DataTable();
@@ -37,12 +37,20 @@ namespace ProyectoFinal_Progra_I
             this.clientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.clientes);
             actualizarDatosCliente();
         }
+        private void estadoControles(bool estado)
+        {
+            cl.estadoControles(estado, grbDatosCliente);
+            cl.estadoControles(!estado, grbNavegacionCliente);
+            cboOpcionBuscarCliente.Enabled = !estado;
+            txtBuscarCliente.Enabled = !estado;
+        }
         private void actualizarDatosCliente()
         {
             DataRowView clienteSelecionado = (DataRowView)clientesBindingSource.Current;
              idClienteSeleccionado = (int)clienteSelecionado["idCliente"];
             pacientesBindingSource.Filter = $"idCliente = {idClienteSeleccionado}";
             txtNombreCliente.Text.Trim();
+            lblPosicionCliente.Text = $"{clientesBindingSource.Position + 1} de {clientesBindingSource.Count}";
         }
 
         private void btnPrimeroCliente_Click(object sender, EventArgs e)
@@ -89,14 +97,14 @@ namespace ProyectoFinal_Progra_I
             {
                 btnNuevoCliente.Text = "Guardar";
                 btnModificarCliente.Text = "Cancelar";
-                // estadoControles(true);
+                 estadoControles(true);
 
             }
             else
             {
                 clientesBindingSource.CancelEdit();
 
-                //estadoControles(false);
+                estadoControles(false);
                 btnNuevoCliente.Text = "Nuevo cliente";
                 btnModificarCliente.Text = "Modificar datos";
             }
@@ -108,19 +116,24 @@ namespace ProyectoFinal_Progra_I
             {
                 btnNuevoCliente.Text = "Guardar";
                 btnModificarCliente.Text = "Cancelar";
-                //estadoControles(true);
+                estadoControles(true);
 
                 clientesBindingSource.AddNew();
             }
             else
             {
-                clientesBindingSource.EndEdit();
-                this.clientesTableAdapter.Update(bd_veterinaria_huellitasDataSet);
+                if (cl.ValidarDatos(grbDatosCliente))
+                    MessageBox.Show("Ningun campo debe estar vacío");
+                else
+                {
+                    clientesBindingSource.EndEdit();
+                    this.clientesTableAdapter.Update(bd_veterinaria_huellitasDataSet);
 
-                //estadoControles(false);
-                btnNuevoCliente.Text = "Nuevo cliente";
-                btnModificarCliente.Text = "Modificar datos";
+                    estadoControles(false);
+                    btnNuevoCliente.Text = "Nuevo cliente";
+                    btnModificarCliente.Text = "Modificar datos";
 
+                }
             }
         }
 

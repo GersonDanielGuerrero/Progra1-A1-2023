@@ -17,6 +17,7 @@ namespace ProyectoFinal_Progra_I
         Productos objProductos = new Productos();
         Usuarios objUsuarios = new Usuarios();
         Servicios objServicios = new Servicios();
+        Tratamientos objTratamientos = new Tratamientos();
 
         public Principal()
         {
@@ -26,13 +27,7 @@ namespace ProyectoFinal_Progra_I
 
         private void pacientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            objPacientes.MdiParent = this;
-            objPacientes.Show();
-
-            objServicios.Hide();
-            objClientes.Hide();
-            objProductos.Hide();
-            objUsuarios.Hide();
+            
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,6 +39,7 @@ namespace ProyectoFinal_Progra_I
             objPacientes.Hide();
             objUsuarios.Hide();
             objProductos.Hide();
+            objTratamientos.Hide();
         }
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,6 +51,7 @@ namespace ProyectoFinal_Progra_I
             objPacientes.Hide();
             objClientes.Hide();
             objUsuarios.Hide();
+            objTratamientos.Hide();
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -72,6 +69,7 @@ namespace ProyectoFinal_Progra_I
             objClientes.Hide();
             objProductos.Hide();
             objServicios.Hide();
+            objTratamientos.Hide();
         }
 
         private void ServiciosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -83,13 +81,37 @@ namespace ProyectoFinal_Progra_I
             objClientes.Hide();
             objProductos.Hide();
             objUsuarios.Hide();
-
+            objTratamientos.Hide();
 
         }
 
         private void Principal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void datosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            objPacientes.MdiParent = this;
+            objPacientes.Show();
+
+            objServicios.Hide();
+            objClientes.Hide();
+            objUsuarios.Hide();
+            objProductos.Hide();
+            objTratamientos.Hide();
+        }
+
+        private void tratamientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            objTratamientos.MdiParent = this;
+            objTratamientos.Show();
+
+            objServicios.Hide();
+            objPacientes.Hide();
+            objUsuarios.Hide();
+            objProductos.Hide();
+            objClientes.Hide();
         }
     }
 }

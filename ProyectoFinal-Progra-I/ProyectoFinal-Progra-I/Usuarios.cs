@@ -12,6 +12,7 @@ namespace ProyectoFinal_Progra_I
 {
     public partial class Usuarios : Form
     {
+        Clinica cl = new Clinica();
         public Usuarios()
         {
             InitializeComponent();
@@ -21,17 +22,25 @@ namespace ProyectoFinal_Progra_I
         {
             // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.usuarios' Puede moverla o quitarla según sea necesario.
             this.usuariosTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.usuarios);
-
+            lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
         }
-
+        private void estadoControles(bool estado)
+        {
+            cl.estadoControles(estado, grbDatosUsuario);
+            cl.estadoControles(!estado, grbNavegacionUsuario);
+            cboOpcionBuscarUsuario.Enabled = !estado;
+            cboOpcionBuscarUsuario.Enabled = !estado;
+        }
         private void btnPrimeroUsuario_Click(object sender, EventArgs e)
         {
             usuariosBindingSource.MoveFirst();
+            lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
         }
 
         private void btnAnteriorUsuario_Click(object sender, EventArgs e)
         {
             usuariosBindingSource.MovePrevious();
+            lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
         }
 
         private void btnSiguienteUsuario_Click(object sender, EventArgs e)
@@ -42,6 +51,7 @@ namespace ProyectoFinal_Progra_I
         private void btnUltimoUsuario_Click(object sender, EventArgs e)
         {
             usuariosBindingSource.MoveLast();
+            lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
         }
 
         private void btnNuevoUsuario_Click(object sender, EventArgs e)
@@ -50,19 +60,24 @@ namespace ProyectoFinal_Progra_I
             {
                 btnNuevoUsuario.Text = "Guardar";
                 btnModificarUsuario.Text = "Cancelar";
-                //estadoControles(true);
+                estadoControles(true);
 
                 usuariosBindingSource.AddNew();
             }
             else
             {
-                usuariosBindingSource.EndEdit();
-                this.usuariosTableAdapter.Update(bd_veterinaria_huellitasDataSet);
-                //estadoControles(false);
-                btnNuevoUsuario.Text = "Nuevo usuario";
-                btnModificarUsuario.Text = "Modificar datos";
-
+                if (cl.ValidarDatos(grbDatosUsuario))
+                    MessageBox.Show("Ningun campo debe estar vacío");
+                else
+                {
+                    usuariosBindingSource.EndEdit();
+                    this.usuariosTableAdapter.Update(bd_veterinaria_huellitasDataSet);
+                    estadoControles(false);
+                    btnNuevoUsuario.Text = "Nuevo usuario";
+                    btnModificarUsuario.Text = "Modificar datos";
+                }
             }
+            lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
         }
 
         private void btnModificarUsuario_Click(object sender, EventArgs e)
@@ -71,17 +86,18 @@ namespace ProyectoFinal_Progra_I
             {
                 btnNuevoUsuario.Text = "Guardar";
                 btnModificarUsuario.Text = "Cancelar";
-                // estadoControles(true);
+                 estadoControles(true);
 
             }
             else
             {
                 usuariosBindingSource.CancelEdit();
 
-                //estadoControles(false);
+                estadoControles(false);
                 btnNuevoUsuario.Text = "Nuevo usuario";
                 btnModificarUsuario.Text = "Modificar datos";
             }
+            lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
         }
     }
 }

@@ -18,6 +18,7 @@ namespace ProyectoFinal_Progra_I
         DataTable miTabla = new DataTable();
         public int posicion = 0;
         String accion = "nuevo";
+        Clinica cl = new Clinica();
         int idPacienteSeleccionado = 1;
         DataRowView pacienteSelecionado;
         public Pacientes()
@@ -59,6 +60,14 @@ namespace ProyectoFinal_Progra_I
             // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.especies' Puede moverla o quitarla según sea necesario.
             this.especiesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.especies);
             actualizarDatosPaciente();
+            estadoControles(false);
+        }
+        private void estadoControles(bool estado)
+        {
+            cl.estadoControles(estado, grbDatosPaciente);
+            cl.estadoControles(!estado, grbNavegacionPaciente);
+            cboOpcionBuscarPaciente.Enabled = !estado;
+            txtBuscarPaciente.Enabled = !estado;
         }
         private void actualizarDatosPaciente()
         {
@@ -69,9 +78,10 @@ namespace ProyectoFinal_Progra_I
             bool pacienteFallecido = (bool)pacienteSelecionado["fallecido"];
             lblPacienteHaFallecido.Visible = pacienteFallecido;
             grbFallecimientoPaciente.Visible = pacienteFallecido;
-            btnModificarPaciente.Enabled = !pacienteFallecido;
+            
             btnFallecimientoPaciente.Visible = !pacienteFallecido;
             txtNombrePaciente.Text.Trim();
+            lblPosicionPaciente.Text = $"{pacientesBindingSource.Position + 1} de {pacientesBindingSource.Count}";
         }
         private void btnPrimeroPaciente_Click(object sender, EventArgs e)
         {
@@ -92,6 +102,7 @@ namespace ProyectoFinal_Progra_I
             datosPacientesBindingSource.MoveNext();
             pacientesBindingSource.MoveNext();
             actualizarDatosPaciente();
+
         }
 
         private void btnUltimoPaciente_Click(object sender, EventArgs e)
@@ -99,6 +110,7 @@ namespace ProyectoFinal_Progra_I
             pacientesBindingSource.MoveLast();
             datosPacientesBindingSource.MoveLast();
             
+
             actualizarDatosPaciente();
         }
 
@@ -109,20 +121,26 @@ namespace ProyectoFinal_Progra_I
             {
                 btnNuevoPaciente.Text = "Guardar";
                 btnModificarPaciente.Text = "Cancelar";
-                //estadoControles(true);
+                estadoControles(true);
 
                 pacientesBindingSource.AddNew();
             }
             else
             {
-                pacientesBindingSource.EndEdit();
+                if (cl.ValidarDatos(grbDatosPaciente))
+                    MessageBox.Show("Ningun campo debe estar vacío");
+                else
+                {
+                    pacientesBindingSource.EndEdit();
                 this.pacientesTableAdapter.Update(bd_veterinaria_huellitasDataSet);
                 this.datosPacientesTableAdapter.Fill(bd_veterinaria_huellitasDataSet.datosPacientes);
-                //estadoControles(false);
+                estadoControles(false);
                 btnNuevoPaciente.Text = "Nuevo paciente";
                 btnModificarPaciente.Text = "Modificar datos";
+            }
                
             }
+            lblPosicionPaciente.Text = $"{pacientesBindingSource.Position + 1} de {pacientesBindingSource.Count}";
         }
 
         private void grdDatosPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -136,17 +154,18 @@ namespace ProyectoFinal_Progra_I
             {
                 btnNuevoPaciente.Text = "Guardar";
                 btnModificarPaciente.Text = "Cancelar";
-               // estadoControles(true);
+                estadoControles(true);
 
             }
             else
             {
                 pacientesBindingSource.CancelEdit();
 
-                //estadoControles(false);
+                estadoControles(false);
                 btnNuevoPaciente.Text = "Nuevo paciente";
                 btnModificarPaciente.Text = "Modificar datos";
             }
+            lblPosicionPaciente.Text = $"{pacientesBindingSource.Position + 1} de {pacientesBindingSource.Count}";
         }
 
         private void grbDatosPaciente_Enter(object sender, EventArgs e)

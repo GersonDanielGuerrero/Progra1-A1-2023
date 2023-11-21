@@ -12,6 +12,7 @@ namespace ProyectoFinal_Progra_I
 {
     public partial class Productos : Form
     {
+        Clinica cl = new Clinica();
         public Productos()
         {
             InitializeComponent();
@@ -27,27 +28,35 @@ namespace ProyectoFinal_Progra_I
             this.tipoProductoTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.tipoProducto);
             // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.marcas' Puede moverla o quitarla según sea necesario.
             this.marcasTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.marcas);
-
+            lblPosicionProducto.Text = $"{productosBindingSource.Position + 1} de {productosBindingSource.Count}";
         }
-
+        private void estadoControles(bool estado)
+        {
+            cl.estadoControles(estado, grbDatosProducto);
+            cl.estadoControles(!estado, grbNavegacionProducto);
+        }
         private void btnPrimeroProducto_Click(object sender, EventArgs e)
         {
             productosBindingSource.MoveFirst();
+            lblPosicionProducto.Text = $"{productosBindingSource.Position + 1} de {productosBindingSource.Count}";
         }
 
         private void btnAnteriorProducto_Click(object sender, EventArgs e)
         {
             productosBindingSource.MovePrevious();
+            lblPosicionProducto.Text = $"{productosBindingSource.Position + 1} de {productosBindingSource.Count}";
         }
 
         private void btnSiguienteProducto_Click(object sender, EventArgs e)
         {
             productosBindingSource.MoveNext();
+            lblPosicionProducto.Text = $"{productosBindingSource.Position + 1} de {productosBindingSource.Count}";
         }
 
         private void btnUltimoProducto_Click(object sender, EventArgs e)
         {
             productosBindingSource.MoveLast();
+            lblPosicionProducto.Text = $"{productosBindingSource.Position + 1} de {productosBindingSource.Count}";
         }
 
         private void btnNuevoProducto_Click(object sender, EventArgs e)
@@ -56,19 +65,24 @@ namespace ProyectoFinal_Progra_I
             {
                 btnNuevoProducto.Text = "Guardar";
                 btnModificarProducto.Text = "Cancelar";
-                //estadoControles(true);
+                estadoControles(true);
 
                 productosBindingSource.AddNew();
             }
             else
             {
-                productosBindingSource.EndEdit();
-                this.productosTableAdapter.Update(bd_veterinaria_huellitasDataSet);
-                this.datosProductosTableAdapter.Fill(bd_veterinaria_huellitasDataSet.datosProductos);
-                //estadoControles(false);
-                btnNuevoProducto.Text = "Nuevo producto";
-                btnModificarProducto.Text = "Modificar datos";
-
+                if (cl.ValidarDatos(grbDatosProducto))
+                    MessageBox.Show("Ningun campo debe estar vacío");
+                else
+                {
+                    productosBindingSource.EndEdit();
+                    this.productosTableAdapter.Update(bd_veterinaria_huellitasDataSet);
+                    this.datosProductosTableAdapter.Fill(bd_veterinaria_huellitasDataSet.datosProductos);
+                    estadoControles(false);
+                    btnNuevoProducto.Text = "Nuevo producto";
+                    btnModificarProducto.Text = "Modificar datos";
+                }
+                lblPosicionProducto.Text = $"{productosBindingSource.Position + 1} de {productosBindingSource.Count}";
             }
         }
 
@@ -78,17 +92,18 @@ namespace ProyectoFinal_Progra_I
             {
                 btnNuevoProducto.Text = "Guardar";
                 btnModificarProducto.Text = "Cancelar";
-                // estadoControles(true);
+                 estadoControles(true);
 
             }
             else
             {
                 productosBindingSource.CancelEdit();
 
-                //estadoControles(false);
+                estadoControles(false);
                 btnNuevoProducto.Text = "Nuevo producto";
                 btnModificarProducto.Text = "Modificar datos";
             }
+            lblPosicionProducto.Text = $"{productosBindingSource.Position + 1} de {productosBindingSource.Count}";
         }
     }
 }

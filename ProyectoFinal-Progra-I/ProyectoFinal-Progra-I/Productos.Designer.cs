@@ -341,7 +341,7 @@ namespace ProyectoFinal_Progra_I
             this.btnNuevoProducto.Name = "btnNuevoProducto";
             this.btnNuevoProducto.Size = new System.Drawing.Size(90, 55);
             this.btnNuevoProducto.TabIndex = 18;
-            this.btnNuevoProducto.Text = "Nuevo paciente";
+            this.btnNuevoProducto.Text = "Nuevo producto";
             this.btnNuevoProducto.UseVisualStyleBackColor = false;
             this.btnNuevoProducto.Click += new System.EventHandler(this.btnNuevoProducto_Click);
             // 
