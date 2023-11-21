@@ -29,6 +29,7 @@ namespace ProyectoFinal_Progra_I
             // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.marcas' Puede moverla o quitarla según sea necesario.
             this.marcasTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.marcas);
             lblPosicionProducto.Text = $"{productosBindingSource.Position + 1} de {productosBindingSource.Count}";
+            estadoControles(false);
         }
         private void estadoControles(bool estado)
         {

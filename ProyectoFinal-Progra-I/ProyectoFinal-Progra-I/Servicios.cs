@@ -22,7 +22,7 @@ namespace ProyectoFinal_Progra_I
         {
             // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.tipoServicios' Puede moverla o quitarla según sea necesario.
             this.tipoServiciosTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.tipoServicios);
-
+            estadoControles(false);
             lblPosicionPaciente.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
         }
         private void estadoControles(bool estado)
