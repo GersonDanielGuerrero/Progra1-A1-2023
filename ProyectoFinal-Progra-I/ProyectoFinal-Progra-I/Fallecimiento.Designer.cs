@@ -113,13 +113,13 @@ namespace ProyectoFinal_Progra_I
             // dtpFechaFallecimiento
             // 
             this.dtpFechaFallecimiento.CustomFormat = "dddd d \'de\' MMMM \'de\' yyyy  hh:mm tt";
-            this.dtpFechaFallecimiento.Enabled = false;
             this.dtpFechaFallecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaFallecimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaFallecimiento.Location = new System.Drawing.Point(212, 83);
             this.dtpFechaFallecimiento.Name = "dtpFechaFallecimiento";
             this.dtpFechaFallecimiento.Size = new System.Drawing.Size(430, 26);
             this.dtpFechaFallecimiento.TabIndex = 28;
+            this.dtpFechaFallecimiento.Value = new System.DateTime(2023, 11, 20, 19, 5, 53, 0);
             // 
             // bd_veterinaria_huellitasDataSet
             // 

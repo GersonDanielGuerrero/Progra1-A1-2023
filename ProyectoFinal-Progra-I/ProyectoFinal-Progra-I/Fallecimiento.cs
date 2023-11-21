@@ -12,10 +12,12 @@ namespace ProyectoFinal_Progra_I
 {
     public partial class Fallecimiento : Form
     {
-        public Fallecimiento(int idPaciente)
+        public int idPaciente;
+        public Fallecimiento(int IdPaciente)
         {
             InitializeComponent();
-            
+            idPaciente = IdPaciente;
+            pacientesBindingSource.Filter = $"idPaciente = {idPaciente}";
         }
 
         private void Fallecimiento_Load(object sender, EventArgs e)
@@ -29,8 +31,16 @@ namespace ProyectoFinal_Progra_I
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
             
+            DataRow nuevoFallecimiento = bd_veterinaria_huellitasDataSet.fallecimientos.NewRow();
+            nuevoFallecimiento["idPaciente"] = idPaciente;
+            nuevoFallecimiento["fecha"] = dtpFechaFallecimiento.Value;
+            nuevoFallecimiento["causa"] = txtCausaFallecimiento.Text;
+
+            bd_veterinaria_huellitasDataSet.fallecimientos.Rows.Add(nuevoFallecimiento);
+            fallecimientosTableAdapter.Update(bd_veterinaria_huellitasDataSet.fallecimientos);
+
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

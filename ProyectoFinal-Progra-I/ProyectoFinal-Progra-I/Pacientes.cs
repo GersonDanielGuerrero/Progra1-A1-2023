@@ -19,6 +19,7 @@ namespace ProyectoFinal_Progra_I
         public int posicion = 0;
         String accion = "nuevo";
         int idPacienteSeleccionado = 1;
+        DataRowView pacienteSelecionado;
         public Pacientes()
         {
             InitializeComponent();
@@ -61,11 +62,12 @@ namespace ProyectoFinal_Progra_I
         }
         private void actualizarDatosPaciente()
         {
-            DataRowView pacienteSelecionado = (DataRowView)pacientesBindingSource.Current;
+            pacienteSelecionado = (DataRowView)pacientesBindingSource.Current;
            idPacienteSeleccionado = (int)pacienteSelecionado["idPaciente"];
-            pacientesColoresBindingSource.Filter = $"idPaciente = {idPacienteSeleccionado}";
+            fallecimientosBindingSource.Filter = $"idPaciente = {idPacienteSeleccionado}";
 
             bool pacienteFallecido = (bool)pacienteSelecionado["fallecido"];
+            lblPacienteHaFallecido.Visible = pacienteFallecido;
             grbFallecimientoPaciente.Visible = pacienteFallecido;
             btnModificarPaciente.Enabled = !pacienteFallecido;
             btnFallecimientoPaciente.Visible = !pacienteFallecido;
@@ -155,8 +157,13 @@ namespace ProyectoFinal_Progra_I
         private void btnFallecimientoPaciente_Click(object sender, EventArgs e)
         {
             Fallecimiento objFallecimiento = new Fallecimiento(idPacienteSeleccionado);
-            if (objFallecimiento.ShowDialog() == DialogResult.OK)
+            if (objFallecimiento.ShowDialog() == DialogResult.OK) {
+
+                pacienteSelecionado["fallecido"] = true;
+                pacientesTableAdapter.Update(bd_veterinaria_huellitasDataSet.pacientes);
+                fallecimientosTableAdapter.Fill(bd_veterinaria_huellitasDataSet.fallecimientos);
                 actualizarDatosPaciente();
+            }
         }
         /*
 private void Pacientes_Load(object sender, EventArgs e)
