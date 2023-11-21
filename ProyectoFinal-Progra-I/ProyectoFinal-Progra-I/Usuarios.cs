@@ -23,6 +23,8 @@ namespace ProyectoFinal_Progra_I
             // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.usuarios' Puede moverla o quitarla según sea necesario.
             this.usuariosTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.usuarios);
             lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
+            estadoControles(false);
+            txtConfirmacionDeContraseñaUsuario.Text = txtContraseñaUsuario.Text;
         }
         private void estadoControles(bool estado)
         {
@@ -35,23 +37,27 @@ namespace ProyectoFinal_Progra_I
         {
             usuariosBindingSource.MoveFirst();
             lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
+            txtConfirmacionDeContraseñaUsuario.Text = txtContraseñaUsuario.Text;
         }
 
         private void btnAnteriorUsuario_Click(object sender, EventArgs e)
         {
             usuariosBindingSource.MovePrevious();
+            txtConfirmacionDeContraseñaUsuario.Text = txtContraseñaUsuario.Text;
             lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
         }
 
         private void btnSiguienteUsuario_Click(object sender, EventArgs e)
         {
             usuariosBindingSource.MoveNext();
+            txtConfirmacionDeContraseñaUsuario.Text = txtContraseñaUsuario.Text;
         }
 
         private void btnUltimoUsuario_Click(object sender, EventArgs e)
         {
             usuariosBindingSource.MoveLast();
             lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
+            txtConfirmacionDeContraseñaUsuario.Text = txtContraseñaUsuario.Text;
         }
 
         private void btnNuevoUsuario_Click(object sender, EventArgs e)
@@ -68,6 +74,8 @@ namespace ProyectoFinal_Progra_I
             {
                 if (cl.ValidarDatos(grbDatosUsuario))
                     MessageBox.Show("Ningun campo debe estar vacío");
+                else if(txtConfirmacionDeContraseñaUsuario.Text!=txtContraseñaUsuario.Text)
+                    MessageBox.Show("Las contraseñas no coinciden");
                 else
                 {
                     usuariosBindingSource.EndEdit();
@@ -97,6 +105,13 @@ namespace ProyectoFinal_Progra_I
                 btnNuevoUsuario.Text = "Nuevo usuario";
                 btnModificarUsuario.Text = "Modificar datos";
             }
+            lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
+        }
+
+        private void btnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+            usuariosBindingSource.RemoveCurrent();
+            this.usuariosTableAdapter.Update(bd_veterinaria_huellitasDataSet);
             lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
         }
     }

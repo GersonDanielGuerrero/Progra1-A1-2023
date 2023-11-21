@@ -82,7 +82,7 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosUsuario.Controls.Add(this.lblUsuario);
             this.grbDatosUsuario.Location = new System.Drawing.Point(530, 21);
             this.grbDatosUsuario.Name = "grbDatosUsuario";
-            this.grbDatosUsuario.Size = new System.Drawing.Size(737, 362);
+            this.grbDatosUsuario.Size = new System.Drawing.Size(737, 431);
             this.grbDatosUsuario.TabIndex = 36;
             this.grbDatosUsuario.TabStop = false;
             this.grbDatosUsuario.Text = "Datos del usuario";
@@ -110,11 +110,11 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(93, 323);
+            this.label2.Location = new System.Drawing.Point(66, 323);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.Size = new System.Drawing.Size(86, 20);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Precio";
+            this.label2.Text = "Precio ($)";
             // 
             // textBox2
             // 
@@ -141,7 +141,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipoServiciosBindingSource, "duracionNormal", true));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(158, 124);
+            this.textBox1.Location = new System.Drawing.Point(194, 124);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(65, 26);
             this.textBox1.TabIndex = 20;
@@ -171,9 +171,9 @@ namespace ProyectoFinal_Progra_I
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(12, 127);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(140, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(185, 20);
             this.lblUsuario.TabIndex = 4;
-            this.lblUsuario.Text = "Duración normal";
+            this.lblUsuario.Text = "Duración normal (min)";
             // 
             // cboOpcionBuscarUsuario
             // 
@@ -187,7 +187,7 @@ namespace ProyectoFinal_Progra_I
             "Teléfono",
             "Fecha de nacimiento",
             "Fecha de registro"});
-            this.cboOpcionBuscarUsuario.Location = new System.Drawing.Point(94, 21);
+            this.cboOpcionBuscarUsuario.Location = new System.Drawing.Point(105, 57);
             this.cboOpcionBuscarUsuario.Name = "cboOpcionBuscarUsuario";
             this.cboOpcionBuscarUsuario.Size = new System.Drawing.Size(154, 28);
             this.cboOpcionBuscarUsuario.TabIndex = 35;
@@ -195,16 +195,16 @@ namespace ProyectoFinal_Progra_I
             // txtBuscarUsuario
             // 
             this.txtBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarUsuario.Location = new System.Drawing.Point(263, 21);
+            this.txtBuscarUsuario.Location = new System.Drawing.Point(275, 57);
             this.txtBuscarUsuario.Name = "txtBuscarUsuario";
-            this.txtBuscarUsuario.Size = new System.Drawing.Size(249, 26);
+            this.txtBuscarUsuario.Size = new System.Drawing.Size(210, 26);
             this.txtBuscarUsuario.TabIndex = 34;
             // 
             // lblBuscarUsuario
             // 
             this.lblBuscarUsuario.AutoSize = true;
             this.lblBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarUsuario.Location = new System.Drawing.Point(23, 24);
+            this.lblBuscarUsuario.Location = new System.Drawing.Point(34, 60);
             this.lblBuscarUsuario.Name = "lblBuscarUsuario";
             this.lblBuscarUsuario.Size = new System.Drawing.Size(65, 20);
             this.lblBuscarUsuario.TabIndex = 33;
@@ -218,7 +218,7 @@ namespace ProyectoFinal_Progra_I
             this.grbNavegacionPaciente.Controls.Add(this.btnUltimoServicio);
             this.grbNavegacionPaciente.Controls.Add(this.btnSiguienteServicio);
             this.grbNavegacionPaciente.Controls.Add(this.lblPosicionPaciente);
-            this.grbNavegacionPaciente.Location = new System.Drawing.Point(888, 399);
+            this.grbNavegacionPaciente.Location = new System.Drawing.Point(126, 282);
             this.grbNavegacionPaciente.Name = "grbNavegacionPaciente";
             this.grbNavegacionPaciente.Size = new System.Drawing.Size(280, 82);
             this.grbNavegacionPaciente.TabIndex = 38;
@@ -288,7 +288,7 @@ namespace ProyectoFinal_Progra_I
             this.grbEdicionPaciente.Controls.Add(this.btnNuevoServicio);
             this.grbEdicionPaciente.Controls.Add(this.btnModificarServicio);
             this.grbEdicionPaciente.Controls.Add(this.btnEliminarServicio);
-            this.grbEdicionPaciente.Location = new System.Drawing.Point(530, 399);
+            this.grbEdicionPaciente.Location = new System.Drawing.Point(104, 370);
             this.grbEdicionPaciente.Name = "grbEdicionPaciente";
             this.grbEdicionPaciente.Size = new System.Drawing.Size(320, 82);
             this.grbEdicionPaciente.TabIndex = 37;
@@ -311,7 +311,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.btnModificarServicio.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnModificarServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarServicio.Location = new System.Drawing.Point(112, 19);
+            this.btnModificarServicio.Location = new System.Drawing.Point(112, 18);
             this.btnModificarServicio.Name = "btnModificarServicio";
             this.btnModificarServicio.Size = new System.Drawing.Size(90, 55);
             this.btnModificarServicio.TabIndex = 16;
@@ -329,6 +329,7 @@ namespace ProyectoFinal_Progra_I
             this.btnEliminarServicio.TabIndex = 17;
             this.btnEliminarServicio.Text = "Eliminar servicio";
             this.btnEliminarServicio.UseVisualStyleBackColor = false;
+            this.btnEliminarServicio.Click += new System.EventHandler(this.btnEliminarServicio_Click);
             // 
             // tipoServiciosTableAdapter
             // 
@@ -365,9 +366,9 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.tipoServiciosDataGridView.DataSource = this.tipoServiciosBindingSource;
-            this.tipoServiciosDataGridView.Location = new System.Drawing.Point(27, 73);
+            this.tipoServiciosDataGridView.Location = new System.Drawing.Point(38, 21);
             this.tipoServiciosDataGridView.Name = "tipoServiciosDataGridView";
-            this.tipoServiciosDataGridView.Size = new System.Drawing.Size(458, 400);
+            this.tipoServiciosDataGridView.Size = new System.Drawing.Size(458, 255);
             this.tipoServiciosDataGridView.TabIndex = 38;
             // 
             // dataGridViewTextBoxColumn1

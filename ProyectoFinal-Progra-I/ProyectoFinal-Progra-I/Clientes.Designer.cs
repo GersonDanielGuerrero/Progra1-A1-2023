@@ -30,7 +30,6 @@ namespace ProyectoFinal_Progra_I
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,28 +61,25 @@ namespace ProyectoFinal_Progra_I
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.pacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
-            this.btnAgregarFotoCliente = new System.Windows.Forms.Button();
-            this.pbFotoCliente = new System.Windows.Forms.PictureBox();
             this.erpClientes = new System.Windows.Forms.ErrorProvider(this.components);
             this.clientesTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.clientesTableAdapter();
             this.pacientesTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.pacientesTableAdapter();
             this.tableAdapterManager = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
             this.grbEdicionCliente.SuspendLayout();
             this.grbNavegacionCliente.SuspendLayout();
             this.grbDatosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFotoCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +88,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 69);
+            this.label1.Location = new System.Drawing.Point(27, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 1;
@@ -102,7 +98,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(103, 259);
+            this.label2.Location = new System.Drawing.Point(103, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 2;
@@ -112,7 +108,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(98, 304);
+            this.label3.Location = new System.Drawing.Point(98, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 20);
             this.label3.TabIndex = 3;
@@ -122,7 +118,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(111, 210);
+            this.label4.Location = new System.Drawing.Point(111, 54);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 4;
@@ -132,7 +128,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(33, 354);
+            this.label5.Location = new System.Drawing.Point(33, 213);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(156, 20);
             this.label5.TabIndex = 5;
@@ -142,7 +138,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 529);
+            this.label6.Location = new System.Drawing.Point(12, 413);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(176, 20);
             this.label6.TabIndex = 6;
@@ -152,7 +148,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(40, 573);
+            this.label7.Location = new System.Drawing.Point(39, 457);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(150, 20);
             this.label7.TabIndex = 7;
@@ -162,7 +158,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.txtNombreCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "nombre", true));
             this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCliente.Location = new System.Drawing.Point(195, 205);
+            this.txtNombreCliente.Location = new System.Drawing.Point(195, 49);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(430, 26);
             this.txtNombreCliente.TabIndex = 8;
@@ -181,7 +177,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.txtCorreoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "correo", true));
             this.txtCorreoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreoCliente.Location = new System.Drawing.Point(195, 354);
+            this.txtCorreoCliente.Location = new System.Drawing.Point(195, 213);
             this.txtCorreoCliente.Name = "txtCorreoCliente";
             this.txtCorreoCliente.Size = new System.Drawing.Size(430, 26);
             this.txtCorreoCliente.TabIndex = 9;
@@ -190,7 +186,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.txtDireccionCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "direccion", true));
             this.txtDireccionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccionCliente.Location = new System.Drawing.Point(195, 304);
+            this.txtDireccionCliente.Location = new System.Drawing.Point(195, 155);
             this.txtDireccionCliente.Name = "txtDireccionCliente";
             this.txtDireccionCliente.Size = new System.Drawing.Size(430, 26);
             this.txtDireccionCliente.TabIndex = 10;
@@ -199,7 +195,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.txtTelefonoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "telefono", true));
             this.txtTelefonoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefonoCliente.Location = new System.Drawing.Point(195, 254);
+            this.txtTelefonoCliente.Location = new System.Drawing.Point(195, 99);
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
             this.txtTelefonoCliente.Size = new System.Drawing.Size(430, 26);
             this.txtTelefonoCliente.TabIndex = 11;
@@ -209,7 +205,7 @@ namespace ProyectoFinal_Progra_I
             this.dtpNacimietoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientesBindingSource, "fechaNacimiento", true));
             this.dtpNacimietoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "fechaNacimiento", true));
             this.dtpNacimietoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNacimietoCliente.Location = new System.Drawing.Point(196, 524);
+            this.dtpNacimietoCliente.Location = new System.Drawing.Point(194, 408);
             this.dtpNacimietoCliente.Name = "dtpNacimietoCliente";
             this.dtpNacimietoCliente.Size = new System.Drawing.Size(336, 26);
             this.dtpNacimietoCliente.TabIndex = 12;
@@ -219,7 +215,7 @@ namespace ProyectoFinal_Progra_I
             this.dtpRegistroCliente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientesBindingSource, "fechaRegistro", true));
             this.dtpRegistroCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "fechaRegistro", true));
             this.dtpRegistroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpRegistroCliente.Location = new System.Drawing.Point(196, 573);
+            this.dtpRegistroCliente.Location = new System.Drawing.Point(195, 457);
             this.dtpRegistroCliente.Name = "dtpRegistroCliente";
             this.dtpRegistroCliente.Size = new System.Drawing.Size(336, 26);
             this.dtpRegistroCliente.TabIndex = 13;
@@ -227,7 +223,7 @@ namespace ProyectoFinal_Progra_I
             // txtBuscarCliente
             // 
             this.txtBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarCliente.Location = new System.Drawing.Point(267, 66);
+            this.txtBuscarCliente.Location = new System.Drawing.Point(267, 84);
             this.txtBuscarCliente.Name = "txtBuscarCliente";
             this.txtBuscarCliente.Size = new System.Drawing.Size(249, 26);
             this.txtBuscarCliente.TabIndex = 14;
@@ -244,7 +240,7 @@ namespace ProyectoFinal_Progra_I
             "Teléfono",
             "Fecha de nacimiento",
             "Fecha de registro"});
-            this.cboOpcionBuscarCliente.Location = new System.Drawing.Point(98, 66);
+            this.cboOpcionBuscarCliente.Location = new System.Drawing.Point(98, 84);
             this.cboOpcionBuscarCliente.Name = "cboOpcionBuscarCliente";
             this.cboOpcionBuscarCliente.Size = new System.Drawing.Size(154, 28);
             this.cboOpcionBuscarCliente.TabIndex = 15;
@@ -271,6 +267,7 @@ namespace ProyectoFinal_Progra_I
             this.btnEliminarCliente.TabIndex = 17;
             this.btnEliminarCliente.Text = "Eliminar Cliente";
             this.btnEliminarCliente.UseVisualStyleBackColor = false;
+            this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
             // btnNuevoCliente
             // 
@@ -373,8 +370,6 @@ namespace ProyectoFinal_Progra_I
             // 
             this.grbDatosCliente.Controls.Add(this.listBox1);
             this.grbDatosCliente.Controls.Add(this.label9);
-            this.grbDatosCliente.Controls.Add(this.btnAgregarFotoCliente);
-            this.grbDatosCliente.Controls.Add(this.pbFotoCliente);
             this.grbDatosCliente.Controls.Add(this.txtTelefonoCliente);
             this.grbDatosCliente.Controls.Add(this.txtDireccionCliente);
             this.grbDatosCliente.Controls.Add(this.txtCorreoCliente);
@@ -387,9 +382,9 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosCliente.Controls.Add(this.label2);
             this.grbDatosCliente.Controls.Add(this.label4);
             this.grbDatosCliente.Controls.Add(this.label3);
-            this.grbDatosCliente.Location = new System.Drawing.Point(536, 12);
+            this.grbDatosCliente.Location = new System.Drawing.Point(536, 66);
             this.grbDatosCliente.Name = "grbDatosCliente";
-            this.grbDatosCliente.Size = new System.Drawing.Size(657, 619);
+            this.grbDatosCliente.Size = new System.Drawing.Size(657, 539);
             this.grbDatosCliente.TabIndex = 26;
             this.grbDatosCliente.TabStop = false;
             this.grbDatosCliente.Text = "Datos del cliente";
@@ -401,7 +396,7 @@ namespace ProyectoFinal_Progra_I
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(196, 401);
+            this.listBox1.Location = new System.Drawing.Point(195, 277);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(429, 104);
             this.listBox1.TabIndex = 20;
@@ -416,34 +411,11 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 401);
+            this.label9.Location = new System.Drawing.Point(5, 277);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(183, 20);
             this.label9.TabIndex = 19;
             this.label9.Text = "Pacientes registrados";
-            // 
-            // btnAgregarFotoCliente
-            // 
-            this.btnAgregarFotoCliente.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAgregarFotoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarFotoCliente.Location = new System.Drawing.Point(271, 133);
-            this.btnAgregarFotoCliente.Name = "btnAgregarFotoCliente";
-            this.btnAgregarFotoCliente.Size = new System.Drawing.Size(192, 32);
-            this.btnAgregarFotoCliente.TabIndex = 17;
-            this.btnAgregarFotoCliente.Text = "Añadir foto";
-            this.btnAgregarFotoCliente.UseVisualStyleBackColor = false;
-            this.btnAgregarFotoCliente.Click += new System.EventHandler(this.btnAgregarFotoCliente_Click);
-            // 
-            // pbFotoCliente
-            // 
-            this.pbFotoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clientesBindingSource, "foto", true));
-            this.pbFotoCliente.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbFotoCliente.InitialImage")));
-            this.pbFotoCliente.Location = new System.Drawing.Point(271, 19);
-            this.pbFotoCliente.Name = "pbFotoCliente";
-            this.pbFotoCliente.Size = new System.Drawing.Size(192, 108);
-            this.pbFotoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFotoCliente.TabIndex = 14;
-            this.pbFotoCliente.TabStop = false;
             // 
             // erpClientes
             // 
@@ -477,55 +449,6 @@ namespace ProyectoFinal_Progra_I
             this.tableAdapterManager.UpdateOrder = ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuariosTableAdapter = null;
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.DataPropertyName = "foto";
-            this.dataGridViewImageColumn1.HeaderText = "foto";
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "fechaRegistro";
-            this.dataGridViewTextBoxColumn7.HeaderText = "fechaRegistro";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "fechaNacimiento";
-            this.dataGridViewTextBoxColumn6.HeaderText = "fechaNacimiento";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "telefono";
-            this.dataGridViewTextBoxColumn5.HeaderText = "telefono";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "correo";
-            this.dataGridViewTextBoxColumn4.HeaderText = "correo";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "direccion";
-            this.dataGridViewTextBoxColumn3.HeaderText = "direccion";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idCliente";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idCliente";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // clientesDataGridView
             // 
             this.clientesDataGridView.AutoGenerateColumns = false;
@@ -540,10 +463,61 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewImageColumn1});
             this.clientesDataGridView.DataSource = this.clientesBindingSource;
-            this.clientesDataGridView.Location = new System.Drawing.Point(12, 100);
+            this.clientesDataGridView.Location = new System.Drawing.Point(12, 66);
             this.clientesDataGridView.Name = "clientesDataGridView";
-            this.clientesDataGridView.Size = new System.Drawing.Size(504, 333);
+            this.clientesDataGridView.Size = new System.Drawing.Size(504, 367);
             this.clientesDataGridView.TabIndex = 20;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idCliente";
+            this.dataGridViewTextBoxColumn1.HeaderText = "idCliente";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "direccion";
+            this.dataGridViewTextBoxColumn3.HeaderText = "direccion";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "correo";
+            this.dataGridViewTextBoxColumn4.HeaderText = "correo";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "telefono";
+            this.dataGridViewTextBoxColumn5.HeaderText = "telefono";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn6.HeaderText = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "fechaRegistro";
+            this.dataGridViewTextBoxColumn7.HeaderText = "fechaRegistro";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.DataPropertyName = "foto";
+            this.dataGridViewImageColumn1.HeaderText = "foto";
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Visible = false;
             // 
             // Clientes
             // 
@@ -570,7 +544,6 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosCliente.ResumeLayout(false);
             this.grbDatosCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFotoCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -606,8 +579,6 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.GroupBox grbNavegacionCliente;
         private System.Windows.Forms.GroupBox grbDatosCliente;
         private System.Windows.Forms.ErrorProvider erpClientes;
-        private System.Windows.Forms.Button btnAgregarFotoCliente;
-        private System.Windows.Forms.PictureBox pbFotoCliente;
         private System.Windows.Forms.Label label9;
         private bd_veterinaria_huellitasDataSet bd_veterinaria_huellitasDataSet;
         private System.Windows.Forms.BindingSource clientesBindingSource;
@@ -616,6 +587,7 @@ namespace ProyectoFinal_Progra_I
         private bd_veterinaria_huellitasDataSetTableAdapters.pacientesTableAdapter pacientesTableAdapter;
         private bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView clientesDataGridView;
+        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -624,6 +596,5 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.ListBox listBox1;
     }
 }

@@ -65,12 +65,12 @@ namespace ProyectoFinal_Progra_I
             this.tableAdapterManager = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager();
             this.datosProductosDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbNavegacionProducto.SuspendLayout();
             this.grbDatosProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
@@ -90,7 +90,7 @@ namespace ProyectoFinal_Progra_I
             this.grbNavegacionProducto.Controls.Add(this.btnUltimoProducto);
             this.grbNavegacionProducto.Controls.Add(this.btnSiguienteProducto);
             this.grbNavegacionProducto.Controls.Add(this.lblPosicionProducto);
-            this.grbNavegacionProducto.Location = new System.Drawing.Point(96, 317);
+            this.grbNavegacionProducto.Location = new System.Drawing.Point(96, 337);
             this.grbNavegacionProducto.Name = "grbNavegacionProducto";
             this.grbNavegacionProducto.Size = new System.Drawing.Size(282, 82);
             this.grbNavegacionProducto.TabIndex = 28;
@@ -169,7 +169,7 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosProducto.Controls.Add(this.label4);
             this.grbDatosProducto.Controls.Add(this.txtDescripcionProducto);
             this.grbDatosProducto.Controls.Add(this.label10);
-            this.grbDatosProducto.Location = new System.Drawing.Point(510, 32);
+            this.grbDatosProducto.Location = new System.Drawing.Point(510, 52);
             this.grbDatosProducto.Name = "grbDatosProducto";
             this.grbDatosProducto.Size = new System.Drawing.Size(657, 472);
             this.grbDatosProducto.TabIndex = 29;
@@ -326,7 +326,7 @@ namespace ProyectoFinal_Progra_I
             this.grbEdicionProducto.Controls.Add(this.btnNuevoProducto);
             this.grbEdicionProducto.Controls.Add(this.btnModificarProducto);
             this.grbEdicionProducto.Controls.Add(this.btnEliminarProducto);
-            this.grbEdicionProducto.Location = new System.Drawing.Point(69, 405);
+            this.grbEdicionProducto.Location = new System.Drawing.Point(77, 422);
             this.grbEdicionProducto.Name = "grbEdicionProducto";
             this.grbEdicionProducto.Size = new System.Drawing.Size(320, 82);
             this.grbEdicionProducto.TabIndex = 30;
@@ -367,6 +367,7 @@ namespace ProyectoFinal_Progra_I
             this.btnEliminarProducto.TabIndex = 17;
             this.btnEliminarProducto.Text = "Eliminar paciente";
             this.btnEliminarProducto.UseVisualStyleBackColor = false;
+            this.btnEliminarProducto.Click += new System.EventHandler(this.btnEliminarProducto_Click);
             // 
             // marcasTableAdapter
             // 
@@ -415,16 +416,16 @@ namespace ProyectoFinal_Progra_I
             this.datosProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datosProductosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
+            this.dataGridViewTextBoxColumn5});
             this.datosProductosDataGridView.DataSource = this.datosProductosBindingSource;
-            this.datosProductosDataGridView.Location = new System.Drawing.Point(12, 17);
+            this.datosProductosDataGridView.Location = new System.Drawing.Point(12, 52);
             this.datosProductosDataGridView.Name = "datosProductosDataGridView";
-            this.datosProductosDataGridView.Size = new System.Drawing.Size(471, 294);
+            this.datosProductosDataGridView.Size = new System.Drawing.Size(444, 279);
             this.datosProductosDataGridView.TabIndex = 30;
             // 
             // dataGridViewTextBoxColumn1
@@ -432,31 +433,6 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn1.DataPropertyName = "nombre";
             this.dataGridViewTextBoxColumn1.HeaderText = "nombre";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "idProducto";
-            this.dataGridViewTextBoxColumn2.HeaderText = "idProducto";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "idMarca";
-            this.dataGridViewTextBoxColumn3.HeaderText = "idMarca";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "precio";
-            this.dataGridViewTextBoxColumn4.HeaderText = "precio";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "idTipoProducto";
-            this.dataGridViewTextBoxColumn5.HeaderText = "idTipoProducto";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -469,6 +445,34 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn7.DataPropertyName = "tipoProducto";
             this.dataGridViewTextBoxColumn7.HeaderText = "tipoProducto";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "precio";
+            this.dataGridViewTextBoxColumn4.HeaderText = "precio";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "idProducto";
+            this.dataGridViewTextBoxColumn2.HeaderText = "idProducto";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "idMarca";
+            this.dataGridViewTextBoxColumn3.HeaderText = "idMarca";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "idTipoProducto";
+            this.dataGridViewTextBoxColumn5.HeaderText = "idTipoProducto";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Visible = false;
             // 
             // Productos
             // 
@@ -535,11 +539,11 @@ namespace ProyectoFinal_Progra_I
         private bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView datosProductosDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }

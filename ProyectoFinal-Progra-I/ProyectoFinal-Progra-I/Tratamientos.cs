@@ -114,6 +114,11 @@ namespace ProyectoFinal_Progra_I
             lblPosicionTratamiento.Text = $"{tratamientosBindingSource.Position + 1} de {tratamientosBindingSource.Count}";
         }
 
-       
+        private void btnEliminarTratamiento_Click(object sender, EventArgs e)
+        {
+            tratamientosBindingSource.RemoveCurrent();
+            this.tratamientosTableAdapter.Update(bd_veterinaria_huellitasDataSet);
+            lblPosicionTratamiento.Text = $"{tratamientosBindingSource.Position + 1} de {pacientesBindingSource.Count}";
+        }
     }
 }

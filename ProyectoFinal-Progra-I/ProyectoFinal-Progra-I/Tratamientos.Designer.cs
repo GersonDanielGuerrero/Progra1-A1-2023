@@ -387,6 +387,7 @@ namespace ProyectoFinal_Progra_I
             this.btnEliminarTratamiento.TabIndex = 17;
             this.btnEliminarTratamiento.Text = "Eliminar paciente";
             this.btnEliminarTratamiento.UseVisualStyleBackColor = false;
+            this.btnEliminarTratamiento.Click += new System.EventHandler(this.btnEliminarTratamiento_Click);
             // 
             // detalleTratamientosBindingSource
             // 
@@ -432,9 +433,9 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.detalleTratamientosDataGridView.DataSource = this.detalleTratamientosBindingSource;
-            this.detalleTratamientosDataGridView.Location = new System.Drawing.Point(7, 90);
+            this.detalleTratamientosDataGridView.Location = new System.Drawing.Point(7, 56);
             this.detalleTratamientosDataGridView.Name = "detalleTratamientosDataGridView";
-            this.detalleTratamientosDataGridView.Size = new System.Drawing.Size(516, 384);
+            this.detalleTratamientosDataGridView.Size = new System.Drawing.Size(516, 418);
             this.detalleTratamientosDataGridView.TabIndex = 51;
             // 
             // dataGridViewTextBoxColumn1
@@ -507,28 +508,31 @@ namespace ProyectoFinal_Progra_I
             "Estatura",
             "Peso",
             "Descripcion"});
-            this.cboOpcionBuscarTratamiento.Location = new System.Drawing.Point(87, 56);
+            this.cboOpcionBuscarTratamiento.Location = new System.Drawing.Point(105, 12);
             this.cboOpcionBuscarTratamiento.Name = "cboOpcionBuscarTratamiento";
             this.cboOpcionBuscarTratamiento.Size = new System.Drawing.Size(154, 28);
             this.cboOpcionBuscarTratamiento.TabIndex = 54;
+            this.cboOpcionBuscarTratamiento.Visible = false;
             // 
             // txtBuscarTratamiento
             // 
             this.txtBuscarTratamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarTratamiento.Location = new System.Drawing.Point(256, 56);
+            this.txtBuscarTratamiento.Location = new System.Drawing.Point(274, 12);
             this.txtBuscarTratamiento.Name = "txtBuscarTratamiento";
             this.txtBuscarTratamiento.Size = new System.Drawing.Size(249, 26);
             this.txtBuscarTratamiento.TabIndex = 53;
+            this.txtBuscarTratamiento.Visible = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(16, 59);
+            this.label7.Location = new System.Drawing.Point(34, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 20);
             this.label7.TabIndex = 52;
             this.label7.Text = "Buscar";
+            this.label7.Visible = false;
             // 
             // Tratamientos
             // 

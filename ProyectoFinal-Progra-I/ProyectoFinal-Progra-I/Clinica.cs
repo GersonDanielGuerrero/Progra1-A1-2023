@@ -14,12 +14,21 @@ namespace ProyectoFinal_Progra_I
             bool hayCamposVacios = false;
             foreach (Control k in groupBox.Controls)
             {
-                if (!(k is Label) && string.IsNullOrWhiteSpace(k.Text))
+                if (!(k is Label || k is PictureBox) && string.IsNullOrWhiteSpace(k.Text))
                 {
                     hayCamposVacios = true;
                 }
+                
+               
             }
             return hayCamposVacios;
+        }
+        public void quitarEspaciosEnBlanco(GroupBox groupBox)
+        {
+            foreach (Control k in groupBox.Controls)
+            {
+                k.Text.Trim();
+            }
         }
         public void estadoControles(bool estado, GroupBox groupBox)
         {

@@ -101,5 +101,12 @@ namespace ProyectoFinal_Progra_I
             }
             lblPosicionPaciente.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
         }
+
+        private void btnEliminarServicio_Click(object sender, EventArgs e)
+        {
+            tipoServiciosBindingSource.RemoveCurrent();
+            this.tipoServiciosTableAdapter.Update(bd_veterinaria_huellitasDataSet);
+            lblPosicionPaciente.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
+        }
     }
 }

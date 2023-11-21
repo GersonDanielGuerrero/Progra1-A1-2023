@@ -12807,8 +12807,7 @@ SELECT idProducto, nombre, idMarca, precio, descripcion, idTipoProducto FROM pro
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idProducto, nombre, idMarca, precio, descripcion, idTipoProducto FROM dbo." +
-                "productos";
+            this._commandCollection[0].CommandText = "SELECT  * FROM dbo.productos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -105,5 +105,13 @@ namespace ProyectoFinal_Progra_I
             }
             lblPosicionProducto.Text = $"{productosBindingSource.Position + 1} de {productosBindingSource.Count}";
         }
+
+        private void btnEliminarProducto_Click(object sender, EventArgs e)
+        {
+            productosBindingSource.RemoveCurrent();
+            this.productosTableAdapter.Update(bd_veterinaria_huellitasDataSet);
+            lblPosicionProducto.Text = $"{productosBindingSource.Position + 1} de {productosBindingSource.Count}";
+            this.datosProductosTableAdapter.Fill(bd_veterinaria_huellitasDataSet.datosProductos);
+        }
     }
 }

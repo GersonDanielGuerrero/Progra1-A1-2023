@@ -30,7 +30,6 @@ namespace ProyectoFinal_Progra_I
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
             this.grbDatosUsuario = new System.Windows.Forms.GroupBox();
             this.txtConfirmacionDeContraseñaUsuario = new System.Windows.Forms.TextBox();
             this.lblConfirmacionDeContraseñaUsuario = new System.Windows.Forms.Label();
@@ -40,8 +39,6 @@ namespace ProyectoFinal_Progra_I
             this.lblContraseñaUsuarios = new System.Windows.Forms.Label();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.btnAgregarFotoUsuario = new System.Windows.Forms.Button();
-            this.pbFotoUsuario = new System.Windows.Forms.PictureBox();
             this.txtTelefonoUsuario = new System.Windows.Forms.TextBox();
             this.txtDireccionUsuario = new System.Windows.Forms.TextBox();
             this.txtCorreoUsuario = new System.Windows.Forms.TextBox();
@@ -79,13 +76,14 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.grbDatosUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFotoUsuario)).BeginInit();
             this.grbNavegacionUsuario.SuspendLayout();
             this.grbEdicionUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // grbDatosUsuario
@@ -96,8 +94,6 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosUsuario.Controls.Add(this.lblContraseñaUsuarios);
             this.grbDatosUsuario.Controls.Add(this.txtNombreUsuario);
             this.grbDatosUsuario.Controls.Add(this.lblNombreUsuario);
-            this.grbDatosUsuario.Controls.Add(this.btnAgregarFotoUsuario);
-            this.grbDatosUsuario.Controls.Add(this.pbFotoUsuario);
             this.grbDatosUsuario.Controls.Add(this.txtTelefonoUsuario);
             this.grbDatosUsuario.Controls.Add(this.txtDireccionUsuario);
             this.grbDatosUsuario.Controls.Add(this.txtCorreoUsuario);
@@ -110,9 +106,9 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosUsuario.Controls.Add(this.lblTelefonoUsuario);
             this.grbDatosUsuario.Controls.Add(this.lblUsuario);
             this.grbDatosUsuario.Controls.Add(this.lblDireccionUsuario);
-            this.grbDatosUsuario.Location = new System.Drawing.Point(536, 12);
+            this.grbDatosUsuario.Location = new System.Drawing.Point(536, 79);
             this.grbDatosUsuario.Name = "grbDatosUsuario";
-            this.grbDatosUsuario.Size = new System.Drawing.Size(737, 574);
+            this.grbDatosUsuario.Size = new System.Drawing.Size(737, 507);
             this.grbDatosUsuario.TabIndex = 31;
             this.grbDatosUsuario.TabStop = false;
             this.grbDatosUsuario.Text = "Datos del usuario";
@@ -120,7 +116,7 @@ namespace ProyectoFinal_Progra_I
             // txtConfirmacionDeContraseñaUsuario
             // 
             this.txtConfirmacionDeContraseñaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmacionDeContraseñaUsuario.Location = new System.Drawing.Point(262, 314);
+            this.txtConfirmacionDeContraseñaUsuario.Location = new System.Drawing.Point(262, 189);
             this.txtConfirmacionDeContraseñaUsuario.Name = "txtConfirmacionDeContraseñaUsuario";
             this.txtConfirmacionDeContraseñaUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtConfirmacionDeContraseñaUsuario.TabIndex = 23;
@@ -129,7 +125,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.lblConfirmacionDeContraseñaUsuario.AutoSize = true;
             this.lblConfirmacionDeContraseñaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmacionDeContraseñaUsuario.Location = new System.Drawing.Point(15, 320);
+            this.lblConfirmacionDeContraseñaUsuario.Location = new System.Drawing.Point(15, 195);
             this.lblConfirmacionDeContraseñaUsuario.Name = "lblConfirmacionDeContraseñaUsuario";
             this.lblConfirmacionDeContraseñaUsuario.Size = new System.Drawing.Size(234, 20);
             this.lblConfirmacionDeContraseñaUsuario.TabIndex = 22;
@@ -139,7 +135,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.txtContraseñaUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "clave", true));
             this.txtContraseñaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaUsuario.Location = new System.Drawing.Point(262, 270);
+            this.txtContraseñaUsuario.Location = new System.Drawing.Point(262, 134);
             this.txtContraseñaUsuario.Name = "txtContraseñaUsuario";
             this.txtContraseñaUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtContraseñaUsuario.TabIndex = 21;
@@ -158,7 +154,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.lblContraseñaUsuarios.AutoSize = true;
             this.lblContraseñaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseñaUsuarios.Location = new System.Drawing.Point(147, 273);
+            this.lblContraseñaUsuarios.Location = new System.Drawing.Point(147, 137);
             this.lblContraseñaUsuarios.Name = "lblContraseñaUsuarios";
             this.lblContraseñaUsuarios.Size = new System.Drawing.Size(102, 20);
             this.lblContraseñaUsuarios.TabIndex = 20;
@@ -168,7 +164,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.txtNombreUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "nombre", true));
             this.txtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreUsuario.Location = new System.Drawing.Point(262, 183);
+            this.txtNombreUsuario.Location = new System.Drawing.Point(262, 19);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtNombreUsuario.TabIndex = 19;
@@ -177,39 +173,17 @@ namespace ProyectoFinal_Progra_I
             // 
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreUsuario.Location = new System.Drawing.Point(178, 188);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(178, 24);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(71, 20);
             this.lblNombreUsuario.TabIndex = 18;
             this.lblNombreUsuario.Text = "Nombre";
             // 
-            // btnAgregarFotoUsuario
-            // 
-            this.btnAgregarFotoUsuario.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAgregarFotoUsuario.Enabled = false;
-            this.btnAgregarFotoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarFotoUsuario.Location = new System.Drawing.Point(271, 133);
-            this.btnAgregarFotoUsuario.Name = "btnAgregarFotoUsuario";
-            this.btnAgregarFotoUsuario.Size = new System.Drawing.Size(192, 32);
-            this.btnAgregarFotoUsuario.TabIndex = 17;
-            this.btnAgregarFotoUsuario.Text = "Añadir foto";
-            this.btnAgregarFotoUsuario.UseVisualStyleBackColor = false;
-            // 
-            // pbFotoUsuario
-            // 
-            this.pbFotoUsuario.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbFotoUsuario.InitialImage")));
-            this.pbFotoUsuario.Location = new System.Drawing.Point(271, 19);
-            this.pbFotoUsuario.Name = "pbFotoUsuario";
-            this.pbFotoUsuario.Size = new System.Drawing.Size(192, 108);
-            this.pbFotoUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbFotoUsuario.TabIndex = 14;
-            this.pbFotoUsuario.TabStop = false;
-            // 
             // txtTelefonoUsuario
             // 
             this.txtTelefonoUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "telefono", true));
             this.txtTelefonoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefonoUsuario.Location = new System.Drawing.Point(262, 361);
+            this.txtTelefonoUsuario.Location = new System.Drawing.Point(262, 247);
             this.txtTelefonoUsuario.Name = "txtTelefonoUsuario";
             this.txtTelefonoUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtTelefonoUsuario.TabIndex = 11;
@@ -218,7 +192,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.txtDireccionUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "direccion", true));
             this.txtDireccionUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccionUsuario.Location = new System.Drawing.Point(262, 408);
+            this.txtDireccionUsuario.Location = new System.Drawing.Point(262, 303);
             this.txtDireccionUsuario.Name = "txtDireccionUsuario";
             this.txtDireccionUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtDireccionUsuario.TabIndex = 10;
@@ -227,7 +201,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.txtCorreoUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "correo", true));
             this.txtCorreoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreoUsuario.Location = new System.Drawing.Point(262, 455);
+            this.txtCorreoUsuario.Location = new System.Drawing.Point(262, 363);
             this.txtCorreoUsuario.Name = "txtCorreoUsuario";
             this.txtCorreoUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtCorreoUsuario.TabIndex = 9;
@@ -236,7 +210,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.txtUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "usuario", true));
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(262, 225);
+            this.txtUsuario.Location = new System.Drawing.Point(262, 74);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(430, 26);
             this.txtUsuario.TabIndex = 8;
@@ -247,7 +221,7 @@ namespace ProyectoFinal_Progra_I
             this.dtpNacimietoUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuariosBindingSource, "fechaNacimiento", true));
             this.dtpNacimietoUsuario.Enabled = false;
             this.dtpNacimietoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNacimietoUsuario.Location = new System.Drawing.Point(262, 500);
+            this.dtpNacimietoUsuario.Location = new System.Drawing.Point(262, 408);
             this.dtpNacimietoUsuario.Name = "dtpNacimietoUsuario";
             this.dtpNacimietoUsuario.Size = new System.Drawing.Size(336, 26);
             this.dtpNacimietoUsuario.TabIndex = 12;
@@ -256,7 +230,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(106, 543);
+            this.label7.Location = new System.Drawing.Point(106, 456);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(150, 20);
             this.label7.TabIndex = 7;
@@ -266,7 +240,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.lblFechaDeNacimientoUsuario.AutoSize = true;
             this.lblFechaDeNacimientoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaDeNacimientoUsuario.Location = new System.Drawing.Point(80, 505);
+            this.lblFechaDeNacimientoUsuario.Location = new System.Drawing.Point(80, 413);
             this.lblFechaDeNacimientoUsuario.Name = "lblFechaDeNacimientoUsuario";
             this.lblFechaDeNacimientoUsuario.Size = new System.Drawing.Size(176, 20);
             this.lblFechaDeNacimientoUsuario.TabIndex = 6;
@@ -278,7 +252,7 @@ namespace ProyectoFinal_Progra_I
             this.dtpRegistroCliente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuariosBindingSource, "fechaRegistro", true));
             this.dtpRegistroCliente.Enabled = false;
             this.dtpRegistroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpRegistroCliente.Location = new System.Drawing.Point(262, 543);
+            this.dtpRegistroCliente.Location = new System.Drawing.Point(262, 456);
             this.dtpRegistroCliente.Name = "dtpRegistroCliente";
             this.dtpRegistroCliente.Size = new System.Drawing.Size(336, 26);
             this.dtpRegistroCliente.TabIndex = 13;
@@ -287,7 +261,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.lblCorreoElectronicoUsuario.AutoSize = true;
             this.lblCorreoElectronicoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreoElectronicoUsuario.Location = new System.Drawing.Point(100, 455);
+            this.lblCorreoElectronicoUsuario.Location = new System.Drawing.Point(100, 363);
             this.lblCorreoElectronicoUsuario.Name = "lblCorreoElectronicoUsuario";
             this.lblCorreoElectronicoUsuario.Size = new System.Drawing.Size(156, 20);
             this.lblCorreoElectronicoUsuario.TabIndex = 5;
@@ -297,7 +271,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.lblTelefonoUsuario.AutoSize = true;
             this.lblTelefonoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefonoUsuario.Location = new System.Drawing.Point(170, 366);
+            this.lblTelefonoUsuario.Location = new System.Drawing.Point(170, 250);
             this.lblTelefonoUsuario.Name = "lblTelefonoUsuario";
             this.lblTelefonoUsuario.Size = new System.Drawing.Size(79, 20);
             this.lblTelefonoUsuario.TabIndex = 2;
@@ -307,7 +281,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(178, 230);
+            this.lblUsuario.Location = new System.Drawing.Point(178, 79);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(71, 20);
             this.lblUsuario.TabIndex = 4;
@@ -317,7 +291,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.lblDireccionUsuario.AutoSize = true;
             this.lblDireccionUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccionUsuario.Location = new System.Drawing.Point(165, 408);
+            this.lblDireccionUsuario.Location = new System.Drawing.Point(165, 303);
             this.lblDireccionUsuario.Name = "lblDireccionUsuario";
             this.lblDireccionUsuario.Size = new System.Drawing.Size(84, 20);
             this.lblDireccionUsuario.TabIndex = 3;
@@ -366,7 +340,7 @@ namespace ProyectoFinal_Progra_I
             this.grbNavegacionUsuario.Controls.Add(this.btnUltimoUsuario);
             this.grbNavegacionUsuario.Controls.Add(this.btnSiguienteUsuario);
             this.grbNavegacionUsuario.Controls.Add(this.lblPosicionUsuario);
-            this.grbNavegacionUsuario.Location = new System.Drawing.Point(917, 592);
+            this.grbNavegacionUsuario.Location = new System.Drawing.Point(138, 410);
             this.grbNavegacionUsuario.Name = "grbNavegacionUsuario";
             this.grbNavegacionUsuario.Size = new System.Drawing.Size(278, 82);
             this.grbNavegacionUsuario.TabIndex = 33;
@@ -436,7 +410,7 @@ namespace ProyectoFinal_Progra_I
             this.grbEdicionUsuario.Controls.Add(this.btnNuevoUsuario);
             this.grbEdicionUsuario.Controls.Add(this.btnModificarUsuario);
             this.grbEdicionUsuario.Controls.Add(this.btnEliminarUsuario);
-            this.grbEdicionUsuario.Location = new System.Drawing.Point(538, 592);
+            this.grbEdicionUsuario.Location = new System.Drawing.Point(121, 498);
             this.grbEdicionUsuario.Name = "grbEdicionUsuario";
             this.grbEdicionUsuario.Size = new System.Drawing.Size(331, 82);
             this.grbEdicionUsuario.TabIndex = 32;
@@ -475,8 +449,9 @@ namespace ProyectoFinal_Progra_I
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
             this.btnEliminarUsuario.Size = new System.Drawing.Size(90, 55);
             this.btnEliminarUsuario.TabIndex = 17;
-            this.btnEliminarUsuario.Text = "Eliminar Cliente";
+            this.btnEliminarUsuario.Text = "Eliminar usuario";
             this.btnEliminarUsuario.UseVisualStyleBackColor = false;
+            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click);
             // 
             // usuariosTableAdapter
             // 
@@ -517,9 +492,9 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.usuariosDataGridView.DataSource = this.usuariosBindingSource;
-            this.usuariosDataGridView.Location = new System.Drawing.Point(12, 132);
+            this.usuariosDataGridView.Location = new System.Drawing.Point(12, 79);
             this.usuariosDataGridView.Name = "usuariosDataGridView";
-            this.usuariosDataGridView.Size = new System.Drawing.Size(506, 308);
+            this.usuariosDataGridView.Size = new System.Drawing.Size(506, 310);
             this.usuariosDataGridView.TabIndex = 33;
             // 
             // dataGridViewTextBoxColumn1
@@ -528,6 +503,7 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn1.HeaderText = "idUsuario";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -577,6 +553,10 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn9.HeaderText = "fechaRegistro";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -598,11 +578,11 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFotoUsuario)).EndInit();
             this.grbNavegacionUsuario.ResumeLayout(false);
             this.grbNavegacionUsuario.PerformLayout();
             this.grbEdicionUsuario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -611,8 +591,6 @@ namespace ProyectoFinal_Progra_I
         #endregion
 
         private System.Windows.Forms.GroupBox grbDatosUsuario;
-        private System.Windows.Forms.Button btnAgregarFotoUsuario;
-        private System.Windows.Forms.PictureBox pbFotoUsuario;
         private System.Windows.Forms.TextBox txtTelefonoUsuario;
         private System.Windows.Forms.TextBox txtDireccionUsuario;
         private System.Windows.Forms.TextBox txtCorreoUsuario;
@@ -658,5 +636,6 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

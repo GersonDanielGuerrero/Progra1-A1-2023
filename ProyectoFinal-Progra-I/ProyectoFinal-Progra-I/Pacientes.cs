@@ -61,6 +61,8 @@ namespace ProyectoFinal_Progra_I
             this.especiesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.especies);
             actualizarDatosPaciente();
             estadoControles(false);
+
+
         }
         private void estadoControles(bool estado)
         {
@@ -183,6 +185,14 @@ namespace ProyectoFinal_Progra_I
                 fallecimientosTableAdapter.Fill(bd_veterinaria_huellitasDataSet.fallecimientos);
                 actualizarDatosPaciente();
             }
+        }
+
+        private void btnEliminarPaciente_Click(object sender, EventArgs e)
+        {
+            pacientesBindingSource.RemoveCurrent();
+            this.pacientesTableAdapter.Update(bd_veterinaria_huellitasDataSet);
+            lblPosicionPaciente.Text = $"{pacientesBindingSource.Position + 1} de {pacientesBindingSource.Count}";
+            fallecimientosTableAdapter.Fill(bd_veterinaria_huellitasDataSet.fallecimientos);
         }
         /*
 private void Pacientes_Load(object sender, EventArgs e)

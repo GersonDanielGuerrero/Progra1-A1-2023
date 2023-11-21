@@ -35,7 +35,10 @@ namespace ProyectoFinal_Progra_I
             this.pacientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.pacientes);
             // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.clientes' Puede moverla o quitarla según sea necesario.
             this.clientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.clientes);
+
+            estadoControles(false);
             actualizarDatosCliente();
+
         }
         private void estadoControles(bool estado)
         {
@@ -77,19 +80,6 @@ namespace ProyectoFinal_Progra_I
             actualizarDatosCliente();
         }
 
-        private void btnAgregarFotoCliente_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Archivo de imagen |*.jpg;*.png;*.jpeg";
-            if (ofd.ShowDialog().Equals(DialogResult.OK))
-            {
-                string ruta = ofd.FileName;
-                bytesFotoCliente = File.ReadAllBytes(ruta);
-                using (MemoryStream ms = new MemoryStream(bytesFotoCliente))
-                    pbFotoCliente.Image = Image.FromStream(ms);
-
-            }
-        }
 
         private void btnModificarCliente_Click(object sender, EventArgs e)
         {
@@ -117,8 +107,8 @@ namespace ProyectoFinal_Progra_I
                 btnNuevoCliente.Text = "Guardar";
                 btnModificarCliente.Text = "Cancelar";
                 estadoControles(true);
-
-                clientesBindingSource.AddNew();
+                
+                    clientesBindingSource.AddNew();
             }
             else
             {
@@ -135,6 +125,13 @@ namespace ProyectoFinal_Progra_I
 
                 }
             }
+        }
+
+        private void btnEliminarCliente_Click(object sender, EventArgs e)
+        {
+            clientesBindingSource.RemoveCurrent();
+            this.clientesTableAdapter.Update(bd_veterinaria_huellitasDataSet);
+            lblPosicionCliente.Text = $"{clientesBindingSource.Position + 1} de {clientesBindingSource.Count}";
         }
 
         /*

@@ -124,7 +124,7 @@ namespace ProyectoFinal_Progra_I
             "Estatura",
             "Peso",
             "Descripcion"});
-            this.cboOpcionBuscarPaciente.Location = new System.Drawing.Point(94, 56);
+            this.cboOpcionBuscarPaciente.Location = new System.Drawing.Point(93, 75);
             this.cboOpcionBuscarPaciente.Name = "cboOpcionBuscarPaciente";
             this.cboOpcionBuscarPaciente.Size = new System.Drawing.Size(154, 28);
             this.cboOpcionBuscarPaciente.TabIndex = 19;
@@ -132,7 +132,7 @@ namespace ProyectoFinal_Progra_I
             // txtBuscarPaciente
             // 
             this.txtBuscarPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarPaciente.Location = new System.Drawing.Point(263, 56);
+            this.txtBuscarPaciente.Location = new System.Drawing.Point(262, 75);
             this.txtBuscarPaciente.Name = "txtBuscarPaciente";
             this.txtBuscarPaciente.Size = new System.Drawing.Size(249, 26);
             this.txtBuscarPaciente.TabIndex = 18;
@@ -141,7 +141,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 59);
+            this.label1.Location = new System.Drawing.Point(22, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 17;
@@ -584,6 +584,7 @@ namespace ProyectoFinal_Progra_I
             this.btnEliminarPaciente.TabIndex = 17;
             this.btnEliminarPaciente.Text = "Eliminar paciente";
             this.btnEliminarPaciente.UseVisualStyleBackColor = false;
+            this.btnEliminarPaciente.Click += new System.EventHandler(this.btnEliminarPaciente_Click);
             // 
             // erpPacientes
             // 
@@ -662,9 +663,9 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.datosPacientesDataGridView.DataSource = this.datosPacientesBindingSource;
-            this.datosPacientesDataGridView.Location = new System.Drawing.Point(16, 88);
+            this.datosPacientesDataGridView.Location = new System.Drawing.Point(16, 56);
             this.datosPacientesDataGridView.Name = "datosPacientesDataGridView";
-            this.datosPacientesDataGridView.Size = new System.Drawing.Size(496, 379);
+            this.datosPacientesDataGridView.Size = new System.Drawing.Size(496, 411);
             this.datosPacientesDataGridView.TabIndex = 29;
             // 
             // dataGridViewTextBoxColumn1
