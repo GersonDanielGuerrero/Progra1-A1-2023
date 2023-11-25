@@ -134,6 +134,11 @@ namespace ProyectoFinal_Progra_I
             lblPosicionCliente.Text = $"{clientesBindingSource.Position + 1} de {clientesBindingSource.Count}";
         }
 
+        private void txtBuscarCliente_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
         /*
 private void Clientes_Load(object sender, EventArgs e)
 {

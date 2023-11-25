@@ -11,18 +11,43 @@ namespace ProyectoFinal_Progra_I
     class Conexion
     {
 
-        SqlConnection miConexion = new SqlConnection();
+        private static SqlConnection miConexion = new SqlConnection();
+        private static String cadenaConexion = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\bd_veterinaria_huellitas.mdf;Integrated Security=True";
+        public static SqlConnection ObtenerConexion()
+        {
+            if (miConexion==null)
+            {
+                miConexion = new SqlConnection(cadenaConexion);
+                miConexion.Open();
+            }
+            else if (miConexion.State==ConnectionState.Closed)
+            {
+                miConexion.Open();
+            }
+            return miConexion;
+        }
+
+        public static void CerrarConexion()
+        {
+            if (miConexion!=null && miConexion.State==ConnectionState.Open)
+            {
+                miConexion.Close();
+            }
+        }
         SqlCommand miComando = new SqlCommand();
         SqlDataAdapter miAdaptador = new SqlDataAdapter();
         DataSet miDs = new DataSet();
 
         public Conexion()
         {
-            String cadenaConexion = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\bd_veterinaria_huellitas.mdf;Integrated Security=True";
+
+
+            /*
             miConexion.ConnectionString = cadenaConexion;
             miConexion.Open();
             obtenerDatos();
             parametrizacion();
+            */
         }
         public DataSet obtenerDatos()
         {

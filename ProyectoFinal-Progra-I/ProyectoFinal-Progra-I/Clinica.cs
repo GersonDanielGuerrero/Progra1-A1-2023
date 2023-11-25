@@ -14,9 +14,12 @@ namespace ProyectoFinal_Progra_I
             bool hayCamposVacios = false;
             foreach (Control k in groupBox.Controls)
             {
+                k.BackColor = System.Drawing.Color.White;
                 if (!(k is Label || k is PictureBox) && string.IsNullOrWhiteSpace(k.Text))
                 {
+                   
                     hayCamposVacios = true;
+                    k.BackColor = System.Drawing.Color.Red;
                 }
                 
                

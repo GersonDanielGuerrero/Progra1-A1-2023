@@ -50,3 +50,4 @@ C:\Users\danic\Source\Repos\Progra1-A1-2023\ProyectoFinal-Progra-I\ProyectoFinal
 C:\Users\danic\Source\Repos\Progra1-A1-2023\ProyectoFinal-Progra-I\ProyectoFinal-Progra-I\bin\Debug\ProyectoFinal-Progra-I.exe
 C:\Users\danic\Source\Repos\Progra1-A1-2023\ProyectoFinal-Progra-I\ProyectoFinal-Progra-I\bin\Debug\ProyectoFinal-Progra-I.pdb
 C:\Users\danic\Source\Repos\Progra1-A1-2023\ProyectoFinal-Progra-I\ProyectoFinal-Progra-I\obj\Debug\ProyectoFinal_Progra_I.Principal.resources
+C:\Users\danic\Source\Repos\Progra1-A1-2023\ProyectoFinal-Progra-I\ProyectoFinal-Progra-I\obj\Debug\ProyectoFinal_Progra_I.consultas.resources

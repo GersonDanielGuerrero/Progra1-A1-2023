@@ -227,6 +227,7 @@ namespace ProyectoFinal_Progra_I
             this.txtBuscarCliente.Name = "txtBuscarCliente";
             this.txtBuscarCliente.Size = new System.Drawing.Size(249, 26);
             this.txtBuscarCliente.TabIndex = 14;
+            this.txtBuscarCliente.TextChanged += new System.EventHandler(this.txtBuscarCliente_TextChanged);
             // 
             // cboOpcionBuscarCliente
             // 
@@ -463,9 +464,9 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewImageColumn1});
             this.clientesDataGridView.DataSource = this.clientesBindingSource;
-            this.clientesDataGridView.Location = new System.Drawing.Point(12, 66);
+            this.clientesDataGridView.Location = new System.Drawing.Point(12, 120);
             this.clientesDataGridView.Name = "clientesDataGridView";
-            this.clientesDataGridView.Size = new System.Drawing.Size(504, 367);
+            this.clientesDataGridView.Size = new System.Drawing.Size(504, 313);
             this.clientesDataGridView.TabIndex = 20;
             // 
             // dataGridViewTextBoxColumn1
