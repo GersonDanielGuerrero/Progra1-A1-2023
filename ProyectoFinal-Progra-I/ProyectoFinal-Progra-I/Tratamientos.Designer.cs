@@ -38,9 +38,9 @@ namespace ProyectoFinal_Progra_I
             this.label2 = new System.Windows.Forms.Label();
             this.txtDosisTratamiento = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaInicioTratamiento = new System.Windows.Forms.DateTimePicker();
             this.lblFechaDeNacimientoUsuario = new System.Windows.Forms.Label();
-            this.dateFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.dateFechaFinTratamiento = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.tratamientosTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.tratamientosTableAdapter();
             this.pacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -155,16 +155,16 @@ namespace ProyectoFinal_Progra_I
             this.label3.TabIndex = 41;
             this.label3.Text = "Dosis";
             // 
-            // dtpFechaInicio
+            // dtpFechaInicioTratamiento
             // 
-            this.dtpFechaInicio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tratamientosBindingSource, "fechaInicio", true));
-            this.dtpFechaInicio.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tratamientosBindingSource, "fechaInicio", true));
-            this.dtpFechaInicio.Enabled = false;
-            this.dtpFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaInicio.Location = new System.Drawing.Point(196, 308);
-            this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(336, 26);
-            this.dtpFechaInicio.TabIndex = 44;
+            this.dtpFechaInicioTratamiento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tratamientosBindingSource, "fechaInicio", true));
+            this.dtpFechaInicioTratamiento.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tratamientosBindingSource, "fechaInicio", true));
+            this.dtpFechaInicioTratamiento.Enabled = false;
+            this.dtpFechaInicioTratamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaInicioTratamiento.Location = new System.Drawing.Point(196, 308);
+            this.dtpFechaInicioTratamiento.Name = "dtpFechaInicioTratamiento";
+            this.dtpFechaInicioTratamiento.Size = new System.Drawing.Size(336, 26);
+            this.dtpFechaInicioTratamiento.TabIndex = 44;
             // 
             // lblFechaDeNacimientoUsuario
             // 
@@ -176,16 +176,16 @@ namespace ProyectoFinal_Progra_I
             this.lblFechaDeNacimientoUsuario.TabIndex = 43;
             this.lblFechaDeNacimientoUsuario.Text = "Inicio del tratamiento";
             // 
-            // dateFechaFin
+            // dateFechaFinTratamiento
             // 
-            this.dateFechaFin.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tratamientosBindingSource, "fechaFin", true));
-            this.dateFechaFin.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tratamientosBindingSource, "fechaFin", true));
-            this.dateFechaFin.Enabled = false;
-            this.dateFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateFechaFin.Location = new System.Drawing.Point(196, 380);
-            this.dateFechaFin.Name = "dateFechaFin";
-            this.dateFechaFin.Size = new System.Drawing.Size(336, 26);
-            this.dateFechaFin.TabIndex = 46;
+            this.dateFechaFinTratamiento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tratamientosBindingSource, "fechaFin", true));
+            this.dateFechaFinTratamiento.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.tratamientosBindingSource, "fechaFin", true));
+            this.dateFechaFinTratamiento.Enabled = false;
+            this.dateFechaFinTratamiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateFechaFinTratamiento.Location = new System.Drawing.Point(196, 380);
+            this.dateFechaFinTratamiento.Name = "dateFechaFinTratamiento";
+            this.dateFechaFinTratamiento.Size = new System.Drawing.Size(336, 26);
+            this.dateFechaFinTratamiento.TabIndex = 46;
             // 
             // label5
             // 
@@ -224,8 +224,8 @@ namespace ProyectoFinal_Progra_I
             this.grbDetallesTratamiento.Controls.Add(this.cboProductoTratamiento);
             this.grbDetallesTratamiento.Controls.Add(this.cboPacienteTratamiento);
             this.grbDetallesTratamiento.Controls.Add(this.txtDosisTratamiento);
-            this.grbDetallesTratamiento.Controls.Add(this.dtpFechaInicio);
-            this.grbDetallesTratamiento.Controls.Add(this.dateFechaFin);
+            this.grbDetallesTratamiento.Controls.Add(this.dtpFechaInicioTratamiento);
+            this.grbDetallesTratamiento.Controls.Add(this.dateFechaFinTratamiento);
             this.grbDetallesTratamiento.Controls.Add(this.label4);
             this.grbDetallesTratamiento.Controls.Add(this.label1);
             this.grbDetallesTratamiento.Controls.Add(this.label2);
@@ -573,9 +573,9 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDosisTratamiento;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dtpFechaInicio;
+        private System.Windows.Forms.DateTimePicker dtpFechaInicioTratamiento;
         private System.Windows.Forms.Label lblFechaDeNacimientoUsuario;
-        private System.Windows.Forms.DateTimePicker dateFechaFin;
+        private System.Windows.Forms.DateTimePicker dateFechaFinTratamiento;
         private System.Windows.Forms.Label label5;
         private bd_veterinaria_huellitasDataSet bd_veterinaria_huellitasDataSet;
         private System.Windows.Forms.BindingSource tratamientosBindingSource;

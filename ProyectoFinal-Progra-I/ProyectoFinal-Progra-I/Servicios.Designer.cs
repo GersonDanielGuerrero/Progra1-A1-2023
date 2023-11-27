@@ -30,27 +30,27 @@ namespace ProyectoFinal_Progra_I
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.grbDatosUsuario = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.grbDatosServicio = new System.Windows.Forms.GroupBox();
+            this.txtPrecioServicio = new System.Windows.Forms.TextBox();
             this.tipoServiciosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDescripcionServicio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.txtDuracionServicio = new System.Windows.Forms.TextBox();
+            this.txtNombreServicio = new System.Windows.Forms.TextBox();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.cboOpcionBuscarUsuario = new System.Windows.Forms.ComboBox();
             this.txtBuscarUsuario = new System.Windows.Forms.TextBox();
             this.lblBuscarUsuario = new System.Windows.Forms.Label();
-            this.grbNavegacionPaciente = new System.Windows.Forms.GroupBox();
+            this.grbNavegacionServicio = new System.Windows.Forms.GroupBox();
             this.btnPrimeroServicio = new System.Windows.Forms.Button();
             this.btnAnteriorServicio = new System.Windows.Forms.Button();
             this.btnUltimoServicio = new System.Windows.Forms.Button();
             this.btnSiguienteServicio = new System.Windows.Forms.Button();
-            this.lblPosicionPaciente = new System.Windows.Forms.Label();
-            this.grbEdicionPaciente = new System.Windows.Forms.GroupBox();
+            this.lblPosicionServicio = new System.Windows.Forms.Label();
+            this.grbEdicionServicio = new System.Windows.Forms.GroupBox();
             this.btnNuevoServicio = new System.Windows.Forms.Button();
             this.btnModificarServicio = new System.Windows.Forms.Button();
             this.btnEliminarServicio = new System.Windows.Forms.Button();
@@ -62,39 +62,39 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grbDatosUsuario.SuspendLayout();
+            this.grbDatosServicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoServiciosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
-            this.grbNavegacionPaciente.SuspendLayout();
-            this.grbEdicionPaciente.SuspendLayout();
+            this.grbNavegacionServicio.SuspendLayout();
+            this.grbEdicionServicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoServiciosDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // grbDatosUsuario
+            // grbDatosServicio
             // 
-            this.grbDatosUsuario.Controls.Add(this.textBox3);
-            this.grbDatosUsuario.Controls.Add(this.label2);
-            this.grbDatosUsuario.Controls.Add(this.textBox2);
-            this.grbDatosUsuario.Controls.Add(this.label1);
-            this.grbDatosUsuario.Controls.Add(this.textBox1);
-            this.grbDatosUsuario.Controls.Add(this.txtNombreUsuario);
-            this.grbDatosUsuario.Controls.Add(this.lblNombreUsuario);
-            this.grbDatosUsuario.Controls.Add(this.lblUsuario);
-            this.grbDatosUsuario.Location = new System.Drawing.Point(530, 21);
-            this.grbDatosUsuario.Name = "grbDatosUsuario";
-            this.grbDatosUsuario.Size = new System.Drawing.Size(737, 431);
-            this.grbDatosUsuario.TabIndex = 36;
-            this.grbDatosUsuario.TabStop = false;
-            this.grbDatosUsuario.Text = "Datos del usuario";
+            this.grbDatosServicio.Controls.Add(this.txtPrecioServicio);
+            this.grbDatosServicio.Controls.Add(this.label2);
+            this.grbDatosServicio.Controls.Add(this.txtDescripcionServicio);
+            this.grbDatosServicio.Controls.Add(this.label1);
+            this.grbDatosServicio.Controls.Add(this.txtDuracionServicio);
+            this.grbDatosServicio.Controls.Add(this.txtNombreServicio);
+            this.grbDatosServicio.Controls.Add(this.lblNombreUsuario);
+            this.grbDatosServicio.Controls.Add(this.lblUsuario);
+            this.grbDatosServicio.Location = new System.Drawing.Point(530, 21);
+            this.grbDatosServicio.Name = "grbDatosServicio";
+            this.grbDatosServicio.Size = new System.Drawing.Size(737, 431);
+            this.grbDatosServicio.TabIndex = 36;
+            this.grbDatosServicio.TabStop = false;
+            this.grbDatosServicio.Text = "Datos del servicio";
             // 
-            // textBox3
+            // txtPrecioServicio
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipoServiciosBindingSource, "Precio", true));
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(158, 320);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(86, 26);
-            this.textBox3.TabIndex = 24;
+            this.txtPrecioServicio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipoServiciosBindingSource, "Precio", true));
+            this.txtPrecioServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioServicio.Location = new System.Drawing.Point(158, 320);
+            this.txtPrecioServicio.Name = "txtPrecioServicio";
+            this.txtPrecioServicio.Size = new System.Drawing.Size(86, 26);
+            this.txtPrecioServicio.TabIndex = 24;
             // 
             // tipoServiciosBindingSource
             // 
@@ -116,16 +116,16 @@ namespace ProyectoFinal_Progra_I
             this.label2.TabIndex = 23;
             this.label2.Text = "Precio ($)";
             // 
-            // textBox2
+            // txtDescripcionServicio
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipoServiciosBindingSource, "descripcion", true));
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(158, 198);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(430, 71);
-            this.textBox2.TabIndex = 22;
+            this.txtDescripcionServicio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipoServiciosBindingSource, "descripcion", true));
+            this.txtDescripcionServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcionServicio.Location = new System.Drawing.Point(158, 198);
+            this.txtDescripcionServicio.Multiline = true;
+            this.txtDescripcionServicio.Name = "txtDescripcionServicio";
+            this.txtDescripcionServicio.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDescripcionServicio.Size = new System.Drawing.Size(430, 71);
+            this.txtDescripcionServicio.TabIndex = 22;
             // 
             // label1
             // 
@@ -137,23 +137,23 @@ namespace ProyectoFinal_Progra_I
             this.label1.TabIndex = 21;
             this.label1.Text = "Descripcion";
             // 
-            // textBox1
+            // txtDuracionServicio
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipoServiciosBindingSource, "duracionNormal", true));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(194, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(65, 26);
-            this.textBox1.TabIndex = 20;
+            this.txtDuracionServicio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipoServiciosBindingSource, "duracionNormal", true));
+            this.txtDuracionServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDuracionServicio.Location = new System.Drawing.Point(194, 124);
+            this.txtDuracionServicio.Name = "txtDuracionServicio";
+            this.txtDuracionServicio.Size = new System.Drawing.Size(65, 26);
+            this.txtDuracionServicio.TabIndex = 20;
             // 
-            // txtNombreUsuario
+            // txtNombreServicio
             // 
-            this.txtNombreUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipoServiciosBindingSource, "tipoServicio", true));
-            this.txtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreUsuario.Location = new System.Drawing.Point(158, 49);
-            this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(430, 26);
-            this.txtNombreUsuario.TabIndex = 19;
+            this.txtNombreServicio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipoServiciosBindingSource, "tipoServicio", true));
+            this.txtNombreServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreServicio.Location = new System.Drawing.Point(158, 49);
+            this.txtNombreServicio.Name = "txtNombreServicio";
+            this.txtNombreServicio.Size = new System.Drawing.Size(430, 26);
+            this.txtNombreServicio.TabIndex = 19;
             // 
             // lblNombreUsuario
             // 
@@ -210,20 +210,20 @@ namespace ProyectoFinal_Progra_I
             this.lblBuscarUsuario.TabIndex = 33;
             this.lblBuscarUsuario.Text = "Buscar";
             // 
-            // grbNavegacionPaciente
+            // grbNavegacionServicio
             // 
-            this.grbNavegacionPaciente.BackColor = System.Drawing.SystemColors.Control;
-            this.grbNavegacionPaciente.Controls.Add(this.btnPrimeroServicio);
-            this.grbNavegacionPaciente.Controls.Add(this.btnAnteriorServicio);
-            this.grbNavegacionPaciente.Controls.Add(this.btnUltimoServicio);
-            this.grbNavegacionPaciente.Controls.Add(this.btnSiguienteServicio);
-            this.grbNavegacionPaciente.Controls.Add(this.lblPosicionPaciente);
-            this.grbNavegacionPaciente.Location = new System.Drawing.Point(126, 282);
-            this.grbNavegacionPaciente.Name = "grbNavegacionPaciente";
-            this.grbNavegacionPaciente.Size = new System.Drawing.Size(280, 82);
-            this.grbNavegacionPaciente.TabIndex = 38;
-            this.grbNavegacionPaciente.TabStop = false;
-            this.grbNavegacionPaciente.Text = "Navegación";
+            this.grbNavegacionServicio.BackColor = System.Drawing.SystemColors.Control;
+            this.grbNavegacionServicio.Controls.Add(this.btnPrimeroServicio);
+            this.grbNavegacionServicio.Controls.Add(this.btnAnteriorServicio);
+            this.grbNavegacionServicio.Controls.Add(this.btnUltimoServicio);
+            this.grbNavegacionServicio.Controls.Add(this.btnSiguienteServicio);
+            this.grbNavegacionServicio.Controls.Add(this.lblPosicionServicio);
+            this.grbNavegacionServicio.Location = new System.Drawing.Point(126, 282);
+            this.grbNavegacionServicio.Name = "grbNavegacionServicio";
+            this.grbNavegacionServicio.Size = new System.Drawing.Size(280, 82);
+            this.grbNavegacionServicio.TabIndex = 38;
+            this.grbNavegacionServicio.TabStop = false;
+            this.grbNavegacionServicio.Text = "Navegación";
             // 
             // btnPrimeroServicio
             // 
@@ -273,27 +273,27 @@ namespace ProyectoFinal_Progra_I
             this.btnSiguienteServicio.UseVisualStyleBackColor = false;
             this.btnSiguienteServicio.Click += new System.EventHandler(this.btnSiguienteServicio_Click);
             // 
-            // lblPosicionPaciente
+            // lblPosicionServicio
             // 
-            this.lblPosicionPaciente.AutoSize = true;
-            this.lblPosicionPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosicionPaciente.Location = new System.Drawing.Point(107, 36);
-            this.lblPosicionPaciente.Name = "lblPosicionPaciente";
-            this.lblPosicionPaciente.Size = new System.Drawing.Size(57, 20);
-            this.lblPosicionPaciente.TabIndex = 23;
-            this.lblPosicionPaciente.Text = "x de n";
+            this.lblPosicionServicio.AutoSize = true;
+            this.lblPosicionServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosicionServicio.Location = new System.Drawing.Point(107, 36);
+            this.lblPosicionServicio.Name = "lblPosicionServicio";
+            this.lblPosicionServicio.Size = new System.Drawing.Size(57, 20);
+            this.lblPosicionServicio.TabIndex = 23;
+            this.lblPosicionServicio.Text = "x de n";
             // 
-            // grbEdicionPaciente
+            // grbEdicionServicio
             // 
-            this.grbEdicionPaciente.Controls.Add(this.btnNuevoServicio);
-            this.grbEdicionPaciente.Controls.Add(this.btnModificarServicio);
-            this.grbEdicionPaciente.Controls.Add(this.btnEliminarServicio);
-            this.grbEdicionPaciente.Location = new System.Drawing.Point(104, 370);
-            this.grbEdicionPaciente.Name = "grbEdicionPaciente";
-            this.grbEdicionPaciente.Size = new System.Drawing.Size(320, 82);
-            this.grbEdicionPaciente.TabIndex = 37;
-            this.grbEdicionPaciente.TabStop = false;
-            this.grbEdicionPaciente.Text = "Edición";
+            this.grbEdicionServicio.Controls.Add(this.btnNuevoServicio);
+            this.grbEdicionServicio.Controls.Add(this.btnModificarServicio);
+            this.grbEdicionServicio.Controls.Add(this.btnEliminarServicio);
+            this.grbEdicionServicio.Location = new System.Drawing.Point(104, 370);
+            this.grbEdicionServicio.Name = "grbEdicionServicio";
+            this.grbEdicionServicio.Size = new System.Drawing.Size(320, 82);
+            this.grbEdicionServicio.TabIndex = 37;
+            this.grbEdicionServicio.TabStop = false;
+            this.grbEdicionServicio.Text = "Edición";
             // 
             // btnNuevoServicio
             // 
@@ -409,22 +409,22 @@ namespace ProyectoFinal_Progra_I
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.ControlBox = false;
             this.Controls.Add(this.tipoServiciosDataGridView);
-            this.Controls.Add(this.grbNavegacionPaciente);
-            this.Controls.Add(this.grbEdicionPaciente);
-            this.Controls.Add(this.grbDatosUsuario);
+            this.Controls.Add(this.grbNavegacionServicio);
+            this.Controls.Add(this.grbEdicionServicio);
+            this.Controls.Add(this.grbDatosServicio);
             this.Controls.Add(this.cboOpcionBuscarUsuario);
             this.Controls.Add(this.txtBuscarUsuario);
             this.Controls.Add(this.lblBuscarUsuario);
             this.Name = "Servicios";
             this.Text = "Servicios";
             this.Load += new System.EventHandler(this.Servicios_Load);
-            this.grbDatosUsuario.ResumeLayout(false);
-            this.grbDatosUsuario.PerformLayout();
+            this.grbDatosServicio.ResumeLayout(false);
+            this.grbDatosServicio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoServiciosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).EndInit();
-            this.grbNavegacionPaciente.ResumeLayout(false);
-            this.grbNavegacionPaciente.PerformLayout();
-            this.grbEdicionPaciente.ResumeLayout(false);
+            this.grbNavegacionServicio.ResumeLayout(false);
+            this.grbNavegacionServicio.PerformLayout();
+            this.grbEdicionServicio.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tipoServiciosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -433,28 +433,28 @@ namespace ProyectoFinal_Progra_I
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grbDatosUsuario;
-        private System.Windows.Forms.TextBox txtNombreUsuario;
+        private System.Windows.Forms.GroupBox grbDatosServicio;
+        private System.Windows.Forms.TextBox txtNombreServicio;
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.ComboBox cboOpcionBuscarUsuario;
         private System.Windows.Forms.TextBox txtBuscarUsuario;
         private System.Windows.Forms.Label lblBuscarUsuario;
-        private System.Windows.Forms.GroupBox grbNavegacionPaciente;
+        private System.Windows.Forms.GroupBox grbNavegacionServicio;
         private System.Windows.Forms.Button btnPrimeroServicio;
         private System.Windows.Forms.Button btnAnteriorServicio;
         private System.Windows.Forms.Button btnUltimoServicio;
         private System.Windows.Forms.Button btnSiguienteServicio;
-        private System.Windows.Forms.Label lblPosicionPaciente;
-        private System.Windows.Forms.GroupBox grbEdicionPaciente;
+        private System.Windows.Forms.Label lblPosicionServicio;
+        private System.Windows.Forms.GroupBox grbEdicionServicio;
         private System.Windows.Forms.Button btnNuevoServicio;
         private System.Windows.Forms.Button btnModificarServicio;
         private System.Windows.Forms.Button btnEliminarServicio;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPrecioServicio;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDescripcionServicio;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDuracionServicio;
         private bd_veterinaria_huellitasDataSet bd_veterinaria_huellitasDataSet;
         private System.Windows.Forms.BindingSource tipoServiciosBindingSource;
         private bd_veterinaria_huellitasDataSetTableAdapters.tipoServiciosTableAdapter tipoServiciosTableAdapter;

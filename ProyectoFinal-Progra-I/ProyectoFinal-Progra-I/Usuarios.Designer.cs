@@ -46,7 +46,7 @@ namespace ProyectoFinal_Progra_I
             this.dtpNacimietoUsuario = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.lblFechaDeNacimientoUsuario = new System.Windows.Forms.Label();
-            this.dtpRegistroCliente = new System.Windows.Forms.DateTimePicker();
+            this.dtpRegistroUsuario = new System.Windows.Forms.DateTimePicker();
             this.lblCorreoElectronicoUsuario = new System.Windows.Forms.Label();
             this.lblTelefonoUsuario = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -101,7 +101,7 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosUsuario.Controls.Add(this.dtpNacimietoUsuario);
             this.grbDatosUsuario.Controls.Add(this.label7);
             this.grbDatosUsuario.Controls.Add(this.lblFechaDeNacimientoUsuario);
-            this.grbDatosUsuario.Controls.Add(this.dtpRegistroCliente);
+            this.grbDatosUsuario.Controls.Add(this.dtpRegistroUsuario);
             this.grbDatosUsuario.Controls.Add(this.lblCorreoElectronicoUsuario);
             this.grbDatosUsuario.Controls.Add(this.lblTelefonoUsuario);
             this.grbDatosUsuario.Controls.Add(this.lblUsuario);
@@ -246,16 +246,16 @@ namespace ProyectoFinal_Progra_I
             this.lblFechaDeNacimientoUsuario.TabIndex = 6;
             this.lblFechaDeNacimientoUsuario.Text = "Fecha de nacimiento";
             // 
-            // dtpRegistroCliente
+            // dtpRegistroUsuario
             // 
-            this.dtpRegistroCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "fechaRegistro", true));
-            this.dtpRegistroCliente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuariosBindingSource, "fechaRegistro", true));
-            this.dtpRegistroCliente.Enabled = false;
-            this.dtpRegistroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpRegistroCliente.Location = new System.Drawing.Point(262, 456);
-            this.dtpRegistroCliente.Name = "dtpRegistroCliente";
-            this.dtpRegistroCliente.Size = new System.Drawing.Size(336, 26);
-            this.dtpRegistroCliente.TabIndex = 13;
+            this.dtpRegistroUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "fechaRegistro", true));
+            this.dtpRegistroUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuariosBindingSource, "fechaRegistro", true));
+            this.dtpRegistroUsuario.Enabled = false;
+            this.dtpRegistroUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpRegistroUsuario.Location = new System.Drawing.Point(262, 456);
+            this.dtpRegistroUsuario.Name = "dtpRegistroUsuario";
+            this.dtpRegistroUsuario.Size = new System.Drawing.Size(336, 26);
+            this.dtpRegistroUsuario.TabIndex = 13;
             // 
             // lblCorreoElectronicoUsuario
             // 
@@ -598,7 +598,7 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DateTimePicker dtpNacimietoUsuario;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblFechaDeNacimientoUsuario;
-        private System.Windows.Forms.DateTimePicker dtpRegistroCliente;
+        private System.Windows.Forms.DateTimePicker dtpRegistroUsuario;
         private System.Windows.Forms.Label lblCorreoElectronicoUsuario;
         private System.Windows.Forms.Label lblTelefonoUsuario;
         private System.Windows.Forms.Label lblUsuario;

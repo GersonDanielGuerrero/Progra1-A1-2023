@@ -43,7 +43,7 @@ namespace ProyectoFinal_Progra_I
             this.fallecimientosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboSexoPaciente = new System.Windows.Forms.ComboBox();
             this.pacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblSexoPaciente = new System.Windows.Forms.Label();
             this.cboTutorPaciente = new System.Windows.Forms.ComboBox();
@@ -152,7 +152,7 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosPaciente.Controls.Add(this.lblPacienteHaFallecido);
             this.grbDatosPaciente.Controls.Add(this.btnFallecimientoPaciente);
             this.grbDatosPaciente.Controls.Add(this.grbFallecimientoPaciente);
-            this.grbDatosPaciente.Controls.Add(this.comboBox1);
+            this.grbDatosPaciente.Controls.Add(this.cboSexoPaciente);
             this.grbDatosPaciente.Controls.Add(this.lblSexoPaciente);
             this.grbDatosPaciente.Controls.Add(this.cboTutorPaciente);
             this.grbDatosPaciente.Controls.Add(this.lblTutorPaciente);
@@ -264,21 +264,21 @@ namespace ProyectoFinal_Progra_I
             this.label13.TabIndex = 42;
             this.label13.Text = "Fecha y hora de fallecimiento:";
             // 
-            // comboBox1
+            // cboSexoPaciente
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "sexo", true));
-            this.comboBox1.DisplayMember = "IdColor";
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboSexoPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "sexo", true));
+            this.cboSexoPaciente.DisplayMember = "IdColor";
+            this.cboSexoPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSexoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cboSexoPaciente.FormattingEnabled = true;
+            this.cboSexoPaciente.Items.AddRange(new object[] {
             "Macho",
             "Hembra"});
-            this.comboBox1.Location = new System.Drawing.Point(195, 226);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(430, 28);
-            this.comboBox1.TabIndex = 39;
-            this.comboBox1.ValueMember = "IdColor";
+            this.cboSexoPaciente.Location = new System.Drawing.Point(195, 226);
+            this.cboSexoPaciente.Name = "cboSexoPaciente";
+            this.cboSexoPaciente.Size = new System.Drawing.Size(430, 28);
+            this.cboSexoPaciente.TabIndex = 39;
+            this.cboSexoPaciente.ValueMember = "IdColor";
             // 
             // pacientesBindingSource
             // 
@@ -811,7 +811,7 @@ namespace ProyectoFinal_Progra_I
         private bd_veterinaria_huellitasDataSetTableAdapters.razasTableAdapter razasTableAdapter;
         private System.Windows.Forms.BindingSource datosPacientesBindingSource;
         private bd_veterinaria_huellitasDataSetTableAdapters.datosPacientesTableAdapter datosPacientesTableAdapter;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboSexoPaciente;
         private System.Windows.Forms.BindingSource pacientesColoresBindingSource;
         private bd_veterinaria_huellitasDataSetTableAdapters.pacientesColoresTableAdapter pacientesColoresTableAdapter;
         private System.Windows.Forms.BindingSource pacientesColoresBindingSource1;

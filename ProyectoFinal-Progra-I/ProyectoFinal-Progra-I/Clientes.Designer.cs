@@ -58,7 +58,7 @@ namespace ProyectoFinal_Progra_I
             this.grbEdicionCliente = new System.Windows.Forms.GroupBox();
             this.grbNavegacionCliente = new System.Windows.Forms.GroupBox();
             this.grbDatosCliente = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lboPacientesRegistradosCliente = new System.Windows.Forms.ListBox();
             this.pacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.erpClientes = new System.Windows.Forms.ErrorProvider(this.components);
@@ -369,7 +369,7 @@ namespace ProyectoFinal_Progra_I
             // 
             // grbDatosCliente
             // 
-            this.grbDatosCliente.Controls.Add(this.listBox1);
+            this.grbDatosCliente.Controls.Add(this.lboPacientesRegistradosCliente);
             this.grbDatosCliente.Controls.Add(this.label9);
             this.grbDatosCliente.Controls.Add(this.txtTelefonoCliente);
             this.grbDatosCliente.Controls.Add(this.txtDireccionCliente);
@@ -390,18 +390,18 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosCliente.TabStop = false;
             this.grbDatosCliente.Text = "Datos del cliente";
             // 
-            // listBox1
+            // lboPacientesRegistradosCliente
             // 
-            this.listBox1.DataSource = this.pacientesBindingSource;
-            this.listBox1.DisplayMember = "nombre";
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(195, 277);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(429, 104);
-            this.listBox1.TabIndex = 20;
-            this.listBox1.ValueMember = "nombre";
+            this.lboPacientesRegistradosCliente.DataSource = this.pacientesBindingSource;
+            this.lboPacientesRegistradosCliente.DisplayMember = "nombre";
+            this.lboPacientesRegistradosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lboPacientesRegistradosCliente.FormattingEnabled = true;
+            this.lboPacientesRegistradosCliente.ItemHeight = 20;
+            this.lboPacientesRegistradosCliente.Location = new System.Drawing.Point(195, 277);
+            this.lboPacientesRegistradosCliente.Name = "lboPacientesRegistradosCliente";
+            this.lboPacientesRegistradosCliente.Size = new System.Drawing.Size(429, 104);
+            this.lboPacientesRegistradosCliente.TabIndex = 20;
+            this.lboPacientesRegistradosCliente.ValueMember = "nombre";
             // 
             // pacientesBindingSource
             // 
@@ -588,7 +588,7 @@ namespace ProyectoFinal_Progra_I
         private bd_veterinaria_huellitasDataSetTableAdapters.pacientesTableAdapter pacientesTableAdapter;
         private bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView clientesDataGridView;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lboPacientesRegistradosCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

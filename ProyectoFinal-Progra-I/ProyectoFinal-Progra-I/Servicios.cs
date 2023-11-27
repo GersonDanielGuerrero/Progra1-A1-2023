@@ -23,37 +23,37 @@ namespace ProyectoFinal_Progra_I
             // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.tipoServicios' Puede moverla o quitarla según sea necesario.
             this.tipoServiciosTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.tipoServicios);
             estadoControles(false);
-            lblPosicionPaciente.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
+            lblPosicionServicio.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
         }
         private void estadoControles(bool estado)
         {
-            cl.estadoControles(estado, grbDatosUsuario);
-            cl.estadoControles(!estado, grbNavegacionPaciente);
+            cl.estadoControles(estado, grbDatosServicio);
+            cl.estadoControles(!estado, grbNavegacionServicio);
             cboOpcionBuscarUsuario.Enabled = !estado;
             txtBuscarUsuario.Enabled = !estado;
         }
         private void btnPrimeroPaciente_Click(object sender, EventArgs e)
         {
             tipoServiciosBindingSource.MoveFirst();
-            lblPosicionPaciente.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
+            lblPosicionServicio.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
         }
 
         private void btnAnteriorServicio_Click(object sender, EventArgs e)
         {
             tipoServiciosBindingSource.MovePrevious();
-            lblPosicionPaciente.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
+            lblPosicionServicio.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
         }
 
         private void btnSiguienteServicio_Click(object sender, EventArgs e)
         {
             tipoServiciosBindingSource.MoveNext();
-            lblPosicionPaciente.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
+            lblPosicionServicio.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
         }
 
         private void btnUltimoServicio_Click(object sender, EventArgs e)
         {
             tipoServiciosBindingSource.MoveLast();
-            lblPosicionPaciente.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
+            lblPosicionServicio.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
         }
 
         private void btnNuevoServicio_Click(object sender, EventArgs e)
@@ -68,7 +68,7 @@ namespace ProyectoFinal_Progra_I
             }
             else
             {
-                if (cl.ValidarDatos(grbDatosUsuario))
+                if (cl.ValidarDatos(grbDatosServicio))
                     MessageBox.Show("Ningun campo debe estar vacío");
                 else
                 {
@@ -79,7 +79,7 @@ namespace ProyectoFinal_Progra_I
                     btnModificarServicio.Text = "Modificar datos";
                 }
             }
-            lblPosicionPaciente.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
+            lblPosicionServicio.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
         }
 
         private void btnModificarServicio_Click(object sender, EventArgs e)
@@ -99,14 +99,14 @@ namespace ProyectoFinal_Progra_I
                 btnNuevoServicio.Text = "Nuevo servicio";
                 btnModificarServicio.Text = "Modificar datos";
             }
-            lblPosicionPaciente.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
+            lblPosicionServicio.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
         }
 
         private void btnEliminarServicio_Click(object sender, EventArgs e)
         {
             tipoServiciosBindingSource.RemoveCurrent();
             this.tipoServiciosTableAdapter.Update(bd_veterinaria_huellitasDataSet);
-            lblPosicionPaciente.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
+            lblPosicionServicio.Text = $"{tipoServiciosBindingSource.Position + 1} de {tipoServiciosBindingSource.Count}";
         }
     }
 }

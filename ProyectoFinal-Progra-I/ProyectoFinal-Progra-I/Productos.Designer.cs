@@ -170,7 +170,7 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosProducto.Size = new System.Drawing.Size(657, 472);
             this.grbDatosProducto.TabIndex = 29;
             this.grbDatosProducto.TabStop = false;
-            this.grbDatosProducto.Text = "Datos del paciente";
+            this.grbDatosProducto.Text = "Datos del producto";
             // 
             // txtPrecioProducto
             // 

@@ -30,8 +30,8 @@ namespace ProyectoFinal_Progra_I
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCancelarFallecimiento = new System.Windows.Forms.Button();
+            this.btnAceptarFallecimiento = new System.Windows.Forms.Button();
             this.lblFallecimientoPaciente = new System.Windows.Forms.Label();
             this.txtCausaFallecimiento = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,29 +48,29 @@ namespace ProyectoFinal_Progra_I
             ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnCancelar
+            // btnCancelarFallecimiento
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(385, 227);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(90, 33);
-            this.btnCancelar.TabIndex = 27;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelarFallecimiento.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnCancelarFallecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarFallecimiento.Location = new System.Drawing.Point(385, 227);
+            this.btnCancelarFallecimiento.Name = "btnCancelarFallecimiento";
+            this.btnCancelarFallecimiento.Size = new System.Drawing.Size(90, 33);
+            this.btnCancelarFallecimiento.TabIndex = 27;
+            this.btnCancelarFallecimiento.Text = "Cancelar";
+            this.btnCancelarFallecimiento.UseVisualStyleBackColor = false;
+            this.btnCancelarFallecimiento.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnAceptar
+            // btnAceptarFallecimiento
             // 
-            this.btnAceptar.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(212, 227);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(90, 33);
-            this.btnAceptar.TabIndex = 26;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptarFallecimiento.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnAceptarFallecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptarFallecimiento.Location = new System.Drawing.Point(212, 227);
+            this.btnAceptarFallecimiento.Name = "btnAceptarFallecimiento";
+            this.btnAceptarFallecimiento.Size = new System.Drawing.Size(90, 33);
+            this.btnAceptarFallecimiento.TabIndex = 26;
+            this.btnAceptarFallecimiento.Text = "Aceptar";
+            this.btnAceptarFallecimiento.UseVisualStyleBackColor = false;
+            this.btnAceptarFallecimiento.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // lblFallecimientoPaciente
             // 
@@ -163,8 +163,8 @@ namespace ProyectoFinal_Progra_I
             this.ClientSize = new System.Drawing.Size(671, 291);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpFechaFallecimiento);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.btnCancelarFallecimiento);
+            this.Controls.Add(this.btnAceptarFallecimiento);
             this.Controls.Add(this.lblFallecimientoPaciente);
             this.Controls.Add(this.txtCausaFallecimiento);
             this.Controls.Add(this.label2);
@@ -182,8 +182,8 @@ namespace ProyectoFinal_Progra_I
 
         #endregion
 
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnCancelarFallecimiento;
+        private System.Windows.Forms.Button btnAceptarFallecimiento;
         private System.Windows.Forms.Label lblFallecimientoPaciente;
         private System.Windows.Forms.TextBox txtCausaFallecimiento;
         private System.Windows.Forms.Label label2;
