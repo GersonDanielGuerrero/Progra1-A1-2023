@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agenda.Designer.cs">
+      <DependentUpon>Agenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="bd_veterinaria_huellitasDataSet.cs">
       <DependentUpon>bd_veterinaria_huellitasDataSet.xsd</DependentUpon>
     </Compile>
@@ -79,6 +85,12 @@
     </Compile>
     <Compile Include="Clinica.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="DetallesConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetallesConsulta.Designer.cs">
+      <DependentUpon>DetallesConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fallecimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,8 +147,14 @@
     <Compile Include="Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Agenda.resx">
+      <DependentUpon>Agenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetallesConsulta.resx">
+      <DependentUpon>DetallesConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fallecimiento.resx">
       <DependentUpon>Fallecimiento.cs</DependentUpon>
