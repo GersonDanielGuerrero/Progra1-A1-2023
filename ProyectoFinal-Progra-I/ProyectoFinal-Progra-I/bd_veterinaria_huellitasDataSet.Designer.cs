@@ -5775,6 +5775,12 @@ namespace ProyectoFinal_Progra_I {
             
             private global::System.Data.DataColumn columnraza;
             
+            private global::System.Data.DataColumn columnfechaNacimiento;
+            
+            private global::System.Data.DataColumn columnfechaRegistro;
+            
+            private global::System.Data.DataColumn columndescripcion;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public datosPacientesDataTable() {
@@ -5874,6 +5880,30 @@ namespace ProyectoFinal_Progra_I {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn fechaNacimientoColumn {
+                get {
+                    return this.columnfechaNacimiento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn fechaRegistroColumn {
+                get {
+                    return this.columnfechaRegistro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn descripcionColumn {
+                get {
+                    return this.columndescripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5909,7 +5939,7 @@ namespace ProyectoFinal_Progra_I {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public datosPacientesRow AdddatosPacientesRow(int idCliente, int idEspecie, int idRaza, string nombre, string tutor, string especie, string raza) {
+            public datosPacientesRow AdddatosPacientesRow(int idCliente, int idEspecie, int idRaza, string nombre, string tutor, string especie, string raza, System.DateTime fechaNacimiento, System.DateTime fechaRegistro, string descripcion) {
                 datosPacientesRow rowdatosPacientesRow = ((datosPacientesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -5919,7 +5949,10 @@ namespace ProyectoFinal_Progra_I {
                         nombre,
                         tutor,
                         especie,
-                        raza};
+                        raza,
+                        fechaNacimiento,
+                        fechaRegistro,
+                        descripcion};
                 rowdatosPacientesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdatosPacientesRow);
                 return rowdatosPacientesRow;
@@ -5957,6 +5990,9 @@ namespace ProyectoFinal_Progra_I {
                 this.columntutor = base.Columns["tutor"];
                 this.columnespecie = base.Columns["especie"];
                 this.columnraza = base.Columns["raza"];
+                this.columnfechaNacimiento = base.Columns["fechaNacimiento"];
+                this.columnfechaRegistro = base.Columns["fechaRegistro"];
+                this.columndescripcion = base.Columns["descripcion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5978,6 +6014,12 @@ namespace ProyectoFinal_Progra_I {
                 base.Columns.Add(this.columnespecie);
                 this.columnraza = new global::System.Data.DataColumn("raza", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnraza);
+                this.columnfechaNacimiento = new global::System.Data.DataColumn("fechaNacimiento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfechaNacimiento);
+                this.columnfechaRegistro = new global::System.Data.DataColumn("fechaRegistro", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfechaRegistro);
+                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescripcion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidPaciente}, true));
                 this.columnidPaciente.AutoIncrement = true;
@@ -5997,6 +6039,7 @@ namespace ProyectoFinal_Progra_I {
                 this.columnespecie.MaxLength = 75;
                 this.columnraza.AllowDBNull = false;
                 this.columnraza.MaxLength = 75;
+                this.columndescripcion.MaxLength = 500;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8799,6 +8842,90 @@ namespace ProyectoFinal_Progra_I {
                 set {
                     this[this.tabledatosPacientes.razaColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime fechaNacimiento {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tabledatosPacientes.fechaNacimientoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fechaNacimiento\' de la tabla \'datosPacientes\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledatosPacientes.fechaNacimientoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime fechaRegistro {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tabledatosPacientes.fechaRegistroColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fechaRegistro\' de la tabla \'datosPacientes\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledatosPacientes.fechaRegistroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string descripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tabledatosPacientes.descripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'datosPacientes\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledatosPacientes.descripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsfechaNacimientoNull() {
+                return this.IsNull(this.tabledatosPacientes.fechaNacimientoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetfechaNacimientoNull() {
+                this[this.tabledatosPacientes.fechaNacimientoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsfechaRegistroNull() {
+                return this.IsNull(this.tabledatosPacientes.fechaRegistroColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetfechaRegistroNull() {
+                this[this.tabledatosPacientes.fechaRegistroColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsdescripcionNull() {
+                return this.IsNull(this.tabledatosPacientes.descripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetdescripcionNull() {
+                this[this.tabledatosPacientes.descripcionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15270,6 +15397,9 @@ SELECT idUsuario, nombre, usuario, clave, direccion, telefono, correo, fechaNaci
             tableMapping.ColumnMappings.Add("tutor", "tutor");
             tableMapping.ColumnMappings.Add("especie", "especie");
             tableMapping.ColumnMappings.Add("raza", "raza");
+            tableMapping.ColumnMappings.Add("fechaNacimiento", "fechaNacimiento");
+            tableMapping.ColumnMappings.Add("fechaRegistro", "fechaRegistro");
+            tableMapping.ColumnMappings.Add("descripcion", "descripcion");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -15286,7 +15416,8 @@ SELECT idUsuario, nombre, usuario, clave, direccion, telefono, correo, fechaNaci
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        pacientes.idPaciente, pacientes.idCliente, pacientes.idEspecie, pacientes.idRaza, pacientes.nombre, clientes.nombre AS tutor, especies.especie, razas.raza
+            this._commandCollection[0].CommandText = @"SELECT        pacientes.idPaciente, pacientes.idCliente, pacientes.idEspecie, pacientes.idRaza, pacientes.nombre, clientes.nombre AS tutor, especies.especie, razas.raza, pacientes.fechaNacimiento, pacientes.fechaRegistro, 
+                         pacientes.descripcion
 FROM            pacientes INNER JOIN
                          clientes ON pacientes.idCliente = clientes.idCliente INNER JOIN
                          especies ON pacientes.idEspecie = especies.idEspecie INNER JOIN

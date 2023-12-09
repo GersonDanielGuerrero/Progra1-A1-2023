@@ -85,6 +85,7 @@ namespace ProyectoFinal_Progra_I
             this.pacientesColoresTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.pacientesColoresTableAdapter();
             this.pacientesColoresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fallecimientosTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.fallecimientosTableAdapter();
+            this.datosPacientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.datosPacientesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -94,6 +95,9 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbDatosPaciente.SuspendLayout();
             this.grbFallecimientoPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fallecimientosBindingSource)).BeginInit();
@@ -108,6 +112,7 @@ namespace ProyectoFinal_Progra_I
             ((System.ComponentModel.ISupportInitialize)(this.erpPacientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacientesColoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacientesColoresBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosPacientesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosPacientesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,13 +123,11 @@ namespace ProyectoFinal_Progra_I
             this.cboOpcionBuscarPaciente.FormattingEnabled = true;
             this.cboOpcionBuscarPaciente.Items.AddRange(new object[] {
             "Nombre",
-            "Especie",
+            "Tutor",
+            "Epecie",
             "Raza",
-            "Color",
-            "Estatura",
-            "Peso",
-            "Descripcion"});
-            this.cboOpcionBuscarPaciente.Location = new System.Drawing.Point(93, 75);
+            "Descripción"});
+            this.cboOpcionBuscarPaciente.Location = new System.Drawing.Point(93, 56);
             this.cboOpcionBuscarPaciente.Name = "cboOpcionBuscarPaciente";
             this.cboOpcionBuscarPaciente.Size = new System.Drawing.Size(154, 28);
             this.cboOpcionBuscarPaciente.TabIndex = 19;
@@ -132,16 +135,17 @@ namespace ProyectoFinal_Progra_I
             // txtBuscarPaciente
             // 
             this.txtBuscarPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarPaciente.Location = new System.Drawing.Point(262, 75);
+            this.txtBuscarPaciente.Location = new System.Drawing.Point(262, 56);
             this.txtBuscarPaciente.Name = "txtBuscarPaciente";
             this.txtBuscarPaciente.Size = new System.Drawing.Size(157, 26);
             this.txtBuscarPaciente.TabIndex = 18;
+            this.txtBuscarPaciente.TextChanged += new System.EventHandler(this.txtBuscarPaciente_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 78);
+            this.label1.Location = new System.Drawing.Point(22, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 20);
             this.label1.TabIndex = 17;
@@ -649,6 +653,11 @@ namespace ProyectoFinal_Progra_I
             // 
             this.fallecimientosTableAdapter.ClearBeforeFill = true;
             // 
+            // datosPacientesBindingSource1
+            // 
+            this.datosPacientesBindingSource1.DataMember = "datosPacientes";
+            this.datosPacientesBindingSource1.DataSource = this.bd_veterinaria_huellitasDataSet;
+            // 
             // datosPacientesDataGridView
             // 
             this.datosPacientesDataGridView.AutoGenerateColumns = false;
@@ -661,11 +670,14 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13});
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16});
             this.datosPacientesDataGridView.DataSource = this.datosPacientesBindingSource;
-            this.datosPacientesDataGridView.Location = new System.Drawing.Point(26, 56);
+            this.datosPacientesDataGridView.Location = new System.Drawing.Point(12, 97);
             this.datosPacientesDataGridView.Name = "datosPacientesDataGridView";
-            this.datosPacientesDataGridView.Size = new System.Drawing.Size(442, 411);
+            this.datosPacientesDataGridView.Size = new System.Drawing.Size(500, 370);
             this.datosPacientesDataGridView.TabIndex = 29;
             // 
             // dataGridViewTextBoxColumn1
@@ -721,6 +733,26 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn13.HeaderText = "raza";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn14.HeaderText = "fechaNacimiento";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "fechaRegistro";
+            this.dataGridViewTextBoxColumn15.HeaderText = "fechaRegistro";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "descripcion";
+            this.dataGridViewTextBoxColumn16.HeaderText = "descripcion";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
             // Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -756,6 +788,7 @@ namespace ProyectoFinal_Progra_I
             ((System.ComponentModel.ISupportInitialize)(this.erpPacientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacientesColoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacientesColoresBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosPacientesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosPacientesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -824,6 +857,7 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.GroupBox grbFallecimientoPaciente;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.BindingSource datosPacientesBindingSource1;
         private System.Windows.Forms.DataGridView datosPacientesDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -833,5 +867,8 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
     }
 }

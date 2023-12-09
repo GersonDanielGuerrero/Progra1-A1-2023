@@ -68,7 +68,7 @@ namespace ProyectoFinal_Progra_I
             }
             else
             {
-                if (cl.ValidarDatos(grbDatosServicio))
+                if (cl.ValidarDatos(grbDatosServicio,erpServicios))
                     MessageBox.Show("Ningun campo debe estar vacío");
                 else
                 {

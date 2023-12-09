@@ -49,7 +49,7 @@ namespace ProyectoFinal_Progra_I
             parametrizacion();
             */
         }
-        public DataSet obtenerDatos()
+       /* public DataSet obtenerDatos()
         {
             miDs.Clear();
             miComando.Connection = miConexion;
@@ -185,6 +185,6 @@ namespace ProyectoFinal_Progra_I
                 return e.Message;
             }
 
-        }
+        }*/
     }
 }

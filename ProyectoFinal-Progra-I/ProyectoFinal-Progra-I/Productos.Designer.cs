@@ -69,6 +69,7 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.erpProductos = new System.Windows.Forms.ErrorProvider(this.components);
             this.grbNavegacionProducto.SuspendLayout();
             this.grbDatosProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
@@ -78,6 +79,7 @@ namespace ProyectoFinal_Progra_I
             this.grbEdicionProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datosProductosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosProductosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // grbNavegacionProducto
@@ -453,6 +455,10 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Visible = false;
             // 
+            // erpProductos
+            // 
+            this.erpProductos.ContainerControl = this;
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,6 +483,7 @@ namespace ProyectoFinal_Progra_I
             this.grbEdicionProducto.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datosProductosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosProductosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpProductos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -522,5 +529,6 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.ErrorProvider erpProductos;
     }
 }

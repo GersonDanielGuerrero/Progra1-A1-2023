@@ -59,9 +59,10 @@ namespace ProyectoFinal_Progra_I
             this.clientesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.clientes);
             // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.especies' Puede moverla o quitarla según sea necesario.
             this.especiesTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.especies);
+            
             actualizarDatosPaciente();
             estadoControles(false);
-
+cboOpcionBuscarPaciente.SelectedIndex = 0;
 
         }
         private void estadoControles(bool estado)
@@ -129,7 +130,7 @@ namespace ProyectoFinal_Progra_I
             }
             else
             {
-                if (cl.ValidarDatos(grbDatosPaciente))
+                if (cl.ValidarDatos(grbDatosPaciente,erpPacientes))
                     MessageBox.Show("Ningun campo debe estar vacío");
                 else
                 {
@@ -193,6 +194,25 @@ namespace ProyectoFinal_Progra_I
             this.pacientesTableAdapter.Update(bd_veterinaria_huellitasDataSet);
             lblPosicionPaciente.Text = $"{pacientesBindingSource.Position + 1} de {pacientesBindingSource.Count}";
             fallecimientosTableAdapter.Fill(bd_veterinaria_huellitasDataSet.fallecimientos);
+        }
+
+        private void txtBuscarPaciente_TextChanged(object sender, EventArgs e)
+        {
+            string valor = txtBuscarPaciente.Text;
+            int opcion = cboOpcionBuscarPaciente.SelectedIndex;
+
+            try
+            {
+                datosPacientesBindingSource.Filter = opcion == 0 ? "nombre like '%" + valor + "%'" : opcion == 1 ? "tutor like '%" + valor + "%'"
+                : opcion == 2 ? "especie like '%" + valor + "%'" : opcion == 3 ? "raza like '%" + valor + "%'" :
+                "descripcion like '%" + valor + "%'";
+                erpPacientes.SetError(txtBuscarPaciente, "");
+            }
+            catch (Exception d)
+            {
+                erpPacientes.SetError(txtBuscarPaciente, "Por favor ingrese dato a buscar");
+            }
+
         }
         /*
 private void Pacientes_Load(object sender, EventArgs e)

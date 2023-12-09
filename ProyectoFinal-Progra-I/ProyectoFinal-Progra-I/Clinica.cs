@@ -9,17 +9,17 @@ namespace ProyectoFinal_Progra_I
 {
     class Clinica
     {
-        public bool ValidarDatos(GroupBox groupBox)
+        public bool ValidarDatos(GroupBox groupBox, ErrorProvider errorProvider)
         {
             bool hayCamposVacios = false;
             foreach (Control k in groupBox.Controls)
             {
-                k.BackColor = System.Drawing.Color.White;
+                errorProvider.SetError(k, "");
                 if (!(k is Label || k is PictureBox) && string.IsNullOrWhiteSpace(k.Text))
                 {
-                   
+                    errorProvider.SetError(k, "Ningun campo debe estar vacío");
                     hayCamposVacios = true;
-                    k.BackColor = System.Drawing.Color.Red;
+                    
                 }
                 
                

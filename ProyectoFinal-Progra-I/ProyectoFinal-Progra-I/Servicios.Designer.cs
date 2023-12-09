@@ -62,12 +62,14 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.erpServicios = new System.Windows.Forms.ErrorProvider(this.components);
             this.grbDatosServicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoServiciosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
             this.grbNavegacionServicio.SuspendLayout();
             this.grbEdicionServicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoServiciosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpServicios)).BeginInit();
             this.SuspendLayout();
             // 
             // grbDatosServicio
@@ -402,6 +404,10 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn5.HeaderText = "duracionNormal";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // erpServicios
+            // 
+            this.erpServicios.ContainerControl = this;
+            // 
             // Servicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,6 +432,7 @@ namespace ProyectoFinal_Progra_I
             this.grbNavegacionServicio.PerformLayout();
             this.grbEdicionServicio.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tipoServiciosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpServicios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,5 +472,6 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.ErrorProvider erpServicios;
     }
 }

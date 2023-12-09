@@ -76,6 +76,7 @@ namespace ProyectoFinal_Progra_I
             this.cboOpcionBuscarTratamiento = new System.Windows.Forms.ComboBox();
             this.txtBuscarTratamiento = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.erpTratamientos = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tratamientosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).BeginInit();
@@ -85,6 +86,7 @@ namespace ProyectoFinal_Progra_I
             this.grbEdicionTratamiento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detalleTratamientosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleTratamientosDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpTratamientos)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -534,6 +536,10 @@ namespace ProyectoFinal_Progra_I
             this.label7.Text = "Buscar";
             this.label7.Visible = false;
             // 
+            // erpTratamientos
+            // 
+            this.erpTratamientos.ContainerControl = this;
+            // 
             // Tratamientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -561,6 +567,7 @@ namespace ProyectoFinal_Progra_I
             this.grbEdicionTratamiento.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.detalleTratamientosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detalleTratamientosDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpTratamientos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,5 +620,6 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.ErrorProvider erpTratamientos;
     }
 }

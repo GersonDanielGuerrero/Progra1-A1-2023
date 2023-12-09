@@ -72,7 +72,7 @@ namespace ProyectoFinal_Progra_I
             }
             else
             {
-                if (cl.ValidarDatos(grbDatosUsuario))
+                if (cl.ValidarDatos(grbDatosUsuario,erpUsuarios))
                     MessageBox.Show("Ningun campo debe estar vacío");
                 else if(txtConfirmacionDeContraseñaUsuario.Text!=txtContraseñaUsuario.Text)
                     MessageBox.Show("Las contraseñas no coinciden");

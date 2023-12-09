@@ -29,6 +29,7 @@ namespace ProyectoFinal_Progra_I
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtClaveLogIn = new System.Windows.Forms.TextBox();
             this.txtUsuarioLogIn = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,6 +37,11 @@ namespace ProyectoFinal_Progra_I
             this.label1 = new System.Windows.Forms.Label();
             this.btnIngresarLogIn = new System.Windows.Forms.Button();
             this.btnSalirLogIn = new System.Windows.Forms.Button();
+            this.usuariosTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.usuariosTableAdapter();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // txtClaveLogIn
@@ -43,6 +49,7 @@ namespace ProyectoFinal_Progra_I
             this.txtClaveLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClaveLogIn.Location = new System.Drawing.Point(167, 201);
             this.txtClaveLogIn.Name = "txtClaveLogIn";
+            this.txtClaveLogIn.PasswordChar = '*';
             this.txtClaveLogIn.Size = new System.Drawing.Size(430, 26);
             this.txtClaveLogIn.TabIndex = 15;
             // 
@@ -108,6 +115,20 @@ namespace ProyectoFinal_Progra_I
             this.btnSalirLogIn.UseVisualStyleBackColor = false;
             this.btnSalirLogIn.Click += new System.EventHandler(this.btnSalirLogIn_Click);
             // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "usuarios";
+            this.usuariosBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
+            // 
+            // bd_veterinaria_huellitasDataSet
+            // 
+            this.bd_veterinaria_huellitasDataSet.DataSetName = "bd_veterinaria_huellitasDataSet";
+            this.bd_veterinaria_huellitasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,6 +143,9 @@ namespace ProyectoFinal_Progra_I
             this.Controls.Add(this.label4);
             this.Name = "LogIn";
             this.Text = "LogIn";
+            this.Load += new System.EventHandler(this.LogIn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +160,8 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnIngresarLogIn;
         private System.Windows.Forms.Button btnSalirLogIn;
+        private bd_veterinaria_huellitasDataSetTableAdapters.usuariosTableAdapter usuariosTableAdapter;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private bd_veterinaria_huellitasDataSet bd_veterinaria_huellitasDataSet;
     }
 }

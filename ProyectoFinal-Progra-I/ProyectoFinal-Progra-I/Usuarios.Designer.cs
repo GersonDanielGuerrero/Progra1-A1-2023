@@ -76,14 +76,14 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpUsuarios = new System.Windows.Forms.ErrorProvider(this.components);
             this.grbDatosUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
             this.grbNavegacionUsuario.SuspendLayout();
             this.grbEdicionUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // grbDatosUsuario
@@ -553,9 +553,9 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn9.HeaderText = "fechaRegistro";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
-            // errorProvider1
+            // erpUsuarios
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.erpUsuarios.ContainerControl = this;
             // 
             // Usuarios
             // 
@@ -582,7 +582,7 @@ namespace ProyectoFinal_Progra_I
             this.grbNavegacionUsuario.PerformLayout();
             this.grbEdicionUsuario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -636,6 +636,6 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider erpUsuarios;
     }
 }
