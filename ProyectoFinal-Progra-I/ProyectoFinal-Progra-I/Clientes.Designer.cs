@@ -31,20 +31,8 @@ namespace ProyectoFinal_Progra_I
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
-            this.txtCorreoCliente = new System.Windows.Forms.TextBox();
-            this.txtDireccionCliente = new System.Windows.Forms.TextBox();
-            this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
-            this.dtpNacimietoCliente = new System.Windows.Forms.DateTimePicker();
-            this.dtpRegistroCliente = new System.Windows.Forms.DateTimePicker();
             this.txtBuscarCliente = new System.Windows.Forms.TextBox();
             this.cboOpcionBuscarCliente = new System.Windows.Forms.ComboBox();
             this.btnModificarCliente = new System.Windows.Forms.Button();
@@ -58,9 +46,7 @@ namespace ProyectoFinal_Progra_I
             this.grbEdicionCliente = new System.Windows.Forms.GroupBox();
             this.grbNavegacionCliente = new System.Windows.Forms.GroupBox();
             this.grbDatosCliente = new System.Windows.Forms.GroupBox();
-            this.lboPacientesRegistradosCliente = new System.Windows.Forms.ListBox();
             this.pacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label9 = new System.Windows.Forms.Label();
             this.erpClientes = new System.Windows.Forms.ErrorProvider(this.components);
             this.clientesTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.clientesTableAdapter();
             this.pacientesTableAdapter = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.pacientesTableAdapter();
@@ -74,6 +60,22 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnAgregarFotoCliente = new System.Windows.Forms.Button();
+            this.pbFotoCliente = new System.Windows.Forms.PictureBox();
+            this.lboPacientesRegistradosCliente = new System.Windows.Forms.ListBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
+            this.txtDireccionCliente = new System.Windows.Forms.TextBox();
+            this.txtCorreoCliente = new System.Windows.Forms.TextBox();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.dtpNacimietoCliente = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpRegistroCliente = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
             this.grbEdicionCliente.SuspendLayout();
@@ -82,6 +84,7 @@ namespace ProyectoFinal_Progra_I
             ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -94,75 +97,6 @@ namespace ProyectoFinal_Progra_I
             this.label1.TabIndex = 1;
             this.label1.Text = "Buscar";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(103, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Teléfono";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(98, 155);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Dirección";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(111, 54);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Nombre";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(33, 213);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Correo electrónico";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 413);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(176, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Fecha de nacimiento";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(39, 457);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 20);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Fecha de registro";
-            // 
-            // txtNombreCliente
-            // 
-            this.txtNombreCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "nombre", true));
-            this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCliente.Location = new System.Drawing.Point(195, 49);
-            this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(430, 26);
-            this.txtNombreCliente.TabIndex = 8;
-            // 
             // clientesBindingSource
             // 
             this.clientesBindingSource.DataMember = "clientes";
@@ -172,53 +106,6 @@ namespace ProyectoFinal_Progra_I
             // 
             this.bd_veterinaria_huellitasDataSet.DataSetName = "bd_veterinaria_huellitasDataSet";
             this.bd_veterinaria_huellitasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // txtCorreoCliente
-            // 
-            this.txtCorreoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "correo", true));
-            this.txtCorreoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreoCliente.Location = new System.Drawing.Point(195, 213);
-            this.txtCorreoCliente.Name = "txtCorreoCliente";
-            this.txtCorreoCliente.Size = new System.Drawing.Size(430, 26);
-            this.txtCorreoCliente.TabIndex = 9;
-            // 
-            // txtDireccionCliente
-            // 
-            this.txtDireccionCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "direccion", true));
-            this.txtDireccionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccionCliente.Location = new System.Drawing.Point(195, 155);
-            this.txtDireccionCliente.Name = "txtDireccionCliente";
-            this.txtDireccionCliente.Size = new System.Drawing.Size(430, 26);
-            this.txtDireccionCliente.TabIndex = 10;
-            // 
-            // txtTelefonoCliente
-            // 
-            this.txtTelefonoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "telefono", true));
-            this.txtTelefonoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefonoCliente.Location = new System.Drawing.Point(195, 99);
-            this.txtTelefonoCliente.Name = "txtTelefonoCliente";
-            this.txtTelefonoCliente.Size = new System.Drawing.Size(430, 26);
-            this.txtTelefonoCliente.TabIndex = 11;
-            // 
-            // dtpNacimietoCliente
-            // 
-            this.dtpNacimietoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientesBindingSource, "fechaNacimiento", true));
-            this.dtpNacimietoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "fechaNacimiento", true));
-            this.dtpNacimietoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNacimietoCliente.Location = new System.Drawing.Point(194, 408);
-            this.dtpNacimietoCliente.Name = "dtpNacimietoCliente";
-            this.dtpNacimietoCliente.Size = new System.Drawing.Size(336, 26);
-            this.dtpNacimietoCliente.TabIndex = 12;
-            // 
-            // dtpRegistroCliente
-            // 
-            this.dtpRegistroCliente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientesBindingSource, "fechaRegistro", true));
-            this.dtpRegistroCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "fechaRegistro", true));
-            this.dtpRegistroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpRegistroCliente.Location = new System.Drawing.Point(195, 457);
-            this.dtpRegistroCliente.Name = "dtpRegistroCliente";
-            this.dtpRegistroCliente.Size = new System.Drawing.Size(336, 26);
-            this.dtpRegistroCliente.TabIndex = 13;
             // 
             // txtBuscarCliente
             // 
@@ -369,6 +256,10 @@ namespace ProyectoFinal_Progra_I
             // 
             // grbDatosCliente
             // 
+            this.grbDatosCliente.Controls.Add(this.label7);
+            this.grbDatosCliente.Controls.Add(this.dtpRegistroCliente);
+            this.grbDatosCliente.Controls.Add(this.btnAgregarFotoCliente);
+            this.grbDatosCliente.Controls.Add(this.pbFotoCliente);
             this.grbDatosCliente.Controls.Add(this.lboPacientesRegistradosCliente);
             this.grbDatosCliente.Controls.Add(this.label9);
             this.grbDatosCliente.Controls.Add(this.txtTelefonoCliente);
@@ -376,47 +267,22 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosCliente.Controls.Add(this.txtCorreoCliente);
             this.grbDatosCliente.Controls.Add(this.txtNombreCliente);
             this.grbDatosCliente.Controls.Add(this.dtpNacimietoCliente);
-            this.grbDatosCliente.Controls.Add(this.label7);
             this.grbDatosCliente.Controls.Add(this.label6);
-            this.grbDatosCliente.Controls.Add(this.dtpRegistroCliente);
             this.grbDatosCliente.Controls.Add(this.label5);
             this.grbDatosCliente.Controls.Add(this.label2);
             this.grbDatosCliente.Controls.Add(this.label4);
             this.grbDatosCliente.Controls.Add(this.label3);
             this.grbDatosCliente.Location = new System.Drawing.Point(536, 66);
             this.grbDatosCliente.Name = "grbDatosCliente";
-            this.grbDatosCliente.Size = new System.Drawing.Size(657, 539);
+            this.grbDatosCliente.Size = new System.Drawing.Size(657, 718);
             this.grbDatosCliente.TabIndex = 26;
             this.grbDatosCliente.TabStop = false;
             this.grbDatosCliente.Text = "Datos del cliente";
-            // 
-            // lboPacientesRegistradosCliente
-            // 
-            this.lboPacientesRegistradosCliente.DataSource = this.pacientesBindingSource;
-            this.lboPacientesRegistradosCliente.DisplayMember = "nombre";
-            this.lboPacientesRegistradosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lboPacientesRegistradosCliente.FormattingEnabled = true;
-            this.lboPacientesRegistradosCliente.ItemHeight = 20;
-            this.lboPacientesRegistradosCliente.Location = new System.Drawing.Point(195, 277);
-            this.lboPacientesRegistradosCliente.Name = "lboPacientesRegistradosCliente";
-            this.lboPacientesRegistradosCliente.Size = new System.Drawing.Size(429, 104);
-            this.lboPacientesRegistradosCliente.TabIndex = 20;
-            this.lboPacientesRegistradosCliente.ValueMember = "nombre";
             // 
             // pacientesBindingSource
             // 
             this.pacientesBindingSource.DataMember = "pacientes";
             this.pacientesBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(5, 277);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(183, 20);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Pacientes registrados";
             // 
             // erpClientes
             // 
@@ -520,6 +386,168 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Visible = false;
             // 
+            // btnAgregarFotoCliente
+            // 
+            this.btnAgregarFotoCliente.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnAgregarFotoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarFotoCliente.Location = new System.Drawing.Point(270, 146);
+            this.btnAgregarFotoCliente.Name = "btnAgregarFotoCliente";
+            this.btnAgregarFotoCliente.Size = new System.Drawing.Size(236, 37);
+            this.btnAgregarFotoCliente.TabIndex = 61;
+            this.btnAgregarFotoCliente.Text = "Agregar foto";
+            this.btnAgregarFotoCliente.UseVisualStyleBackColor = false;
+            this.btnAgregarFotoCliente.Click += new System.EventHandler(this.btnAgregarFotoCliente_Click);
+            // 
+            // pbFotoCliente
+            // 
+            this.pbFotoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.clientesBindingSource, "foto", true));
+            this.pbFotoCliente.InitialImage = null;
+            this.pbFotoCliente.Location = new System.Drawing.Point(287, 21);
+            this.pbFotoCliente.Name = "pbFotoCliente";
+            this.pbFotoCliente.Size = new System.Drawing.Size(192, 108);
+            this.pbFotoCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFotoCliente.TabIndex = 60;
+            this.pbFotoCliente.TabStop = false;
+            // 
+            // lboPacientesRegistradosCliente
+            // 
+            this.lboPacientesRegistradosCliente.DataSource = this.pacientesBindingSource;
+            this.lboPacientesRegistradosCliente.DisplayMember = "nombre";
+            this.lboPacientesRegistradosCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lboPacientesRegistradosCliente.FormattingEnabled = true;
+            this.lboPacientesRegistradosCliente.ItemHeight = 20;
+            this.lboPacientesRegistradosCliente.Location = new System.Drawing.Point(209, 414);
+            this.lboPacientesRegistradosCliente.Name = "lboPacientesRegistradosCliente";
+            this.lboPacientesRegistradosCliente.Size = new System.Drawing.Size(429, 104);
+            this.lboPacientesRegistradosCliente.TabIndex = 59;
+            this.lboPacientesRegistradosCliente.ValueMember = "nombre";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(19, 414);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(183, 20);
+            this.label9.TabIndex = 58;
+            this.label9.Text = "Pacientes registrados";
+            // 
+            // txtTelefonoCliente
+            // 
+            this.txtTelefonoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "telefono", true));
+            this.txtTelefonoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefonoCliente.Location = new System.Drawing.Point(209, 283);
+            this.txtTelefonoCliente.Name = "txtTelefonoCliente";
+            this.txtTelefonoCliente.Size = new System.Drawing.Size(430, 26);
+            this.txtTelefonoCliente.TabIndex = 56;
+            // 
+            // txtDireccionCliente
+            // 
+            this.txtDireccionCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "direccion", true));
+            this.txtDireccionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccionCliente.Location = new System.Drawing.Point(209, 327);
+            this.txtDireccionCliente.Name = "txtDireccionCliente";
+            this.txtDireccionCliente.Size = new System.Drawing.Size(430, 26);
+            this.txtDireccionCliente.TabIndex = 55;
+            // 
+            // txtCorreoCliente
+            // 
+            this.txtCorreoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "correo", true));
+            this.txtCorreoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreoCliente.Location = new System.Drawing.Point(209, 371);
+            this.txtCorreoCliente.Name = "txtCorreoCliente";
+            this.txtCorreoCliente.Size = new System.Drawing.Size(430, 26);
+            this.txtCorreoCliente.TabIndex = 54;
+            // 
+            // txtNombreCliente
+            // 
+            this.txtNombreCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "nombre", true));
+            this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCliente.Location = new System.Drawing.Point(209, 236);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(430, 26);
+            this.txtNombreCliente.TabIndex = 53;
+            // 
+            // dtpNacimietoCliente
+            // 
+            this.dtpNacimietoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientesBindingSource, "fechaNacimiento", true));
+            this.dtpNacimietoCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "fechaNacimiento", true));
+            this.dtpNacimietoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNacimietoCliente.Location = new System.Drawing.Point(208, 541);
+            this.dtpNacimietoCliente.Name = "dtpNacimietoCliente";
+            this.dtpNacimietoCliente.Size = new System.Drawing.Size(336, 26);
+            this.dtpNacimietoCliente.TabIndex = 57;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(26, 546);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(176, 20);
+            this.label6.TabIndex = 52;
+            this.label6.Text = "Fecha de nacimiento";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(47, 371);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(156, 20);
+            this.label5.TabIndex = 51;
+            this.label5.Text = "Correo electrónico";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(117, 288);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 20);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Teléfono";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(125, 241);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "Nombre";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(112, 327);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 20);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Dirección";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(52, 591);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(150, 20);
+            this.label7.TabIndex = 62;
+            this.label7.Text = "Fecha de registro";
+            // 
+            // dtpRegistroCliente
+            // 
+            this.dtpRegistroCliente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientesBindingSource, "fechaRegistro", true));
+            this.dtpRegistroCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "fechaRegistro", true));
+            this.dtpRegistroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpRegistroCliente.Location = new System.Drawing.Point(208, 591);
+            this.dtpRegistroCliente.Name = "dtpRegistroCliente";
+            this.dtpRegistroCliente.Size = new System.Drawing.Size(336, 26);
+            this.dtpRegistroCliente.TabIndex = 63;
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -547,6 +575,7 @@ namespace ProyectoFinal_Progra_I
             ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,18 +583,6 @@ namespace ProyectoFinal_Progra_I
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtNombreCliente;
-        private System.Windows.Forms.TextBox txtCorreoCliente;
-        private System.Windows.Forms.TextBox txtDireccionCliente;
-        private System.Windows.Forms.TextBox txtTelefonoCliente;
-        private System.Windows.Forms.DateTimePicker dtpNacimietoCliente;
-        private System.Windows.Forms.DateTimePicker dtpRegistroCliente;
         private System.Windows.Forms.TextBox txtBuscarCliente;
         private System.Windows.Forms.ComboBox cboOpcionBuscarCliente;
         private System.Windows.Forms.Button btnModificarCliente;
@@ -580,7 +597,6 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.GroupBox grbNavegacionCliente;
         private System.Windows.Forms.GroupBox grbDatosCliente;
         private System.Windows.Forms.ErrorProvider erpClientes;
-        private System.Windows.Forms.Label label9;
         private bd_veterinaria_huellitasDataSet bd_veterinaria_huellitasDataSet;
         private System.Windows.Forms.BindingSource clientesBindingSource;
         private bd_veterinaria_huellitasDataSetTableAdapters.clientesTableAdapter clientesTableAdapter;
@@ -588,7 +604,6 @@ namespace ProyectoFinal_Progra_I
         private bd_veterinaria_huellitasDataSetTableAdapters.pacientesTableAdapter pacientesTableAdapter;
         private bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView clientesDataGridView;
-        private System.Windows.Forms.ListBox lboPacientesRegistradosCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -597,5 +612,21 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dtpRegistroCliente;
+        private System.Windows.Forms.Button btnAgregarFotoCliente;
+        private System.Windows.Forms.PictureBox pbFotoCliente;
+        private System.Windows.Forms.ListBox lboPacientesRegistradosCliente;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtTelefonoCliente;
+        private System.Windows.Forms.TextBox txtDireccionCliente;
+        private System.Windows.Forms.TextBox txtCorreoCliente;
+        private System.Windows.Forms.TextBox txtNombreCliente;
+        private System.Windows.Forms.DateTimePicker dtpNacimietoCliente;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

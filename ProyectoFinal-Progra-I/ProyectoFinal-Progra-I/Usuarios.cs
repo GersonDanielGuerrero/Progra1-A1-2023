@@ -33,31 +33,39 @@ namespace ProyectoFinal_Progra_I
             cboOpcionBuscarUsuario.Enabled = !estado;
             cboOpcionBuscarUsuario.Enabled = !estado;
         }
+        private void actualizarDatosUsuarios()
+        {
+            lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
+            txtConfirmacionDeContraseñaUsuario.Text = txtContraseñaUsuario.Text;
+
+            //Si no hay una imagen guardada en la db, asigna una por defecto
+            if (pbFotoUsuario.Image == null)
+            {
+                pbFotoUsuario.Image = Principal.imageList1.Images["Usuario.jpeg"];
+            }
+        }
         private void btnPrimeroUsuario_Click(object sender, EventArgs e)
         {
             usuariosBindingSource.MoveFirst();
-            lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
-            txtConfirmacionDeContraseñaUsuario.Text = txtContraseñaUsuario.Text;
+            actualizarDatosUsuarios();
         }
 
         private void btnAnteriorUsuario_Click(object sender, EventArgs e)
         {
             usuariosBindingSource.MovePrevious();
-            txtConfirmacionDeContraseñaUsuario.Text = txtContraseñaUsuario.Text;
-            lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
+            actualizarDatosUsuarios();
         }
 
         private void btnSiguienteUsuario_Click(object sender, EventArgs e)
         {
             usuariosBindingSource.MoveNext();
-            txtConfirmacionDeContraseñaUsuario.Text = txtContraseñaUsuario.Text;
+            actualizarDatosUsuarios();
         }
 
         private void btnUltimoUsuario_Click(object sender, EventArgs e)
         {
             usuariosBindingSource.MoveLast();
-            lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
-            txtConfirmacionDeContraseñaUsuario.Text = txtContraseñaUsuario.Text;
+            actualizarDatosUsuarios();
         }
 
         private void btnNuevoUsuario_Click(object sender, EventArgs e)
@@ -72,9 +80,9 @@ namespace ProyectoFinal_Progra_I
             }
             else
             {
-                if (cl.ValidarDatos(grbDatosUsuario,erpUsuarios))
+                if (cl.ValidarDatos(grbDatosUsuario, erpUsuarios))
                     MessageBox.Show("Ningun campo debe estar vacío");
-                else if(txtConfirmacionDeContraseñaUsuario.Text!=txtContraseñaUsuario.Text)
+                else if (txtConfirmacionDeContraseñaUsuario.Text != txtContraseñaUsuario.Text)
                     MessageBox.Show("Las contraseñas no coinciden");
                 else
                 {
@@ -94,7 +102,7 @@ namespace ProyectoFinal_Progra_I
             {
                 btnNuevoUsuario.Text = "Guardar";
                 btnModificarUsuario.Text = "Cancelar";
-                 estadoControles(true);
+                estadoControles(true);
 
             }
             else
@@ -113,6 +121,18 @@ namespace ProyectoFinal_Progra_I
             usuariosBindingSource.RemoveCurrent();
             this.usuariosTableAdapter.Update(bd_veterinaria_huellitasDataSet);
             lblPosicionUsuario.Text = $"{usuariosBindingSource.Position + 1} de {usuariosBindingSource.Count}";
+        }
+
+        private void btnAgregarFotoUsuario_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    pbFotoUsuario.Image = new Bitmap(ofd.FileName);
+                }
+            }
         }
     }
 }

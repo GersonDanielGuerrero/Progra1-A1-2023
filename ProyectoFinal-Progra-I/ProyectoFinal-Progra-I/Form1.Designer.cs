@@ -29,6 +29,8 @@ namespace ProyectoFinal_Progra_I
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,6 +39,7 @@ namespace ProyectoFinal_Progra_I
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ServiciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,6 +139,17 @@ namespace ProyectoFinal_Progra_I
             this.ServiciosToolStripMenuItem.Text = "Servicios";
             this.ServiciosToolStripMenuItem.Click += new System.EventHandler(this.ServiciosToolStripMenuItem_Click);
             // 
+            // imageList1
+            // 
+            imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            imageList1.Images.SetKeyName(0, "Paciente.jpeg");
+            imageList1.Images.SetKeyName(1, "Cliente.jpeg");
+            imageList1.Images.SetKeyName(2, "Producto.jpeg");
+            imageList1.Images.SetKeyName(3, "Usuario.jpeg");
+            imageList1.Images.SetKeyName(4, "Agenda.jpeg");
+            imageList1.Images.SetKeyName(5, "Limon.jpeg");
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,6 +182,7 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.ToolStripMenuItem ServiciosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem datosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tratamientosToolStripMenuItem;
+        public static System.Windows.Forms.ImageList imageList1;
     }
 }
 

@@ -43,8 +43,12 @@ namespace ProyectoFinal_Progra_I
             this.fallecimientosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_veterinaria_huellitasDataSet = new ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSet();
             this.label13 = new System.Windows.Forms.Label();
-            this.cboSexoPaciente = new System.Windows.Forms.ComboBox();
+            this.txtDescripcionPaciente = new System.Windows.Forms.TextBox();
             this.pacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnAgregarFotoPaciente = new System.Windows.Forms.Button();
+            this.pbFotoPaciente = new System.Windows.Forms.PictureBox();
+            this.cboSexoPaciente = new System.Windows.Forms.ComboBox();
             this.lblSexoPaciente = new System.Windows.Forms.Label();
             this.cboTutorPaciente = new System.Windows.Forms.ComboBox();
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -57,8 +61,6 @@ namespace ProyectoFinal_Progra_I
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDescripcionPaciente = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.dtpNacimietoPaciente = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -103,6 +105,7 @@ namespace ProyectoFinal_Progra_I
             ((System.ComponentModel.ISupportInitialize)(this.fallecimientosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.especiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.razasBindingSource)).BeginInit();
@@ -156,6 +159,10 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosPaciente.Controls.Add(this.lblPacienteHaFallecido);
             this.grbDatosPaciente.Controls.Add(this.btnFallecimientoPaciente);
             this.grbDatosPaciente.Controls.Add(this.grbFallecimientoPaciente);
+            this.grbDatosPaciente.Controls.Add(this.txtDescripcionPaciente);
+            this.grbDatosPaciente.Controls.Add(this.label10);
+            this.grbDatosPaciente.Controls.Add(this.btnAgregarFotoPaciente);
+            this.grbDatosPaciente.Controls.Add(this.pbFotoPaciente);
             this.grbDatosPaciente.Controls.Add(this.cboSexoPaciente);
             this.grbDatosPaciente.Controls.Add(this.lblSexoPaciente);
             this.grbDatosPaciente.Controls.Add(this.cboTutorPaciente);
@@ -166,15 +173,13 @@ namespace ProyectoFinal_Progra_I
             this.grbDatosPaciente.Controls.Add(this.label2);
             this.grbDatosPaciente.Controls.Add(this.label4);
             this.grbDatosPaciente.Controls.Add(this.label3);
-            this.grbDatosPaciente.Controls.Add(this.txtDescripcionPaciente);
-            this.grbDatosPaciente.Controls.Add(this.label10);
             this.grbDatosPaciente.Controls.Add(this.dtpNacimietoPaciente);
             this.grbDatosPaciente.Controls.Add(this.label7);
             this.grbDatosPaciente.Controls.Add(this.label6);
             this.grbDatosPaciente.Controls.Add(this.dtpRegistroPaciente);
             this.grbDatosPaciente.Location = new System.Drawing.Point(529, 56);
             this.grbDatosPaciente.Name = "grbDatosPaciente";
-            this.grbDatosPaciente.Size = new System.Drawing.Size(657, 593);
+            this.grbDatosPaciente.Size = new System.Drawing.Size(657, 847);
             this.grbDatosPaciente.TabIndex = 27;
             this.grbDatosPaciente.TabStop = false;
             this.grbDatosPaciente.Text = "Datos del paciente";
@@ -185,23 +190,22 @@ namespace ProyectoFinal_Progra_I
             this.lblPacienteHaFallecido.AutoSize = true;
             this.lblPacienteHaFallecido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPacienteHaFallecido.ForeColor = System.Drawing.Color.Red;
-            this.lblPacienteHaFallecido.Location = new System.Drawing.Point(172, 439);
+            this.lblPacienteHaFallecido.Location = new System.Drawing.Point(176, 591);
             this.lblPacienteHaFallecido.Name = "lblPacienteHaFallecido";
             this.lblPacienteHaFallecido.Size = new System.Drawing.Size(281, 20);
-            this.lblPacienteHaFallecido.TabIndex = 31;
+            this.lblPacienteHaFallecido.TabIndex = 65;
             this.lblPacienteHaFallecido.Text = "ESTE PACIENTE HA FALLECIDO";
             // 
             // btnFallecimientoPaciente
             // 
             this.btnFallecimientoPaciente.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnFallecimientoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFallecimientoPaciente.Location = new System.Drawing.Point(195, 431);
+            this.btnFallecimientoPaciente.Location = new System.Drawing.Point(199, 583);
             this.btnFallecimientoPaciente.Name = "btnFallecimientoPaciente";
             this.btnFallecimientoPaciente.Size = new System.Drawing.Size(236, 37);
-            this.btnFallecimientoPaciente.TabIndex = 19;
+            this.btnFallecimientoPaciente.TabIndex = 63;
             this.btnFallecimientoPaciente.Text = "Registrar como Fallecido";
             this.btnFallecimientoPaciente.UseVisualStyleBackColor = false;
-            this.btnFallecimientoPaciente.Click += new System.EventHandler(this.btnFallecimientoPaciente_Click);
             // 
             // grbFallecimientoPaciente
             // 
@@ -209,10 +213,10 @@ namespace ProyectoFinal_Progra_I
             this.grbFallecimientoPaciente.Controls.Add(this.label9);
             this.grbFallecimientoPaciente.Controls.Add(this.label11);
             this.grbFallecimientoPaciente.Controls.Add(this.label13);
-            this.grbFallecimientoPaciente.Location = new System.Drawing.Point(3, 474);
+            this.grbFallecimientoPaciente.Location = new System.Drawing.Point(17, 635);
             this.grbFallecimientoPaciente.Name = "grbFallecimientoPaciente";
-            this.grbFallecimientoPaciente.Size = new System.Drawing.Size(654, 119);
-            this.grbFallecimientoPaciente.TabIndex = 43;
+            this.grbFallecimientoPaciente.Size = new System.Drawing.Size(654, 200);
+            this.grbFallecimientoPaciente.TabIndex = 66;
             this.grbFallecimientoPaciente.TabStop = false;
             this.grbFallecimientoPaciente.Text = "Detalles del Fallecimiento";
             this.grbFallecimientoPaciente.Visible = false;
@@ -268,6 +272,53 @@ namespace ProyectoFinal_Progra_I
             this.label13.TabIndex = 42;
             this.label13.Text = "Fecha y hora de fallecimiento:";
             // 
+            // txtDescripcionPaciente
+            // 
+            this.txtDescripcionPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "descripcion", true));
+            this.txtDescripcionPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcionPaciente.Location = new System.Drawing.Point(199, 540);
+            this.txtDescripcionPaciente.Name = "txtDescripcionPaciente";
+            this.txtDescripcionPaciente.Size = new System.Drawing.Size(430, 26);
+            this.txtDescripcionPaciente.TabIndex = 64;
+            // 
+            // pacientesBindingSource
+            // 
+            this.pacientesBindingSource.DataMember = "pacientes";
+            this.pacientesBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(14, 543);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(179, 20);
+            this.label10.TabIndex = 62;
+            this.label10.Text = "Descripción adicional";
+            // 
+            // btnAgregarFotoPaciente
+            // 
+            this.btnAgregarFotoPaciente.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnAgregarFotoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarFotoPaciente.Location = new System.Drawing.Point(248, 144);
+            this.btnAgregarFotoPaciente.Name = "btnAgregarFotoPaciente";
+            this.btnAgregarFotoPaciente.Size = new System.Drawing.Size(236, 37);
+            this.btnAgregarFotoPaciente.TabIndex = 61;
+            this.btnAgregarFotoPaciente.Text = "Agregar foto";
+            this.btnAgregarFotoPaciente.UseVisualStyleBackColor = false;
+            this.btnAgregarFotoPaciente.Click += new System.EventHandler(this.btnAgregarFotoPaciente_Click);
+            // 
+            // pbFotoPaciente
+            // 
+            this.pbFotoPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.pacientesBindingSource, "foto", true));
+            this.pbFotoPaciente.InitialImage = null;
+            this.pbFotoPaciente.Location = new System.Drawing.Point(265, 19);
+            this.pbFotoPaciente.Name = "pbFotoPaciente";
+            this.pbFotoPaciente.Size = new System.Drawing.Size(192, 108);
+            this.pbFotoPaciente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFotoPaciente.TabIndex = 60;
+            this.pbFotoPaciente.TabStop = false;
+            // 
             // cboSexoPaciente
             // 
             this.cboSexoPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "sexo", true));
@@ -278,25 +329,20 @@ namespace ProyectoFinal_Progra_I
             this.cboSexoPaciente.Items.AddRange(new object[] {
             "Macho",
             "Hembra"});
-            this.cboSexoPaciente.Location = new System.Drawing.Point(195, 226);
+            this.cboSexoPaciente.Location = new System.Drawing.Point(195, 389);
             this.cboSexoPaciente.Name = "cboSexoPaciente";
             this.cboSexoPaciente.Size = new System.Drawing.Size(430, 28);
-            this.cboSexoPaciente.TabIndex = 39;
+            this.cboSexoPaciente.TabIndex = 59;
             this.cboSexoPaciente.ValueMember = "IdColor";
-            // 
-            // pacientesBindingSource
-            // 
-            this.pacientesBindingSource.DataMember = "pacientes";
-            this.pacientesBindingSource.DataSource = this.bd_veterinaria_huellitasDataSet;
             // 
             // lblSexoPaciente
             // 
             this.lblSexoPaciente.AutoSize = true;
             this.lblSexoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexoPaciente.Location = new System.Drawing.Point(131, 229);
+            this.lblSexoPaciente.Location = new System.Drawing.Point(131, 392);
             this.lblSexoPaciente.Name = "lblSexoPaciente";
             this.lblSexoPaciente.Size = new System.Drawing.Size(49, 20);
-            this.lblSexoPaciente.TabIndex = 38;
+            this.lblSexoPaciente.TabIndex = 58;
             this.lblSexoPaciente.Text = "Sexo";
             // 
             // cboTutorPaciente
@@ -307,10 +353,10 @@ namespace ProyectoFinal_Progra_I
             this.cboTutorPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTutorPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.cboTutorPaciente.FormattingEnabled = true;
-            this.cboTutorPaciente.Location = new System.Drawing.Point(195, 82);
+            this.cboTutorPaciente.Location = new System.Drawing.Point(195, 245);
             this.cboTutorPaciente.Name = "cboTutorPaciente";
             this.cboTutorPaciente.Size = new System.Drawing.Size(430, 28);
-            this.cboTutorPaciente.TabIndex = 37;
+            this.cboTutorPaciente.TabIndex = 57;
             this.cboTutorPaciente.ValueMember = "idCliente";
             // 
             // clientesBindingSource
@@ -322,10 +368,10 @@ namespace ProyectoFinal_Progra_I
             // 
             this.lblTutorPaciente.AutoSize = true;
             this.lblTutorPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTutorPaciente.Location = new System.Drawing.Point(131, 90);
+            this.lblTutorPaciente.Location = new System.Drawing.Point(131, 253);
             this.lblTutorPaciente.Name = "lblTutorPaciente";
             this.lblTutorPaciente.Size = new System.Drawing.Size(51, 20);
-            this.lblTutorPaciente.TabIndex = 36;
+            this.lblTutorPaciente.TabIndex = 56;
             this.lblTutorPaciente.Text = "Tutor";
             // 
             // cboEspeciePaciente
@@ -336,10 +382,10 @@ namespace ProyectoFinal_Progra_I
             this.cboEspeciePaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEspeciePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.cboEspeciePaciente.FormattingEnabled = true;
-            this.cboEspeciePaciente.Location = new System.Drawing.Point(195, 130);
+            this.cboEspeciePaciente.Location = new System.Drawing.Point(195, 293);
             this.cboEspeciePaciente.Name = "cboEspeciePaciente";
             this.cboEspeciePaciente.Size = new System.Drawing.Size(430, 28);
-            this.cboEspeciePaciente.TabIndex = 35;
+            this.cboEspeciePaciente.TabIndex = 55;
             this.cboEspeciePaciente.ValueMember = "idEspecie";
             // 
             // especiesBindingSource
@@ -355,10 +401,10 @@ namespace ProyectoFinal_Progra_I
             this.cboRazaPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRazaPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.cboRazaPaciente.FormattingEnabled = true;
-            this.cboRazaPaciente.Location = new System.Drawing.Point(195, 174);
+            this.cboRazaPaciente.Location = new System.Drawing.Point(195, 337);
             this.cboRazaPaciente.Name = "cboRazaPaciente";
             this.cboRazaPaciente.Size = new System.Drawing.Size(430, 28);
-            this.cboRazaPaciente.TabIndex = 33;
+            this.cboRazaPaciente.TabIndex = 54;
             this.cboRazaPaciente.ValueMember = "idRaza";
             // 
             // razasBindingSource
@@ -370,88 +416,69 @@ namespace ProyectoFinal_Progra_I
             // 
             this.txtNombrePaciente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "nombre", true));
             this.txtNombrePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtNombrePaciente.Location = new System.Drawing.Point(195, 36);
+            this.txtNombrePaciente.Location = new System.Drawing.Point(195, 199);
             this.txtNombrePaciente.Name = "txtNombrePaciente";
             this.txtNombrePaciente.Size = new System.Drawing.Size(430, 26);
-            this.txtNombrePaciente.TabIndex = 32;
+            this.txtNombrePaciente.TabIndex = 53;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(109, 128);
+            this.label2.Location = new System.Drawing.Point(109, 291);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 20);
-            this.label2.TabIndex = 28;
+            this.label2.TabIndex = 50;
             this.label2.Text = "Especie";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(111, 41);
+            this.label4.Location = new System.Drawing.Point(111, 204);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 20);
-            this.label4.TabIndex = 30;
+            this.label4.TabIndex = 52;
             this.label4.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(131, 175);
+            this.label3.Location = new System.Drawing.Point(131, 338);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 20);
-            this.label3.TabIndex = 29;
+            this.label3.TabIndex = 51;
             this.label3.Text = "Raza";
-            // 
-            // txtDescripcionPaciente
-            // 
-            this.txtDescripcionPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "descripcion", true));
-            this.txtDescripcionPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionPaciente.Location = new System.Drawing.Point(195, 388);
-            this.txtDescripcionPaciente.Name = "txtDescripcionPaciente";
-            this.txtDescripcionPaciente.Size = new System.Drawing.Size(430, 26);
-            this.txtDescripcionPaciente.TabIndex = 19;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(10, 391);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(179, 20);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Descripción adicional";
             // 
             // dtpNacimietoPaciente
             // 
             this.dtpNacimietoPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.pacientesBindingSource, "fechaNacimiento", true));
             this.dtpNacimietoPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "fechaNacimiento", true));
             this.dtpNacimietoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNacimietoPaciente.Location = new System.Drawing.Point(195, 276);
+            this.dtpNacimietoPaciente.Location = new System.Drawing.Point(195, 439);
             this.dtpNacimietoPaciente.Name = "dtpNacimietoPaciente";
             this.dtpNacimietoPaciente.Size = new System.Drawing.Size(336, 26);
-            this.dtpNacimietoPaciente.TabIndex = 12;
+            this.dtpNacimietoPaciente.TabIndex = 48;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(39, 330);
+            this.label7.Location = new System.Drawing.Point(39, 493);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(150, 20);
-            this.label7.TabIndex = 7;
+            this.label7.TabIndex = 47;
             this.label7.Text = "Fecha de registro";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 281);
+            this.label6.Location = new System.Drawing.Point(13, 444);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(176, 20);
-            this.label6.TabIndex = 6;
+            this.label6.TabIndex = 46;
             this.label6.Text = "Fecha de nacimiento";
             // 
             // dtpRegistroPaciente
@@ -459,10 +486,10 @@ namespace ProyectoFinal_Progra_I
             this.dtpRegistroPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.pacientesBindingSource, "fechaRegistro", true));
             this.dtpRegistroPaciente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pacientesBindingSource, "fechaRegistro", true));
             this.dtpRegistroPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpRegistroPaciente.Location = new System.Drawing.Point(195, 330);
+            this.dtpRegistroPaciente.Location = new System.Drawing.Point(195, 493);
             this.dtpRegistroPaciente.Name = "dtpRegistroPaciente";
             this.dtpRegistroPaciente.Size = new System.Drawing.Size(336, 26);
-            this.dtpRegistroPaciente.TabIndex = 13;
+            this.dtpRegistroPaciente.TabIndex = 49;
             // 
             // datosPacientesBindingSource
             // 
@@ -758,7 +785,7 @@ namespace ProyectoFinal_Progra_I
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1387, 749);
             this.ControlBox = false;
             this.Controls.Add(this.datosPacientesDataGridView);
             this.Controls.Add(this.grbNavegacionPaciente);
@@ -778,6 +805,7 @@ namespace ProyectoFinal_Progra_I
             ((System.ComponentModel.ISupportInitialize)(this.fallecimientosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_veterinaria_huellitasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pacientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoPaciente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.especiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.razasBindingSource)).EndInit();
@@ -801,10 +829,6 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.TextBox txtBuscarPaciente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grbDatosPaciente;
-        private System.Windows.Forms.DateTimePicker dtpNacimietoPaciente;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dtpRegistroPaciente;
         private System.Windows.Forms.GroupBox grbNavegacionPaciente;
         private System.Windows.Forms.Button btnPrimeroPaciente;
         private System.Windows.Forms.Button btnAnteriorPaciente;
@@ -815,18 +839,7 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.Button btnNuevoPaciente;
         private System.Windows.Forms.Button btnModificarPaciente;
         private System.Windows.Forms.Button btnEliminarPaciente;
-        private System.Windows.Forms.TextBox txtDescripcionPaciente;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ErrorProvider erpPacientes;
-        private System.Windows.Forms.Label lblSexoPaciente;
-        private System.Windows.Forms.ComboBox cboTutorPaciente;
-        private System.Windows.Forms.Label lblTutorPaciente;
-        private System.Windows.Forms.ComboBox cboEspeciePaciente;
-        private System.Windows.Forms.ComboBox cboRazaPaciente;
-        private System.Windows.Forms.TextBox txtNombrePaciente;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private bd_veterinaria_huellitasDataSet bd_veterinaria_huellitasDataSet;
         private bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
@@ -844,19 +857,11 @@ namespace ProyectoFinal_Progra_I
         private bd_veterinaria_huellitasDataSetTableAdapters.razasTableAdapter razasTableAdapter;
         private System.Windows.Forms.BindingSource datosPacientesBindingSource;
         private bd_veterinaria_huellitasDataSetTableAdapters.datosPacientesTableAdapter datosPacientesTableAdapter;
-        private System.Windows.Forms.ComboBox cboSexoPaciente;
         private System.Windows.Forms.BindingSource pacientesColoresBindingSource;
         private bd_veterinaria_huellitasDataSetTableAdapters.pacientesColoresTableAdapter pacientesColoresTableAdapter;
         private System.Windows.Forms.BindingSource pacientesColoresBindingSource1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblPacienteHaFallecido;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.BindingSource fallecimientosBindingSource;
         private bd_veterinaria_huellitasDataSetTableAdapters.fallecimientosTableAdapter fallecimientosTableAdapter;
-        private System.Windows.Forms.Button btnFallecimientoPaciente;
-        private System.Windows.Forms.GroupBox grbFallecimientoPaciente;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.BindingSource datosPacientesBindingSource1;
         private System.Windows.Forms.DataGridView datosPacientesDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -870,5 +875,30 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.Label lblPacienteHaFallecido;
+        private System.Windows.Forms.Button btnFallecimientoPaciente;
+        private System.Windows.Forms.GroupBox grbFallecimientoPaciente;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtDescripcionPaciente;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnAgregarFotoPaciente;
+        private System.Windows.Forms.PictureBox pbFotoPaciente;
+        private System.Windows.Forms.ComboBox cboSexoPaciente;
+        private System.Windows.Forms.Label lblSexoPaciente;
+        private System.Windows.Forms.ComboBox cboTutorPaciente;
+        private System.Windows.Forms.Label lblTutorPaciente;
+        private System.Windows.Forms.ComboBox cboEspeciePaciente;
+        private System.Windows.Forms.ComboBox cboRazaPaciente;
+        private System.Windows.Forms.TextBox txtNombrePaciente;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtpNacimietoPaciente;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dtpRegistroPaciente;
     }
 }
