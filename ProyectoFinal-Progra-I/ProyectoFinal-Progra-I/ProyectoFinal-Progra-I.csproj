@@ -77,6 +77,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_veterinaria_huellitasDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="casosClinicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="casosClinicos.Designer.cs">
+      <DependentUpon>casosClinicos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     </Compile>
     <EmbeddedResource Include="Agenda.resx">
       <DependentUpon>Agenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="casosClinicos.resx">
+      <DependentUpon>casosClinicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
