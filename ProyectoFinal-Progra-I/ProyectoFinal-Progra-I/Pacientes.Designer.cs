@@ -200,7 +200,7 @@ namespace ProyectoFinal_Progra_I
             // 
             this.btnFallecimientoPaciente.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnFallecimientoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFallecimientoPaciente.Location = new System.Drawing.Point(199, 583);
+            this.btnFallecimientoPaciente.Location = new System.Drawing.Point(212, 583);
             this.btnFallecimientoPaciente.Name = "btnFallecimientoPaciente";
             this.btnFallecimientoPaciente.Size = new System.Drawing.Size(236, 37);
             this.btnFallecimientoPaciente.TabIndex = 63;
@@ -785,7 +785,7 @@ namespace ProyectoFinal_Progra_I
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1387, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.ControlBox = false;
             this.Controls.Add(this.datosPacientesDataGridView);
             this.Controls.Add(this.grbNavegacionPaciente);

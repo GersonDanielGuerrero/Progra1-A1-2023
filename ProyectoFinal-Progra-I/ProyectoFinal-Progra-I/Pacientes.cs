@@ -18,6 +18,7 @@ namespace ProyectoFinal_Progra_I
         DataTable miTabla = new DataTable();
         public int posicion = 0;
         String accion = "nuevo";
+
         Clinica cl = new Clinica();
         int idPacienteSeleccionado = 1;
         DataRowView pacienteSelecionado;
@@ -149,7 +150,7 @@ namespace ProyectoFinal_Progra_I
                 }
 
             }
-            lblPosicionPaciente.Text = $"{pacientesBindingSource.Position + 1} de {pacientesBindingSource.Count}";
+            actualizarDatosPaciente();
         }
 
         private void grdDatosPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -174,7 +175,7 @@ namespace ProyectoFinal_Progra_I
                 btnNuevoPaciente.Text = "Nuevo paciente";
                 btnModificarPaciente.Text = "Modificar datos";
             }
-            lblPosicionPaciente.Text = $"{pacientesBindingSource.Position + 1} de {pacientesBindingSource.Count}";
+            actualizarDatosPaciente();
         }
 
         private void grbDatosPaciente_Enter(object sender, EventArgs e)
@@ -199,7 +200,7 @@ namespace ProyectoFinal_Progra_I
         {
             pacientesBindingSource.RemoveCurrent();
             this.pacientesTableAdapter.Update(bd_veterinaria_huellitasDataSet);
-            lblPosicionPaciente.Text = $"{pacientesBindingSource.Position + 1} de {pacientesBindingSource.Count}";
+            actualizarDatosPaciente(); 
             fallecimientosTableAdapter.Fill(bd_veterinaria_huellitasDataSet.fallecimientos);
         }
 
