@@ -1186,6 +1186,58 @@ SELECT idTipoExamen, tipoExamen, precio FROM tiposExamen WHERE (idTipoExamen = @
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DatosExamenTableAdapter" GeneratorDataComponentClassName="DatosExamenTableAdapter" Name="DatosExamen" UserDataComponentName="DatosExamenTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_veterinaria_huellitasConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        examenes.idExamen, examenes.idTipoExamen, examenes.idPaciente, examenes.resultado, examenes.idConsulta, pacientes.nombre, tiposExamen.tipoExamen
+FROM            pacientes INNER JOIN
+                         examenes ON pacientes.idPaciente = examenes.idPaciente INNER JOIN
+                         consultas ON pacientes.idPaciente = consultas.idPaciente AND examenes.idConsulta = consultas.idConsulta INNER JOIN
+                         tiposExamen ON tiposExamen.idTipoExamen = examenes.idTipoExamen</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idExamen" DataSetColumn="idExamen" />
+              <Mapping SourceColumn="idTipoExamen" DataSetColumn="idTipoExamen" />
+              <Mapping SourceColumn="idPaciente" DataSetColumn="idPaciente" />
+              <Mapping SourceColumn="resultado" DataSetColumn="resultado" />
+              <Mapping SourceColumn="idConsulta" DataSetColumn="idConsulta" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="tipoExamen" DataSetColumn="tipoExamen" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DatosTratamientosTableAdapter" GeneratorDataComponentClassName="DatosTratamientosTableAdapter" Name="DatosTratamientos" UserDataComponentName="DatosTratamientosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_veterinaria_huellitasConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        tratamientos.idTratamiento, tratamientos.idPaciente, tratamientos.idProducto, pacientes.nombre AS paciente, productos.nombre AS producto, tratamientos.dosis
+FROM            tratamientos INNER JOIN
+                         consultas ON tratamientos.idConsulta = consultas.idConsulta INNER JOIN
+                         pacientes ON tratamientos.idPaciente = pacientes.idPaciente AND consultas.idPaciente = pacientes.idPaciente INNER JOIN
+                         consultas AS consultas_1 ON tratamientos.idConsulta = consultas_1.idConsulta AND pacientes.idPaciente = consultas_1.idPaciente INNER JOIN
+                         productos ON tratamientos.idProducto = productos.idProducto</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idTratamiento" DataSetColumn="idTratamiento" />
+              <Mapping SourceColumn="idPaciente" DataSetColumn="idPaciente" />
+              <Mapping SourceColumn="idProducto" DataSetColumn="idProducto" />
+              <Mapping SourceColumn="paciente" DataSetColumn="paciente" />
+              <Mapping SourceColumn="producto" DataSetColumn="producto" />
+              <Mapping SourceColumn="dosis" DataSetColumn="dosis" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1700,6 +1752,67 @@ SELECT idTipoExamen, tipoExamen, precio FROM tiposExamen WHERE (idTipoExamen = @
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DatosExamen" msprop:Generator_TableClassName="DatosExamenDataTable" msprop:Generator_TableVarName="tableDatosExamen" msprop:Generator_TablePropName="DatosExamen" msprop:Generator_RowDeletingName="DatosExamenRowDeleting" msprop:Generator_RowChangingName="DatosExamenRowChanging" msprop:Generator_RowEvHandlerName="DatosExamenRowChangeEventHandler" msprop:Generator_RowDeletedName="DatosExamenRowDeleted" msprop:Generator_UserTableName="DatosExamen" msprop:Generator_RowChangedName="DatosExamenRowChanged" msprop:Generator_RowEvArgName="DatosExamenRowChangeEvent" msprop:Generator_RowClassName="DatosExamenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idExamen" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidExamen" msprop:Generator_ColumnPropNameInRow="idExamen" msprop:Generator_ColumnPropNameInTable="idExamenColumn" msprop:Generator_UserColumnName="idExamen" type="xs:int" />
+              <xs:element name="idTipoExamen" msprop:Generator_ColumnVarNameInTable="columnidTipoExamen" msprop:Generator_ColumnPropNameInRow="idTipoExamen" msprop:Generator_ColumnPropNameInTable="idTipoExamenColumn" msprop:Generator_UserColumnName="idTipoExamen" type="xs:int" />
+              <xs:element name="idPaciente" msprop:Generator_ColumnVarNameInTable="columnidPaciente" msprop:Generator_ColumnPropNameInRow="idPaciente" msprop:Generator_ColumnPropNameInTable="idPacienteColumn" msprop:Generator_UserColumnName="idPaciente" type="xs:int" />
+              <xs:element name="resultado" msprop:Generator_ColumnVarNameInTable="columnresultado" msprop:Generator_ColumnPropNameInRow="resultado" msprop:Generator_ColumnPropNameInTable="resultadoColumn" msprop:Generator_UserColumnName="resultado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idConsulta" msprop:Generator_ColumnVarNameInTable="columnidConsulta" msprop:Generator_ColumnPropNameInRow="idConsulta" msprop:Generator_ColumnPropNameInTable="idConsultaColumn" msprop:Generator_UserColumnName="idConsulta" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipoExamen" msprop:Generator_ColumnVarNameInTable="columntipoExamen" msprop:Generator_ColumnPropNameInRow="tipoExamen" msprop:Generator_ColumnPropNameInTable="tipoExamenColumn" msprop:Generator_UserColumnName="tipoExamen">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DatosTratamientos" msprop:Generator_TableClassName="DatosTratamientosDataTable" msprop:Generator_TableVarName="tableDatosTratamientos" msprop:Generator_TablePropName="DatosTratamientos" msprop:Generator_RowDeletingName="DatosTratamientosRowDeleting" msprop:Generator_RowChangingName="DatosTratamientosRowChanging" msprop:Generator_RowEvHandlerName="DatosTratamientosRowChangeEventHandler" msprop:Generator_RowDeletedName="DatosTratamientosRowDeleted" msprop:Generator_UserTableName="DatosTratamientos" msprop:Generator_RowChangedName="DatosTratamientosRowChanged" msprop:Generator_RowEvArgName="DatosTratamientosRowChangeEvent" msprop:Generator_RowClassName="DatosTratamientosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idTratamiento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidTratamiento" msprop:Generator_ColumnPropNameInRow="idTratamiento" msprop:Generator_ColumnPropNameInTable="idTratamientoColumn" msprop:Generator_UserColumnName="idTratamiento" type="xs:int" />
+              <xs:element name="idPaciente" msprop:Generator_ColumnVarNameInTable="columnidPaciente" msprop:Generator_ColumnPropNameInRow="idPaciente" msprop:Generator_ColumnPropNameInTable="idPacienteColumn" msprop:Generator_UserColumnName="idPaciente" type="xs:int" />
+              <xs:element name="idProducto" msprop:Generator_ColumnVarNameInTable="columnidProducto" msprop:Generator_ColumnPropNameInRow="idProducto" msprop:Generator_ColumnPropNameInTable="idProductoColumn" msprop:Generator_UserColumnName="idProducto" type="xs:int" />
+              <xs:element name="paciente" msprop:Generator_ColumnVarNameInTable="columnpaciente" msprop:Generator_ColumnPropNameInRow="paciente" msprop:Generator_ColumnPropNameInTable="pacienteColumn" msprop:Generator_UserColumnName="paciente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="producto" msprop:Generator_ColumnVarNameInTable="columnproducto" msprop:Generator_ColumnPropNameInRow="producto" msprop:Generator_ColumnPropNameInTable="productoColumn" msprop:Generator_UserColumnName="producto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dosis" msprop:Generator_ColumnVarNameInTable="columndosis" msprop:Generator_ColumnPropNameInRow="dosis" msprop:Generator_ColumnPropNameInTable="dosisColumn" msprop:Generator_UserColumnName="dosis">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1778,6 +1891,14 @@ SELECT idTipoExamen, tipoExamen, precio FROM tiposExamen WHERE (idTipoExamen = @
       <xs:selector xpath=".//mstns:tiposExamen" />
       <xs:field xpath="mstns:idTipoExamen" />
     </xs:unique>
+    <xs:unique name="DatosExamen_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DatosExamen" />
+      <xs:field xpath="mstns:idExamen" />
+    </xs:unique>
+    <xs:unique name="DatosTratamientos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DatosTratamientos" />
+      <xs:field xpath="mstns:idTratamiento" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
@@ -1803,6 +1924,12 @@ SELECT idTipoExamen, tipoExamen, precio FROM tiposExamen WHERE (idTipoExamen = @
       <msdata:Relationship name="FK_tratamientos_Consultas" msdata:parent="consultas" msdata:child="tratamientos" msdata:parentkey="idConsulta" msdata:childkey="idConsulta" msprop:Generator_UserChildTable="tratamientos" msprop:Generator_ChildPropName="GettratamientosRows" msprop:Generator_UserRelationName="FK_tratamientos_Consultas" msprop:Generator_RelationVarName="relationFK_tratamientos_Consultas" msprop:Generator_UserParentTable="consultas" msprop:Generator_ParentPropName="consultasRow" />
       <msdata:Relationship name="FK_consultas_Pacientes" msdata:parent="pacientes" msdata:child="consultas" msdata:parentkey="idPaciente" msdata:childkey="idPaciente" msprop:Generator_UserChildTable="consultas" msprop:Generator_ChildPropName="GetconsultasRows" msprop:Generator_UserRelationName="FK_consultas_Pacientes" msprop:Generator_ParentPropName="pacientesRow" msprop:Generator_RelationVarName="relationFK_consultas_Pacientes" msprop:Generator_UserParentTable="pacientes" />
       <msdata:Relationship name="FK_consultas_Usuarios" msdata:parent="usuarios" msdata:child="consultas" msdata:parentkey="idUsuario" msdata:childkey="idUsuario" msprop:Generator_UserChildTable="consultas" msprop:Generator_ChildPropName="GetconsultasRows" msprop:Generator_UserRelationName="FK_consultas_Usuarios" msprop:Generator_ParentPropName="usuariosRow" msprop:Generator_RelationVarName="relationFK_consultas_Usuarios" msprop:Generator_UserParentTable="usuarios" />
+      <msdata:Relationship name="FK_examenes_Consultas" msdata:parent="consultas" msdata:child="DatosExamen" msdata:parentkey="idConsulta" msdata:childkey="idConsulta" msprop:Generator_UserChildTable="DatosExamen" msprop:Generator_ChildPropName="GetDatosExamenRows" msprop:Generator_UserRelationName="FK_examenes_Consultas" msprop:Generator_ParentPropName="consultasRow" msprop:Generator_RelationVarName="relationFK_examenes_Consultas" msprop:Generator_UserParentTable="consultas" />
+      <msdata:Relationship name="FK_examenes_Pacientes" msdata:parent="pacientes" msdata:child="DatosExamen" msdata:parentkey="idPaciente" msdata:childkey="idPaciente" msprop:Generator_UserChildTable="DatosExamen" msprop:Generator_ChildPropName="GetDatosExamenRows" msprop:Generator_UserRelationName="FK_examenes_Pacientes" msprop:Generator_ParentPropName="pacientesRow" msprop:Generator_RelationVarName="relationFK_examenes_Pacientes" msprop:Generator_UserParentTable="pacientes" />
+      <msdata:Relationship name="fk_fallecimientos_pacientes2" msdata:parent="DatosTratamientos" msdata:child="fallecimientos" msdata:parentkey="idPaciente" msdata:childkey="idPaciente" msprop:Generator_UserChildTable="fallecimientos" msprop:Generator_ChildPropName="GetfallecimientosRows" msprop:Generator_UserRelationName="fk_fallecimientos_pacientes2" msprop:Generator_RelationVarName="relationfk_fallecimientos_pacientes2" msprop:Generator_UserParentTable="DatosTratamientos" msprop:Generator_ParentPropName="DatosTratamientosRow" />
+      <msdata:Relationship name="FK_colores_pacientes2" msdata:parent="DatosTratamientos" msdata:child="pacientes_colores" msdata:parentkey="idPaciente" msdata:childkey="idPaciente" msprop:Generator_UserChildTable="pacientes_colores" msprop:Generator_ChildPropName="Getpacientes_coloresRows" msprop:Generator_UserRelationName="FK_colores_pacientes2" msprop:Generator_RelationVarName="relationFK_colores_pacientes2" msprop:Generator_UserParentTable="DatosTratamientos" msprop:Generator_ParentPropName="DatosTratamientosRow" />
+      <msdata:Relationship name="fk_idPaciente_tratamiento2" msdata:parent="DatosTratamientos" msdata:child="tratamientos" msdata:parentkey="idPaciente" msdata:childkey="idPaciente" msprop:Generator_UserChildTable="tratamientos" msprop:Generator_ChildPropName="GettratamientosRows" msprop:Generator_UserRelationName="fk_idPaciente_tratamiento2" msprop:Generator_RelationVarName="relationfk_idPaciente_tratamiento2" msprop:Generator_UserParentTable="DatosTratamientos" msprop:Generator_ParentPropName="DatosTratamientosRow" />
+      <msdata:Relationship name="FK_consultas_Pacientes1" msdata:parent="DatosTratamientos" msdata:child="consultas" msdata:parentkey="idPaciente" msdata:childkey="idPaciente" msprop:Generator_UserChildTable="consultas" msprop:Generator_ChildPropName="GetconsultasRows" msprop:Generator_UserRelationName="FK_consultas_Pacientes1" msprop:Generator_RelationVarName="relationFK_consultas_Pacientes1" msprop:Generator_UserParentTable="DatosTratamientos" msprop:Generator_ParentPropName="DatosTratamientosRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
