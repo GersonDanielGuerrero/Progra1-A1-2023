@@ -77,6 +77,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_veterinaria_huellitasDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bd_veterinaria_huellitasDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_veterinaria_huellitasDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="casosClinicos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,12 +119,6 @@
     </Compile>
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MenuPacientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuPacientes.Designer.cs">
-      <DependentUpon>MenuPacientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Pacientes.cs">
       <SubType>Form</SubType>
@@ -174,9 +173,6 @@
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuPacientes.resx">
-      <DependentUpon>MenuPacientes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Pacientes.resx">
       <DependentUpon>Pacientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +207,17 @@
     </None>
     <None Include="bd_veterinaria_huellitasDataSet.xss">
       <DependentUpon>bd_veterinaria_huellitasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bd_veterinaria_huellitasDataSet1.xsc">
+      <DependentUpon>bd_veterinaria_huellitasDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bd_veterinaria_huellitasDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_veterinaria_huellitasDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_veterinaria_huellitasDataSet1.xss">
+      <DependentUpon>bd_veterinaria_huellitasDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

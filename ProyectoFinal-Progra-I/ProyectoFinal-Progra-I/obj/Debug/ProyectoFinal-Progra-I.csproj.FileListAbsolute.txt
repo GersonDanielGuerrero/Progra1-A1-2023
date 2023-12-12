@@ -86,7 +86,6 @@ C:\Users\danic\Source\Repos\Progra1-A1-2023-2\ProyectoFinal-Progra-I\ProyectoFin
 C:\Users\danic\Source\Repos\Progra1-A1-2023-2\ProyectoFinal-Progra-I\ProyectoFinal-Progra-I\obj\Debug\ProyectoFinal_Progra_I.Fallecimiento.resources
 C:\Users\danic\Source\Repos\Progra1-A1-2023-2\ProyectoFinal-Progra-I\ProyectoFinal-Progra-I\obj\Debug\ProyectoFinal_Progra_I.Principal.resources
 C:\Users\danic\Source\Repos\Progra1-A1-2023-2\ProyectoFinal-Progra-I\ProyectoFinal-Progra-I\obj\Debug\ProyectoFinal_Progra_I.LogIn.resources
-C:\Users\danic\Source\Repos\Progra1-A1-2023-2\ProyectoFinal-Progra-I\ProyectoFinal-Progra-I\obj\Debug\ProyectoFinal_Progra_I.MenuPacientes.resources
 C:\Users\danic\Source\Repos\Progra1-A1-2023-2\ProyectoFinal-Progra-I\ProyectoFinal-Progra-I\obj\Debug\ProyectoFinal_Progra_I.Pacientes.resources
 C:\Users\danic\Source\Repos\Progra1-A1-2023-2\ProyectoFinal-Progra-I\ProyectoFinal-Progra-I\obj\Debug\ProyectoFinal_Progra_I.Productos.resources
 C:\Users\danic\Source\Repos\Progra1-A1-2023-2\ProyectoFinal-Progra-I\ProyectoFinal-Progra-I\obj\Debug\ProyectoFinal_Progra_I.Properties.Resources.resources

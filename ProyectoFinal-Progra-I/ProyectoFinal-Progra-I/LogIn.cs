@@ -18,7 +18,7 @@ namespace ProyectoFinal_Progra_I
         DataRowView drv;
         DataTable miTabla = new DataTable();
         
-
+        public static int idUsuarioIngresado;
         public LogIn()
         {
             InitializeComponent();
@@ -50,6 +50,8 @@ namespace ProyectoFinal_Progra_I
                 if (txtUsuarioLogIn.Text.Trim() == usuario.Trim() && txtClaveLogIn.Text.Trim()==clave.Trim()) // && txtClaveLogIn.Text ==miTabla.Rows[i].ItemArray[3].ToString())
                 {
                     permitirIngreso = true;
+                    idUsuarioIngresado = Convert.ToInt32(drv["idUsuario"]);
+                    this.Hide();
 
                 }
                 
@@ -60,8 +62,7 @@ namespace ProyectoFinal_Progra_I
             if (permitirIngreso) { 
                 MessageBox.Show("Bienvenido, " + txtUsuarioLogIn.Text);
                 Principal objPrincipal = new Principal();
-                objPrincipal.Show();
-                
+                objPrincipal.Show(); 
             }
             else
             {

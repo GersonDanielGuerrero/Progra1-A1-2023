@@ -29,6 +29,8 @@ namespace ProyectoFinal_Progra_I
 
         private void Pacientes_Load(object sender, EventArgs e)
         {
+           
+
             // TODO: esta línea de código carga datos en la tabla 'bd_veterinaria_huellitasDataSet.fallecimientos' Puede moverla o quitarla según sea necesario.
             this.fallecimientosTableAdapter.Fill(this.bd_veterinaria_huellitasDataSet.fallecimientos);
 
@@ -64,7 +66,6 @@ namespace ProyectoFinal_Progra_I
             actualizarDatosPaciente();
             estadoControles(false);
             cboOpcionBuscarPaciente.SelectedIndex = 0;
-
         }
         private void estadoControles(bool estado)
         {

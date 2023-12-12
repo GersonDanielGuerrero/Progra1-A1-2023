@@ -100,6 +100,7 @@ namespace ProyectoFinal_Progra_I
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.grbDatosPaciente.SuspendLayout();
             this.grbFallecimientoPaciente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fallecimientosBindingSource)).BeginInit();
@@ -206,6 +207,7 @@ namespace ProyectoFinal_Progra_I
             this.btnFallecimientoPaciente.TabIndex = 63;
             this.btnFallecimientoPaciente.Text = "Registrar como Fallecido";
             this.btnFallecimientoPaciente.UseVisualStyleBackColor = false;
+            this.btnFallecimientoPaciente.Click += new System.EventHandler(this.btnFallecimientoPaciente_Click);
             // 
             // grbFallecimientoPaciente
             // 
@@ -305,6 +307,7 @@ namespace ProyectoFinal_Progra_I
             this.btnAgregarFotoPaciente.Size = new System.Drawing.Size(236, 37);
             this.btnAgregarFotoPaciente.TabIndex = 61;
             this.btnAgregarFotoPaciente.Text = "Agregar foto";
+            this.toolTip1.SetToolTip(this.btnAgregarFotoPaciente, "Fotooooooo");
             this.btnAgregarFotoPaciente.UseVisualStyleBackColor = false;
             this.btnAgregarFotoPaciente.Click += new System.EventHandler(this.btnAgregarFotoPaciente_Click);
             // 
@@ -632,7 +635,9 @@ namespace ProyectoFinal_Progra_I
             this.tableAdapterManager.clientesTableAdapter = null;
             this.tableAdapterManager.coloresTableAdapter = null;
             this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.consultasTableAdapter = null;
             this.tableAdapterManager.especiesTableAdapter = null;
+            this.tableAdapterManager.examenesTableAdapter = null;
             this.tableAdapterManager.fallecimientosTableAdapter = null;
             this.tableAdapterManager.marcasTableAdapter = null;
             this.tableAdapterManager.pacientes_coloresTableAdapter = null;
@@ -643,6 +648,7 @@ namespace ProyectoFinal_Progra_I
             this.tableAdapterManager.razasTableAdapter = null;
             this.tableAdapterManager.tipoProductoTableAdapter = null;
             this.tableAdapterManager.tipoServiciosTableAdapter = null;
+            this.tableAdapterManager.tiposExamenTableAdapter = null;
             this.tableAdapterManager.tratamientosTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ProyectoFinal_Progra_I.bd_veterinaria_huellitasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuariosTableAdapter = null;
@@ -785,7 +791,7 @@ namespace ProyectoFinal_Progra_I
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1218, 749);
             this.ControlBox = false;
             this.Controls.Add(this.datosPacientesDataGridView);
             this.Controls.Add(this.grbNavegacionPaciente);
@@ -900,5 +906,6 @@ namespace ProyectoFinal_Progra_I
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpRegistroPaciente;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
