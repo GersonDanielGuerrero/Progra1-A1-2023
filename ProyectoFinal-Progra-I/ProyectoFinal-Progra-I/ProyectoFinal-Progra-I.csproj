@@ -90,12 +90,24 @@
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Clinica.cs" />
+    <Compile Include="Colores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colores.Designer.cs">
+      <DependentUpon>Colores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="DetallesConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DetallesConsulta.Designer.cs">
       <DependentUpon>DetallesConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Especies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Especies.Designer.cs">
+      <DependentUpon>Especies.cs</DependentUpon>
     </Compile>
     <Compile Include="Fallecimiento.cs">
       <SubType>Form</SubType>
@@ -115,6 +127,12 @@
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Marcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcas.Designer.cs">
+      <DependentUpon>Marcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPacientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +145,12 @@
     <Compile Include="Pacientes.Designer.cs">
       <DependentUpon>Pacientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="principiosActivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="principiosActivos.Designer.cs">
+      <DependentUpon>principiosActivos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Productos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,11 +159,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Razas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Razas.Designer.cs">
+      <DependentUpon>Razas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Servicios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Servicios.Designer.cs">
       <DependentUpon>Servicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tipoProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tipoProductos.Designer.cs">
+      <DependentUpon>tipoProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tiposExamenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tiposExamenes.Designer.cs">
+      <DependentUpon>tiposExamenes.cs</DependentUpon>
     </Compile>
     <Compile Include="Tratamientos.cs">
       <SubType>Form</SubType>
@@ -162,8 +204,14 @@
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Colores.resx">
+      <DependentUpon>Colores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DetallesConsulta.resx">
       <DependentUpon>DetallesConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Especies.resx">
+      <DependentUpon>Especies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fallecimiento.resx">
       <DependentUpon>Fallecimiento.cs</DependentUpon>
@@ -174,11 +222,17 @@
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Marcas.resx">
+      <DependentUpon>Marcas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuPacientes.resx">
       <DependentUpon>MenuPacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pacientes.resx">
       <DependentUpon>Pacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="principiosActivos.resx">
+      <DependentUpon>principiosActivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>
@@ -192,8 +246,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Razas.resx">
+      <DependentUpon>Razas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Servicios.resx">
       <DependentUpon>Servicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tipoProductos.resx">
+      <DependentUpon>tipoProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tiposExamenes.resx">
+      <DependentUpon>tiposExamenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tratamientos.resx">
       <DependentUpon>Tratamientos.cs</DependentUpon>
